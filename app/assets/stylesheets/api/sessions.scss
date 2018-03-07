@@ -49,4 +49,18 @@ h3 {
 }
 
 .login-header-link{
+  cursor: pointer;
+}
+
+.login-input-pw-errors{
+  border-color: rgb(193, 39, 45);
+}
+
+.login-input-email-errors{
+  border-color: rgb(193, 39, 45);
+}
+
+.login-form-errors-list{
+  list-style-type: none;
+  color: rgb(193, 39, 45);
 }
