@@ -46,33 +46,47 @@ class SessionForm extends React.Component {
      otherFormLink = '/login';
    }
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          <br/>
-          Please {this.props.formType} or <Link to={otherFormLink}>{otherForm}</Link>
-          {this.renderErrors()}
-          <div className="login-form">
-            <br/>
-            <label>Email:
-              <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
+        <div className="login-form-wrapper">
+          <div className='login-form-container'>
+            <form onSubmit={this.handleSubmit} className="login-form-box">
+              <div className='login-form-header'>
+                JOIN THE COMMUNITY
+                <br/>
+                <br/>
+                {this.props.formType} or <Link to={otherFormLink}>{otherForm}</Link> below.
+                {this.renderErrors()}
+                If you don't have an account we will create one for you.
+              </div>
+              <div className="login-form">
+                <br/>
+                  <input type="text"
+                    placeholder="Email"
+                    value={this.state.email}
+                    onChange={this.update('email')}
+                    className="login-input-email"
+                    />
+                <br/>
+                <br/>
+                  <input type="password"
+                    value={this.state.password}
+                    placeholder="Password"
+                    onChange={this.update('password')}
+                    className="login-input-pw"
+                    />
+                <br/>
+                <br/>
+                <input className="session-submit" type="submit" value= 'Sign Up/Log In' />
+                <br/>
+                <br/>
+              </div>
+              <div className="login-form-footer">
+                <div>
+                  By creating an account, I accept Retailed's Terms of Services and Privacy Policy.
+                </div>
+              </div>
+            </form>
           </div>
-        </form>
-      </div>
+        </div>
     );
   }
 }
