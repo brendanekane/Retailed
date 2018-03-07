@@ -51,11 +51,14 @@ class SessionForm extends React.Component {
           <div className='login-form-container'>
             <form onSubmit={this.handleSubmit} className="login-form-box">
               <div className='login-form-header'>
-                JOIN THE COMMUNITY
+                <h3>JOIN THE COMMUNITY</h3>
                 <br/>
                 <br/>
-                {this.props.formType} or <Link to={otherFormLink}>{otherForm}</Link> below.
-                If you don't have an account we will create one for you.
+                <div className='login-header-link' >
+                  <Link to={otherFormLink}>{otherForm}</Link> or {this.props.formType} below.
+                </div>
+                <br/>
+                <br/>
                 {this.renderErrors()}
               </div>
               <div className="login-form">

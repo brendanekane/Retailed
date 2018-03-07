@@ -1,12 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NavLoginLinks = () => (
-  <nav className='login-signup'>
-    <Link to='/login'>LOGIN</Link>/
-    <Link to='/signup'>SIGNUP</Link>
-  </nav>
-);
+const NavLoginLinks = (props) => {
+  return (
+    <nav className='login-signup'>
+      <button onClick={() => props.openModal('login')}>
+        Login
+      </button>
+      <button onClick={() => props.openModal('signup')}>
+        Signup
+      </button>
+    </nav>
+  )
+};
 
 // Need a button here to go to the User's profile and has a dropdown menu
 // for specific links in the profile; Placeholder for now
@@ -16,8 +22,8 @@ const NavProfileLink = ({currentUser}) => (
   </nav>
 );
 
-const NavSessionLinks = ({currentUser}) => (
-  currentUser ? <NavProfileLink currentUser={currentUser} /> : <NavLoginLinks />
+const NavSessionLinks = ({currentUser, openModal, closeModal}) => (
+  currentUser ? <NavProfileLink currentUser={currentUser} /> : <NavLoginLinks openModal={openModal} closeModal={closeModal}/>
 );
 
 export default NavSessionLinks;

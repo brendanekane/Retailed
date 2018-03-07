@@ -3,7 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .login-form-container{
-  // background-color: yellow;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,6 +14,7 @@
 .login-form-wrapper{
   display: flex;
   justify-content: center;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 .login-form-header{
@@ -42,4 +42,11 @@ input{
   width: 300;
   flex-wrap: wrap;
   padding-bottom: 150px;
+}
+
+h3 {
+  letter-spacing: 2px;
+}
+
+.login-header-link{
 }
