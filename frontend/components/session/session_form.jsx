@@ -35,6 +35,7 @@ class SessionForm extends React.Component {
     );
   }
 
+
   render() {
     let otherForm;
     let otherFormLink;
@@ -54,8 +55,8 @@ class SessionForm extends React.Component {
                 <br/>
                 <br/>
                 {this.props.formType} or <Link to={otherFormLink}>{otherForm}</Link> below.
-                {this.renderErrors()}
                 If you don't have an account we will create one for you.
+                {this.renderErrors()}
               </div>
               <div className="login-form">
                 <br/>
@@ -80,9 +81,6 @@ class SessionForm extends React.Component {
                 <br/>
               </div>
               <div className="login-form-footer">
-                <div>
-                  By creating an account, I accept Retailed's Terms of Services and Privacy Policy.
-                </div>
               </div>
             </form>
           </div>

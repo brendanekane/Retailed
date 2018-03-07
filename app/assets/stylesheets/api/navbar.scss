@@ -2,10 +2,17 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid lightgrey;
+  font-family: 'Lato', sans-serif;
 }
+
+.nav-bar h2{
+  letter-spacing: 3px;
+}
+
 
 .login-signup {
   margin: 25px;
+  font-size: 10px;
 }
 
 .nav-profile-link{

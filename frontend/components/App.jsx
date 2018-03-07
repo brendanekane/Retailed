@@ -10,7 +10,7 @@ const App = () => (
   <div className="app-hook">
     <div className='nav-bar'>
       <div>search bar</div>
-      <h1>Retailed</h1>
+      <h2>RETAILED</h2>
       <NavbarContainer />
     </div>
     <GreetingContainer />
