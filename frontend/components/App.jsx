@@ -9,8 +9,10 @@ const App = () => (
   <div>
     <h1>Welcome to retailed!</h1>
     <GreetingContainer />
-    <AuthRoute path='/login' component={LoginFormContainer}/>
-    <AuthRoute path='/signup' component={SignupFormContainer}/>
+
+    <AuthRoute path="/login" component={LoginFormContainer} />
+    <AuthRoute path="/signup" component={SignupFormContainer} />
+
   </div>
 );
 
