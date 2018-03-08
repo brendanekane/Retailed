@@ -3,6 +3,7 @@ import SessionForm from 'components/session/session_form';
 import { login } from 'actions/session_actions';
 import React from 'react';
 import { openModal, closeModal } from 'actions/modal_actions';
+import { getUsers } from 'actions/user_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -22,7 +23,8 @@ const mapDispatchToProps = dispatch => {
       </button>
     ),
     closeModal: () => dispatch(closeModal()),
-    openModal: (modal) => dispatch(openModal(modal))
+    openModal: (modal) => dispatch(openModal(modal)),
+    getUsers: () => dispatch(getUsers())
 
   };
 };

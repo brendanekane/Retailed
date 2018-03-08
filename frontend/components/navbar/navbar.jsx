@@ -6,6 +6,7 @@ const NavLoginLinks = (props) => {
     <nav className='login-signup'>
       <p className="loginLink" onClick={() => props.openModal('login')}>LOGIN</p>
       <p className="signupLink" onClick={() => props.openModal('signup')}>SIGNUP</p>
+
     </nav>
   )
 };
