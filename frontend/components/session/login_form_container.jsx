@@ -4,6 +4,7 @@ import { login } from 'actions/session_actions';
 import React from 'react';
 import { openModal, closeModal } from 'actions/modal_actions';
 import { getUsers } from 'actions/user_actions';
+import { getProducts } from 'actions/product_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -24,7 +25,8 @@ const mapDispatchToProps = dispatch => {
     ),
     closeModal: () => dispatch(closeModal()),
     openModal: (modal) => dispatch(openModal(modal)),
-    getUsers: () => dispatch(getUsers())
+    getUsers: () => dispatch(getUsers()),
+    getProducts: () => dispatch(getProducts())
 
   };
 };

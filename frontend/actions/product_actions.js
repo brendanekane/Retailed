@@ -4,10 +4,13 @@ export const RECEIVE_ALL_PRODUCTS = 'RECEIVE_ALL_PRODUCTS';
 export const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
 export const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
 
-export const getProducts = () => dispatch => (
+export const getProducts = () => dispatch => {
+  debugger
+  return (
   ProductApiUtil.getProducts()
   .then(products => dispatch(receiveAllProducts(products)))
 );
+};
 
 export const getProduct = id => dispatch => (
   ProductApiUtil.getProduct(id)
@@ -27,13 +30,16 @@ export const updateProduct = product => dispatch => (
 export const deleteProduct = id => dispatch => (
   ProductApiUtil.deleteProduct(id)
   .then(product => dispatch(removeProduct(id)))
-)
+);
 
 
-const receiveAllProducts = products => ({
+const receiveAllProducts = products => {
+  debugger
+  return({
   type: RECEIVE_ALL_PRODUCTS,
   products
-});
+  });
+};
 
 const receiveProduct = product => ({
   type: RECEIVE_PRODUCT,

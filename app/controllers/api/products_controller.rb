@@ -14,15 +14,15 @@ class Api::ProductsController < ApplicationController
   end
 
   def index
-    @products = Products.all
+    @products = Product.all
   end
 
-  def
 
   def update
     @product = Product.find(params[:id])
     if @product.update(product_params)
       render :show
+    end
   end
 
   def destroy
@@ -33,6 +33,6 @@ class Api::ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:products).permit(:price, :designer, :name, :clothing_type, :size, :clothing_category)
+    params.require(:product).permit(:user_id, :price, :designer, :name, :clothing_type, :size, :clothing_category)
   end
 end

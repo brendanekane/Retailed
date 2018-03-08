@@ -3,6 +3,7 @@ import SessionForm from 'components/session/session_form';
 import { signup } from 'actions/session_actions';
 import { openModal, closeModal } from 'actions/modal_actions';
 import { getUsers } from 'actions/user_actions';
+import { getProducts } from 'actions/product_actions';
 import React from 'react';
 
 
