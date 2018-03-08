@@ -12,11 +12,14 @@ const NavLoginLinks = (props) => {
 
 // Need a button here to go to the User's profile and has a dropdown menu
 // for specific links in the profile; Placeholder for now
-const NavProfileLink = ({currentUser}) => (
-  <nav className='nav-profile-link'>
-    <div>Profile</div>
-  </nav>
-);
+const NavProfileLink = ({currentUser}) => {
+  debugger
+  return(
+    <nav className='nav-profile-link'>
+      Profile
+    </nav>
+  )
+};
 
 const NavSessionLinks = ({currentUser, openModal, closeModal}) => (
   currentUser ? <NavProfileLink currentUser={currentUser} /> : <NavLoginLinks openModal={openModal} closeModal={closeModal}/>

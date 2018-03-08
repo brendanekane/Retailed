@@ -3,11 +3,11 @@
 one:
   username: MyString
   email: MyString
-  passwordDigest: MyString
-  sessionToken: MyString
+  password_digest: MyString
+  session_token: MyString
 
 two:
   username: MyString
   email: MyString
-  passwordDigest: MyString
-  sessionToken: MyString
+  password_digest: MyString
+  session_token: MyString
