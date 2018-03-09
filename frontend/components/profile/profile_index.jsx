@@ -10,11 +10,11 @@ class ProfileIndex extends React.Component {
 
   render() {
     return (
-      <div>
-        <p> MESSAGES (no link yet)</p>
-        <Link to='/users/myitems'>MY ITEMS</Link>
+      <div className='profile-index-container'>
+        <Link to='/users/myitems' className='profile-index-items'>MY ITEMS</Link>
+        <Link to='/users/messages' className='profile-index-messages'>MESSAGES</Link>
         <p> TRANSACTIONS (no link yet)</p>
-        <Link to='/users/settings'>SETTINGS</Link>
+        <Link to='/users/settings' className='profile-index-settings'>SETTINGS</Link>
       </div>
     )
   }
