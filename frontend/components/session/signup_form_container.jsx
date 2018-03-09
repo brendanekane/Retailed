@@ -26,7 +26,8 @@ const mapDispatchToProps = dispatch => {
     ),
     closeModal: () => dispatch(closeModal()),
     openModal: (modal) => dispatch(openModal(modal)),
-    getUsers: () => dispatch(getUsers())
+    getUsers: () => dispatch(getUsers()),
+    getProducts: () => dispatch(getProducts())
   };
 };
 

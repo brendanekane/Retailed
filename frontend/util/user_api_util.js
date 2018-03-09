@@ -6,3 +6,12 @@ export const getUsers = () => {
     })
   );
 };
+
+export const getOneUser = id => {
+  return (
+      $.ajax({
+      method: 'GET',
+      url: `api/users/${id}`
+    })
+  );
+};

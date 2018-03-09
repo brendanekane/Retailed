@@ -1,21 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Greeting = ({ currentUser, logout }) => {
-  if (currentUser) {
-    return (
-      <div>
-        <h1>Welcome { currentUser.email }!</h1>
-        <br/>
-        <button onClick={logout}>Log Out</button>
-      </div>
-    );
-  } else {
-    return (
-      <div>
-      </div>
-    );
+
+class Greeting extends React.Component {
+  constructor(props) {
+    super(props);
   }
-};
+  componentDidMount() {
+    this.props.currentUser;
+  }
+
+  render() {
+
+    if (this.props.currentUser) {
+      return (
+        <div className='greeting-container'>
+          <img className='greeting-user-picture' src='https://cdn.business2community.com/wp-content/uploads/2013/06/Michael-Scott.png' alt='profile picture'></img>
+          <div className='greeting-user-info'>
+            <h2 className='greeting-user-name'>{this.props.currentUser.email.substring(0, this.props.currentUser.email.lastIndexOf("@"))}</h2>
+            <p className='greeting-transactions-num'>({this.props.currentUser.transactions})</p>
+            <p className='greeting-transactions-full'>{this.props.currentUser.transactions} Transactions</p>
+            <br/>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+        </div>
+      );
+    }
+  }
+
+}
+
 
 export default Greeting;

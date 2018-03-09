@@ -7,6 +7,15 @@ export const getProducts = () => {
   );
 };
 
+export const getUserProducts = userId => {
+  return (
+    $.ajax({
+      method: 'GET',
+      url: `api/users/${userId}/products`
+    })
+  );
+};
+
 export const getProduct = id => {
   return (
     $.ajax({

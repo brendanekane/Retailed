@@ -1,0 +1,45 @@
+.greeting-container {
+  display: flex;
+  border-bottom: 1px solid lightgrey;
+  margin: 30px 50px 0 50px;
+}
+
+.greeting-user-picture{
+  display: flex;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.greeting-user-name{
+  display: flex;
+  margin: 13px 0 0 24px;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.greeting-transactions-num{
+  display: flex;
+  margin: 13px 0 0 5px;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+.greeting-user-info{
+  display: flex;
+  padding-bottom: 30px;
+  font-family: 'Fira Sans', sans-serif;
+  width: 190px;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100px;
+}
+
+
+.greeting-transactions-full{
+  display: flex;
+  margin: -18px 0 0 24px;
+  font-size: 13px;
+
+}

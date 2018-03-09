@@ -8,7 +8,7 @@ const Root = ({ store }) => {
   return (
     <Provider store={store}>
       <HashRouter>
-        <App/>
+        <App store={store}/>
       </HashRouter>
     </Provider>
   )
