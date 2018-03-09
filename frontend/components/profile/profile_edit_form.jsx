@@ -5,13 +5,16 @@ class ProfileEditForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      id: this.props.currentUser.id,
       email: this.props.currentUser.email,
-      height: this.props.currentUser.height === null ? "" : currentUser.height,
-      weight: this.props.currentUser.weight === null ? "" : currentUser.weight,
-      location: this.props.currentUser.location === null ? "" : currentUser.location
+      height: this.props.currentUser.height === null ? "" : this.props.currentUser.height,
+      weight: this.props.currentUser.weight === null ? "" : this.props.currentUser.weight,
+      location: this.props.currentUser.location === null ? "" : this.props.currentUser.location
+
     };
     this.handleClick = this.handleClick.bind(this)
   }
+
 
 
   update(property) {
@@ -20,7 +23,7 @@ class ProfileEditForm extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    this.props.updateUser();
+    this.props.updateUser(this.state);
   }
 
   // errors() {
@@ -40,7 +43,7 @@ class ProfileEditForm extends React.Component {
   render() {
     return (
       <section className='profile-details'>
-        <form className='profile-edit-form' onClick={this.handleClick}>
+        <form className='profile-edit-form' onBlur={this.handleClick}>
           <input type='text' value={this.state.email} onChange={this.update('email')} onClick={e => e.stopPropagation()}></input>
           <select value={this.state.location} onChange={this.update('location')}>
             return (

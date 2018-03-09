@@ -23,7 +23,6 @@ class Profile extends React.Component {
     return (
       <div>
         <ProfileIndexContainer />
-        <ProfileEditFormContainer />
         <button onClick={this.handleClick}>Log Out</button>
       </div>
     )

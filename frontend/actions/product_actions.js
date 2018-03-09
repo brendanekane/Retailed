@@ -12,7 +12,6 @@ export const getProducts = () => dispatch => {
 };
 
 export const getUserProducts = (user_id) => dispatch => {
-  debugger
   return (
     ProductApiUtil.getUserProducts(user_id)
     .then(products => dispatch(receiveAllProducts(products)))

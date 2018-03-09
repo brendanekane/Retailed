@@ -17,7 +17,6 @@ export const getOneUser = id => {
 };
 
 export const updateUser = user => {
-  debugger
   return (
     $.ajax({
       method: 'PATCH',
