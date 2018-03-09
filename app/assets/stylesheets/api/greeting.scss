@@ -28,18 +28,19 @@
 
 .greeting-user-info{
   display: flex;
+  flex-direction: column;
   padding-bottom: 30px;
   font-family: 'Fira Sans', sans-serif;
-  width: 190px;
   align-items: center;
   flex-wrap: wrap;
   height: 100px;
+  justify-content: space-between;
 }
 
 
 .greeting-transactions-full{
   display: flex;
-  margin: -18px 0 0 24px;
+  margin: 0 0 0 -77px;
   font-size: 13px;
 
 }
