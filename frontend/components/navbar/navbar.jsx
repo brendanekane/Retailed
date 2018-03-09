@@ -23,7 +23,7 @@ const NavProfileLink = ({currentUser}) => {
       <div>search bar</div>
       <h1>RETAILED</h1>
       <nav className='nav-profile-link'>
-        <Link to={`/${currentUser.id}`}>
+        <Link to={`/users/${currentUser.id}`}>
           <img className='nav-profile-img' src="https://cdn.business2community.com/wp-content/uploads/2013/06/Michael-Scott.png"></img>
         </Link>
         <div className='profile-dropdown'>
@@ -41,8 +41,21 @@ const NavProfileLink = ({currentUser}) => {
 };
 // make a classical component componentdidmount currentUser and componentwillreceiveprops pokedex(this.props.history.push(email substring))
 // export withRouter...maybeee wait til later (not important enough of a feature)
-const NavSessionLinks = ({currentUser, openModal, closeModal}) => (
-  currentUser ? <NavProfileLink currentUser={currentUser} /> : <NavLoginLinks openModal={openModal} closeModal={closeModal}/>
-);
+class NavSessionLinks extends React.Component {
+  constructor(props){
+    super(props)
+
+  }
+
+  // componentWillReceiveProps(newProps) {
+  //   if this.props.currentUser.id !== newProps.currentUser.id
+  // }
+  render(){
+    return(
+    this.props.currentUser ? <NavProfileLink currentUser={this.props.currentUser} /> : <NavLoginLinks openModal={this.props.openModal} closeModal={this.props.closeModal}/>
+
+  )
+  }
+}
 
 export default NavSessionLinks;

@@ -7,7 +7,7 @@ import { AuthRoute } from 'util/route_util';
 import NavbarContainer from 'components/navbar/navbar_container';
 import Modal from 'components/modal';
 import ProfileContainer from 'components/profile/profile_container';
-// debugger
+
 // let email = store.getState().session.currentUser.email;
 // let user_name = email.substring(0, email.lastIndexOf("@"));
 
@@ -20,7 +20,6 @@ const App = ({store}) => {
       <Modal />
       <NavbarContainer />
       <GreetingContainer />
-      <ProfileContainer/>
       <Route path='/users/:id' component={ProfileContainer} />
     </div>
   );

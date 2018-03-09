@@ -1,27 +1,30 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import ProfileIndexContainer from 'components/profile/profile_index_container';
+import ProfileEditFormContainer from 'components/profile/profile_edit_form_container';
 
 class Profile extends React.Component {
   constructor(props) {
     super(props);
+    this.handleClick = this.handleClick.bind(this);
   }
   componentDidMount() {
-
     this.props.getUserProducts(1);
   }
 
-  // componentWillReceiveProps(newProps) {
-  //   debugger
-  //   if (newProps.currentUser && (newProps.currentUser.id !== this.props.currentUser.id)) {
-  //     this.props.history.push(`/${newProps.currentUser.id}`);
-  //   }
-  // }
+  handleClick(e) {
+    e.preventDefault();
+    this.props.logout();
+    this.props.history.push('/');
+  }
+
 
   render() {
     return (
       <div>
-        <h1>profile render</h1>
-        <button onClick={this.props.logout}>Log Out</button>
+        <ProfileIndexContainer />
+        <ProfileEditFormContainer />
+        <button onClick={this.handleClick}>Log Out</button>
       </div>
     )
   }

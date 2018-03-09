@@ -13,7 +13,6 @@ const receiveOneUser = user => ({
   user
 });
 
-// make get user thunk action
 
 export const getUsers = () => dispatch => {
   return UserApiUtil.getUsers()
@@ -23,4 +22,12 @@ export const getUsers = () => dispatch => {
 export const getOneUser = id => dispatch => {
   return UserApiUtil.getOneUser(id)
   .then(user => dispatch(receiveOneUser(users)));
+};
+
+export const updateUser = user => dispatch => {
+  debugger
+  return(
+    UserApiUtil.updateUser(user)
+    .then(user => dispatch(receiveOneUser(user)))
+  );
 };

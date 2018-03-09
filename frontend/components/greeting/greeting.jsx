@@ -18,9 +18,9 @@ class Greeting extends React.Component {
           <img className='greeting-user-picture' src='https://cdn.business2community.com/wp-content/uploads/2013/06/Michael-Scott.png' alt='profile picture'></img>
           <div className='greeting-user-info'>
             <h2 className='greeting-user-name'>
-              {this.props.currentUser.email.substring(0, this.props.currentUser.email.lastIndexOf("@"))} ({(this.props.currentUser.transactions)})
+              {this.props.currentUserName} ({this.props.transactions})
             </h2>
-            <p className='greeting-transactions-full'>{this.props.currentUser.transactions} Transactions</p>
+            <p className='greeting-transactions-full'>{this.props.transactions} Transactions</p>
             <br/>
           </div>
         </div>
