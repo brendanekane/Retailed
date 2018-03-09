@@ -20,8 +20,12 @@ class Greeting extends React.Component {
             <h2 className='greeting-user-name'>
               {this.props.currentUserName} ({this.props.transactions})
             </h2>
-            <p className='greeting-transactions-full'>{this.props.transactions} Transactions</p>
-            <br/>
+            <div className='greeting-sub-info'>
+              <p className='greeting-transactions-full'>{this.props.transactions} Transactions</p>
+              <p className='greetin-feedback'>No feedback yet</p>
+              <p className='greeting-location'>{this.props.location}</p>
+              <p className='greeting-dimensions'>{this.props.height}"  {this.props.weight} lbs</p>
+            </div>
           </div>
         </div>
       );

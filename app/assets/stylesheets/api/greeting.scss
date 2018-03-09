@@ -13,7 +13,7 @@
 
 .greeting-user-name{
   display: flex;
-  margin: 13px 0 0 24px;
+  // margin: 13px 0 0 24px;
   font-family: 'Playfair Display', serif;
   font-size: 24px;
   font-weight: 200;
@@ -30,17 +30,15 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 30px;
-  font-family: 'Fira Sans', sans-serif;
   align-items: center;
   flex-wrap: wrap;
   height: 100px;
   justify-content: space-between;
 }
 
-
-.greeting-transactions-full{
+.greeting-sub-info{
   display: flex;
-  margin: 0 0 0 -77px;
   font-size: 13px;
+  font-family: 'Fira Sans', sans-serif;
 
 }

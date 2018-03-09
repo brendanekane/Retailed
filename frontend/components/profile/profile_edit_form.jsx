@@ -43,6 +43,11 @@ class ProfileEditForm extends React.Component {
   render() {
     return (
       <section className='profile-details'>
+        <h2>Edit Your Info</h2>
+        <div className='profile-picture-container'>
+          <img className='profile-edit-picture' src='https://cdn.business2community.com/wp-content/uploads/2013/06/Michael-Scott.png' alt='profile picture'></img>
+          <p>Avatar</p>
+        </div>
         <form className='profile-edit-form' onBlur={this.handleClick}>
           <input type='text' value={this.state.email} onChange={this.update('email')} onClick={e => e.stopPropagation()}></input>
           <select value={this.state.location} onChange={this.update('location')}>
