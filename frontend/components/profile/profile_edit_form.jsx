@@ -61,8 +61,8 @@ class ProfileEditForm extends React.Component {
 
             )
           </select>
-          <input type='text' value={this.state.weight} placeholder='Weight(in inches)' onChange={this.update('weight')}></input>
-          <input type='text' value={this.state.height} placeholder='Height(in pounds)' onChange={this.update('height')}></input>
+          <input type='text' value={this.state.weight} placeholder='Weight(in pounds)' onChange={this.update('weight')}></input>
+          <input type='text' value={this.state.height} placeholder='Height(in inches)' onChange={this.update('height')}></input>
         </form>
       </section>
     )

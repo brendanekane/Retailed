@@ -2,6 +2,7 @@
   display: flex;
   border-bottom: 1px solid lightgrey;
   margin: 30px 50px 0 50px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .greeting-user-picture{
@@ -30,15 +31,57 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 30px;
-  align-items: center;
   flex-wrap: wrap;
   height: 100px;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  margin-left: 20px;
 }
 
 .greeting-sub-info{
   display: flex;
-  font-size: 13px;
-  font-family: 'Fira Sans', sans-serif;
+  font-size: 15px;
+}
 
+.greeting-transactions-full{
+  padding: 5px 10px 5px 0;
+  border-right: 1px solid lightgrey;
+}
+
+.greeting-feedback{
+  padding: 5px 10px 5px 10px;
+  border-right: 1px solid lightgrey;
+}
+
+.greeting-location{
+  padding: 5px 10px 5px 10px;
+  border-right: 1px solid lightgrey;
+}
+
+.greeting-dimensions {
+  padding: 5px 0 5px 10px;
+};
+
+.greeting-edit-link{
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  border: 1px solid lightgrey;
+  padding: 13px;
+  display: flex;
+  margin-bottom: 115px;
+  -webkit-transition: color 1s;
+  -moz-transition:    color 1s;
+  -ms-transition:     color 1s;
+  -o-transition:      color 1s;
+  transition:         color 1s;
+  -webkit-transition: border 1s;
+  -moz-transition:    border 1s;
+  -ms-transition:     border 1s;
+  -o-transition:      border 1s;
+  transition:         border 1s;
+}
+
+.greeting-edit-link:hover{
+  color: lightgrey;
+  border: 1px solid grey;
 }

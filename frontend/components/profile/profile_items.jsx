@@ -17,9 +17,9 @@ const WithoutItems = () => {
 
 const WithItems = (props) => {
   return(
-    <ul>
+    <ul className='user-product-items'>
       {props.currentUser.product_ids.map(product =>
-        <li className={`user-product-${product.id}`}>
+        <li className={`user-product-item-${product.id}`}>
           {product.clothing_type}
           <br/>
           {product.designer}
