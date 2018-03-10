@@ -7,10 +7,10 @@ import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = ({ session, entities }, ownProps) => {
   return ({
-  viewedUser: ownProps.match.params.id,
-  currentUser: session.currentUser,
-  users: entities.users
-});
+    viewedUser: ownProps.match.params.id,
+    currentUser: session.currentUser,
+    users: entities.users
+  });
 };
 
 const mapDispatchToProps = dispatch => ({

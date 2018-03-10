@@ -10,7 +10,7 @@ class Profile extends React.Component {
     super(props);
   }
   componentDidMount() {
-    this.props.getUserProducts(1);
+    this.props.getUserProducts(this.props.currentUser.id);
   }
 
 

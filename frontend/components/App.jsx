@@ -7,6 +7,7 @@ import { AuthRoute } from 'util/route_util';
 import NavbarContainer from 'components/navbar/navbar_container';
 import Modal from 'components/modal';
 import ProfileContainer from 'components/profile/profile_container';
+import HomepageContainer from 'components/homepage/homepage_container';
 
 // let email = store.getState().session.currentUser.email;
 // let user_name = email.substring(0, email.lastIndexOf("@"));
@@ -19,9 +20,9 @@ const App = ({store}) => {
     <div className="app-hook">
       <Modal />
       <NavbarContainer />
-      <GreetingContainer />
+      <Route path='/users' component={GreetingContainer} />
+      <Route exact path='/' component={HomepageContainer}/>
       <Route path='/users/:id' component={ProfileContainer} />
-
     </div>
   );
 };

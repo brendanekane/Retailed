@@ -5,7 +5,7 @@ const NavLoginLinks = (props) => {
   return (
     <div className='nav-bar'>
       <div className='nav-search-bar'>search bar</div>
-      <h2>RETAILED</h2>
+      <Link to='/' className='navbar-logo'>RETAILED</Link>
       <nav className='login-signup'>
         <p className="loginLink" onClick={() => props.openModal('login')}>LOGIN</p>
         <p className="signupLink" onClick={() => props.openModal('signup')}>SIGNUP</p>
@@ -21,7 +21,7 @@ const NavProfileLink = ({currentUser}) => {
   return(
     <div className='nav-bar'>
       <div className='nav-search-bar'>search bar</div>
-      <h1>RETAILED</h1>
+      <Link to='/' className='navbar-logo'>RETAILED</Link>
       <nav className='nav-profile-link'>
         <Link to={`/users/${currentUser.id}`}>
           <img className='nav-profile-img' src="https://cdn.business2community.com/wp-content/uploads/2013/06/Michael-Scott.png"></img>
