@@ -10,6 +10,10 @@ class Greeting extends React.Component {
     this.props.currentUser;
   }
 
+  componentWillReceiveProps(newProps) {
+    // this.setState({currentUser {}})
+  }
+
   render() {
 
     if (this.props.currentUser) {

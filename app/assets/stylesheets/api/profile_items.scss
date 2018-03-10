@@ -1,0 +1,22 @@
+.profile-items-stock-img{
+  width: 450px;
+}
+
+.items-container{
+  display: flex;
+  align-items: center;
+}
+
+.itemless-info-container{
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.items-total {
+  margin-bottom: 24px
+}
+
+.profile-items-sell-link{
+  line-height: 2;
+}
