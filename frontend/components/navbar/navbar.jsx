@@ -28,11 +28,11 @@ const NavProfileLink = ({currentUser}) => {
         </Link>
         <div className='profile-dropdown'>
           <ul className='profile-dropdown-content'>
-            <li><p>MESSAGES</p></li>
-            <li><p>MY RETAILS</p></li>
-            <li><p>MY ITEMS</p></li>
-            <li><p>TRANSACTIONS</p></li>
-            <li><p>SETTINGS</p></li>
+            <Link to='/users/messages' className='profile-dropdwon-messages'>MESSAGES</Link>
+            <Link to='users/retails'>MY RETAILS</Link>
+            <Link to='/users/myitems'>MY ITEMS</Link>
+            <Link to='/users/transactions'>TRANSACTIONS</Link>
+            <Link to='/users/settings'>SETTINGS</Link>
           </ul>
         </div>
       </nav>

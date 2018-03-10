@@ -58,13 +58,14 @@
   display: block;
 }
 
-.profile-dropdown-content > li {
-  // border-top: 1px solid #ccc;
+.profile-dropdown-content > a {
   color: #878787;
   font-weight: 700;
+  text-decoration: none;
 }
 
-.profile-dropdown-content > li:hover {
+
+.profile-dropdown-content > a:hover {
   color: #000;
 }
 
