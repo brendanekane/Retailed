@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 const NavLoginLinks = (props) => {
   return (
     <div className='nav-bar'>
-      <div>search bar</div>
+      <div className='nav-search-bar'>search bar</div>
       <h2>RETAILED</h2>
       <nav className='login-signup'>
         <p className="loginLink" onClick={() => props.openModal('login')}>LOGIN</p>
@@ -20,7 +20,7 @@ const NavProfileLink = ({currentUser}) => {
   // let user_name = email ? email.substring(0, email.lastIndexOf("@")) : ""
   return(
     <div className='nav-bar'>
-      <div>search bar</div>
+      <div className='nav-search-bar'>search bar</div>
       <h1>RETAILED</h1>
       <nav className='nav-profile-link'>
         <Link to={`/users/${currentUser.id}`}>
@@ -28,11 +28,11 @@ const NavProfileLink = ({currentUser}) => {
         </Link>
         <div className='profile-dropdown'>
           <ul className='profile-dropdown-content'>
-            <li><p>Messages</p></li>
-            <li><p>My Retails</p></li>
-            <li><p>My Items</p></li>
-            <li><p>Transactions</p></li>
-            <li><p>Settings</p></li>
+            <li><p>MESSAGES</p></li>
+            <li><p>MY RETAILS</p></li>
+            <li><p>MY ITEMS</p></li>
+            <li><p>TRANSACTIONS</p></li>
+            <li><p>SETTINGS</p></li>
           </ul>
         </div>
       </nav>

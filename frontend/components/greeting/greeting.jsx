@@ -11,7 +11,8 @@ class Greeting extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    // this.setState({currentUser {}})
+    // debugger
+    // this.setState(this.props.updateUser(newProps.currentUser))
   }
 
   render() {
