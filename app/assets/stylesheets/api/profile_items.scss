@@ -20,3 +20,37 @@
 .profile-items-sell-link{
   line-height: 2;
 }
+
+.user-product-items{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 45px;
+  justify-content: space-between;
+}
+
+li[class*='user-product-item-']{
+  font-size: 20px;
+  padding: 0 20px 0 20px;
+  line-height: .7;
+  font-size: 16px;
+}
+
+li[class*='user-product-item-'] > img{
+  height: 275px;
+  width: 205px;
+
+}
+
+.user-product-created_at{
+  font-size: 11px;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 10px;
+}
+
+.user-product-designer{
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.user-product-name{
+  font-size: 13px;
+}

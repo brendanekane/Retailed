@@ -22,15 +22,17 @@ const WithItems = (props) => {
     <ul className='user-product-items'>
       {props.currentUser.product_ids.map(product =>
         <li className={`user-product-item-${product.id}`}>
-          {product.clothing_type}
+          <img src='https://http2.mlstatic.com/D_Q_NP_701774-MLM26033353605_092017-Q.jpg'></img>
           <br/>
-          {product.designer}
+          <p className='user-product-created_at'>{product.created_at}</p>
           <br/>
-          {product.name}
+          <p className='user-product-designer'>{product.designer}</p>
           <br/>
-          {product.price}
+          <p className='user-product-size'>{product.size}</p>
           <br/>
-          {product.size}
+          <p className='user-product-name'>{product.name}</p>
+          <br/>
+          <p className='user-product-price'>${product.price}</p>
           <br/>
           <br/>
         </li>
