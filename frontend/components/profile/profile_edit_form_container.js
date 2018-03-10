@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { updateUser } from 'actions/user_actions';
 import ProfileEditForm from 'components/profile/profile_edit_form';
+import { logout } from 'actions/session_actions';
 
 const mapStateToProps = ({ errors, session }) => {
   return ({
@@ -12,7 +13,8 @@ const mapStateToProps = ({ errors, session }) => {
 
 const mapDispatchToProps = dispatch => {
   return ({
-    updateUser: user => dispatch(updateUser(user))
+    updateUser: user => dispatch(updateUser(user)),
+    logout: () => dispatch(logout())
   });
 };
 

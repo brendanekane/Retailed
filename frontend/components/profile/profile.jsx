@@ -8,16 +8,9 @@ import ProfileMessagesContainer from 'components/profile/profile_messages_contai
 class Profile extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
   }
   componentDidMount() {
     this.props.getUserProducts(1);
-  }
-
-  handleClick(e) {
-    e.preventDefault();
-    this.props.logout();
-    this.props.history.push('/');
   }
 
 
@@ -32,7 +25,6 @@ class Profile extends React.Component {
             <Route path='/users/messages' component={ ProfileMessagesContainer } />
           </div>
         </div>
-        <button onClick={this.handleClick}>Log Out</button>
       </div>
     )
   }

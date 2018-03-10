@@ -12,6 +12,7 @@ class ProfileEditForm extends React.Component {
       location: this.props.currentUser.location === null ? "" : this.props.currentUser.location
 
     };
+    this.handleUpdate = this.handleUpdate.bind(this)
     this.handleClick = this.handleClick.bind(this)
   }
 
@@ -21,9 +22,15 @@ class ProfileEditForm extends React.Component {
     return e => this.setState({ [property]: e.target.value});
   }
 
-  handleClick(e) {
+  handleUpdate(e) {
     e.preventDefault();
     this.props.updateUser(this.state);
+  }
+
+  handleClick(e) {
+    e.preventDefault();
+    this.props.logout();
+    this.props.history.push('/');
   }
 
   // errors() {
@@ -43,14 +50,14 @@ class ProfileEditForm extends React.Component {
   render() {
     return (
       <section className='profile-details'>
-        <h2>Edit Your Info</h2>
         <div className='profile-picture-container'>
+          <p className= 'profile-picture-container-header'>EDIT YOUR INFO</p>
           <img className='profile-edit-picture' src='https://cdn.business2community.com/wp-content/uploads/2013/06/Michael-Scott.png' alt='profile picture'></img>
-          <p>Avatar</p>
+          <p className= 'profile-picture-container-footer'>AVATAR</p>
         </div>
-        <form className='profile-edit-form' onBlur={this.handleClick}>
-          <input type='text' value={this.state.email} onChange={this.update('email')} onClick={e => e.stopPropagation()}></input>
-          <select value={this.state.location} onChange={this.update('location')}>
+        <form className='profile-edit-form' onBlur={this.handleUpdate}>
+          <input className= 'profile-edit-email' type='text' value={this.state.email} onChange={this.update('email')} onClick={e => e.stopPropagation()}></input>
+          <select className= 'profile-edit-location' value={this.state.location} onChange={this.update('location')}>
             return (
             <option value='United States' key='1'>United States</option>
             <option value='Canada' key='2'>Canada</option>
@@ -61,9 +68,10 @@ class ProfileEditForm extends React.Component {
 
             )
           </select>
-          <input type='text' value={this.state.weight} placeholder='Weight(in pounds)' onChange={this.update('weight')}></input>
-          <input type='text' value={this.state.height} placeholder='Height(in inches)' onChange={this.update('height')}></input>
+          <input className='profile-edit-weight' type='text' value={this.state.weight} placeholder='Weight(in pounds)' onChange={this.update('weight')}></input>
+          <input className='profile-edit-height' type='text' value={this.state.height} placeholder='Height(in inches)' onChange={this.update('height')}></input>
         </form>
+        <button className='profile-settings-logout' onClick={this.handleClick}>SIGN OUT</button>
       </section>
     )
 

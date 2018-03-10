@@ -1,0 +1,89 @@
+.profile-edit-picture{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 35px;
+}
+
+.profile-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 720px;
+}
+
+.profile-edit-form{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.profile-edit-location{
+  border: 5px solid white;
+  background: #f7f7f7;
+  height: 52px;
+  width: 353px;
+  font-size: 14px;
+  margin: 0 0 5px 5px;
+  cursor: pointer;
+}
+
+.profile-edit-email{
+  border: 5px solid white;
+  background: #f7f7f7;
+  height: 40px;
+  width: 340px;
+  font-size: 14px;
+  margin: 0px 5px 5px 0px;
+  cursor: pointer;
+}
+
+.profile-edit-height{
+  border: 5px solid white;
+  background: #f7f7f7;
+  height: 40px;
+  width: 340px;
+  font-size: 14px;
+  margin: 5px 0 0 5px;
+  cursor: pointer;
+}
+
+.profile-edit-weight{
+  border: 5px solid white;
+  background: #f7f7f7;
+  height: 40px;
+  width: 340px;
+  font-size: 14px;
+  margin: 5px 5px 0 0;
+  cursor: pointer;
+}
+
+.profile-picture-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.profile-picture-container-header{
+  font-size: 18px;
+  letter-spacing: 2px;
+  padding-bottom: 25px;
+}
+
+.profile-picture-container-footer{
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.profile-settings-logout{
+  background-color: #c1272d;
+  color: #fff;
+  border: 1px solid #c1272d;
+  width: 100%;
+  width: 98%;
+  margin-right: 7px;
+  height: 60px;
+  font-size: 20px;
+  margin-top: 100px;
+}
