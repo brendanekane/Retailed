@@ -8,11 +8,13 @@ class Greeting extends React.Component {
   }
   componentDidMount() {
     this.props.currentUser;
+    // this.props.updateUser(this.props.currentUser)
   }
 
   componentWillReceiveProps(newProps) {
     // debugger
     // this.setState(this.props.updateUser(newProps.currentUser))
+    this.props.currentUser
   }
 
   render() {
