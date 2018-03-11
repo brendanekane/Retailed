@@ -26,11 +26,12 @@ export const getProduct = id => {
 };
 
 export const createProduct = product => {
+  debugger
   return (
     $.ajax({
       method: 'POST',
       url: 'api/products',
-      data: { product }
+      data: { product: product }
     })
   );
 };

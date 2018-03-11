@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SellForm from 'components/sell/sell_form';
-import { createProduct } from 'actions/user_actions';
+import { createProduct } from 'actions/product_actions';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = ({ session, errors}) => {
@@ -20,4 +20,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SellForm)
+)(SellForm);

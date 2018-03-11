@@ -1,4 +1,5 @@
 export const login = user => {
+  debugger
   return (
     $.ajax({
       url: 'api/session',

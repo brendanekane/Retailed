@@ -24,11 +24,13 @@ export const getProduct = id => dispatch => (
   .then(product => dispatch(receiveProduct(product)))
 );
 
-export const createProduct = product => dispatch => (
-  ProductApiUtil.createProduct(product)
-  .then(product => dispatch(receiveProduct(product))),
-  err => (dispatch(receiveProductErrors(err.responseJSON)))
-);
+export const createProduct = product => dispatch => {
+  return (
+    ProductApiUtil.createProduct(product)
+    .then(product => dispatch(receiveProduct(product))),
+    err => (dispatch(receiveProductErrors(err.responseJSON)))
+  );
+};
 
 export const updateProduct = product => dispatch => (
   ProductApiUtil.updateProduct(product)

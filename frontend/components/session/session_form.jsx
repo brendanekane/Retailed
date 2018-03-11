@@ -29,9 +29,7 @@ class SessionForm extends React.Component {
       // debugger
       this.props.closeModal();
       this.props.history.push(`/users/${data.currentUser.id}`);
-    }
-
-    );
+    });
 
   }
 
