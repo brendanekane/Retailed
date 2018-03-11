@@ -6,6 +6,8 @@ Rails.application.routes.draw do
         resources :products, only: [:index]
       end
       resource :session, only: [:create, :destroy]
-      resources :products, only: [:create, :show, :index, :update, :destroy]
+      resources :products, only: [:create, :show, :index, :update, :destroy] do
+        resources :product_photos, only: [:create, :show]
+      end
     end
 end
