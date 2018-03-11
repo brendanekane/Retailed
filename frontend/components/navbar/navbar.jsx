@@ -26,7 +26,7 @@ const NavProfileLink = ({currentUser}) => {
         <Link to='/sell' className='nav-sell-link'>SELL</Link>
         <nav className='nav-profile-link'>
           <Link to={`/users/${currentUser.id}`}>
-            <img className='nav-profile-img' src="https://cdn.business2community.com/wp-content/uploads/2013/06/Michael-Scott.png"></img>
+            <img className='nav-profile-img' src={currentUser.image_url}></img>
           </Link>
           <div className='profile-dropdown'>
             <ul className='profile-dropdown-content'>

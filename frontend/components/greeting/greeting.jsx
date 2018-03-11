@@ -22,7 +22,7 @@ class Greeting extends React.Component {
     if (this.props.currentUser) {
       return (
         <div className='greeting-container'>
-          <img className='greeting-user-picture' src='https://cdn.business2community.com/wp-content/uploads/2013/06/Michael-Scott.png' alt='profile picture'></img>
+          <img className='greeting-user-picture' src={this.props.currentUser.image_url} alt='profile picture'></img>
           <div className='greeting-user-info'>
             <h2 className='greeting-user-name'>
               {this.props.currentUserName} ({this.props.transactions})

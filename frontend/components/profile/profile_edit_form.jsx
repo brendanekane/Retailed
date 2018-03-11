@@ -52,7 +52,7 @@ class ProfileEditForm extends React.Component {
       <section className='profile-details'>
         <div className='profile-picture-container'>
           <p className= 'profile-picture-container-header'>EDIT YOUR INFO</p>
-          <img className='profile-edit-picture' src='https://cdn.business2community.com/wp-content/uploads/2013/06/Michael-Scott.png' alt='profile picture'></img>
+          <img className='profile-edit-picture' src={this.props.currentUser.image_url} alt='profile picture'></img>
           <p className= 'profile-picture-container-footer'>AVATAR</p>
         </div>
         <form className='profile-edit-form' onBlur={this.handleUpdate}>

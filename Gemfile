@@ -32,7 +32,8 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 gem 'jquery-rails'
 gem "paperclip", "~> 5.2.1"
-gem 'aws-sdk-s3'
+gem 'aws-sdk', '< 3.0'
+gem 'figaro'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
