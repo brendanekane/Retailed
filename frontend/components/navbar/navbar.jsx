@@ -22,20 +22,23 @@ const NavProfileLink = ({currentUser}) => {
     <div className='nav-bar'>
       <div className='nav-search-bar'>search bar</div>
       <Link to='/' className='navbar-logo'>RETAILED</Link>
-      <nav className='nav-profile-link'>
-        <Link to={`/users/${currentUser.id}`}>
-          <img className='nav-profile-img' src="https://cdn.business2community.com/wp-content/uploads/2013/06/Michael-Scott.png"></img>
-        </Link>
-        <div className='profile-dropdown'>
-          <ul className='profile-dropdown-content'>
-            <Link to='/users/messages' className='profile-dropdwon-messages'>MESSAGES</Link>
-            <Link to='users/retails'>MY RETAILS</Link>
-            <Link to='/users/myitems'>MY ITEMS</Link>
-            <Link to='/users/transactions'>TRANSACTIONS</Link>
-            <Link to='/users/settings'>SETTINGS</Link>
-          </ul>
-        </div>
-      </nav>
+      <div className='nav-right'>
+        <Link to='/sell' className='nav-sell-link'>SELL</Link>
+        <nav className='nav-profile-link'>
+          <Link to={`/users/${currentUser.id}`}>
+            <img className='nav-profile-img' src="https://cdn.business2community.com/wp-content/uploads/2013/06/Michael-Scott.png"></img>
+          </Link>
+          <div className='profile-dropdown'>
+            <ul className='profile-dropdown-content'>
+              <Link to='/users/messages' className='profile-dropdwon-messages'>MESSAGES</Link>
+              <Link to='users/retails'>MY RETAILS</Link>
+              <Link to='/users/myitems'>MY ITEMS</Link>
+              <Link to='/users/transactions'>TRANSACTIONS</Link>
+              <Link to='/users/settings'>SETTINGS</Link>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </div>
   )
 };

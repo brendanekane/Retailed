@@ -39,7 +39,7 @@
   height: 32px;
   width: 32px;
   border-radius: 50%;
-  margin: 16px 38px 0 0;
+  margin: 0px 38px 0 30px;
 }
 
 .nav-profile-link:hover .profile-dropdown{
@@ -84,4 +84,33 @@
   padding: 10px 12px 10px 12px;
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
+}
+
+.nav-right{
+  display: flex;
+  align-items: center;
+}
+
+.nav-sell-link{
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  border: 1px solid lightgrey;
+  padding: 7px;
+  display: flex;
+  -webkit-transition: color 1s;
+  -moz-transition:    color 1s;
+  -ms-transition:     color 1s;
+  -o-transition:      color 1s;
+  transition:         color 1s;
+  -webkit-transition: border 1s;
+  -moz-transition:    border 1s;
+  -ms-transition:     border 1s;
+  -o-transition:      border 1s;
+  transition:         border 1s;
+}
+
+.nav-sell-link:hover{
+  color: #cfcfd1;
+  border: 1px solid grey;
 }

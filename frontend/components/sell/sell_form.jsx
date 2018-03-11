@@ -40,6 +40,7 @@ class SellForm extends React.Component {
   render() {
     return (
       <div className='sell-form-wrapper'>
+        <h2 className='sell-form-header-text'>Turn Your Closet Into Cash</h2>
         <img className='sell-form-header-img' src='https://az616578.vo.msecnd.net/files/2016/07/23/636048991026298150-1917001641_1800-1.jpg'></img>
         <form>
             <select className='clothing-type' onChange={this.update('clothing_type')}>
