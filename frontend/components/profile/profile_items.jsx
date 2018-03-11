@@ -36,9 +36,8 @@ const WithItems = (props) => {
           <br/>
           <br/>
         </li>
-      )
-    }
-  </ul>
+      )}
+    </ul>
   )
 }
 

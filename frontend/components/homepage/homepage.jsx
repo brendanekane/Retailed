@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import HomepageProductsContainer from 'components/homepage/homepage_products_container';
 
 class Homepage extends React.Component{
   constructor(props) {
@@ -13,7 +14,9 @@ class Homepage extends React.Component{
 
   render() {
     return(
-      <div>homepage</div>
+      <div>homepage
+        <HomepageProductsContainer />
+      </div>
     )
   }
 }

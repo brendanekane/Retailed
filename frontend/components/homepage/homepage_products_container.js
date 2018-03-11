@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
-import Homepage from 'components/homepage/homepage';
+import HomepageProducts from 'components/homepage/homepage_products';
 import { getProducts } from 'actions/product_actions';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = ({ session, entities }) => {
   return({
     currentUser: session.currentUser,
-    users: entities.users,
-    products: entities.products
+    users: Object.values(entities.users),
+    products: Object.values(entities.products)
   });
 };
 
@@ -17,7 +17,7 @@ const mapDispatchToProps = dispatch => {
   });
 };
 
-export default withRouter(connect(
+export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Homepage));
+)(HomepageProducts);
