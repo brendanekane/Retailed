@@ -17,7 +17,7 @@ class Api::ProductPhotosController < ApplicationController
   private
 
   def product_photo_params
-    params.require(:product_photo).permit(:product_id)
+    params.require(:product_photo).permit(:product_id, :image)
   end
 
 end
