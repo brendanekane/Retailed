@@ -7,7 +7,8 @@ const mapStateToProps = ({ session, entities }) => {
   return({
     currentUser: session.currentUser,
     users: Object.values(entities.users),
-    products: Object.values(entities.products)
+    products: Object.values(entities.products),
+    photos: entities.photos
   });
 };
 
