@@ -1,6 +1,6 @@
 # json.id product.id
 # json.owner_id product.user_id
-json.extract! product, :id, :user_id, :created_at, :designer, :size, :name, :price
+json.extract! product, :id, :user_id, :created_at, :designer, :size, :name, :price, :description
 json.photo_ids do
   json.array! product.product_photos
 end

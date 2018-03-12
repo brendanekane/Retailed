@@ -14,10 +14,10 @@ const receiveOneUser = user => ({
   user
 });
 
-const updateCurrentUser = user => {
+const updateCurrentUser = currentUser => {
   return ({
     type: RECEIVE_CURRENT_USER,
-    user
+    currentUser
   });
 };
 
@@ -34,6 +34,8 @@ export const getOneUser = id => dispatch => {
 export const updateUser = user => dispatch => {
   return(
     UserApiUtil.updateUser(user)
-    .then(user => dispatch(updateCurrentUser(user)))
+    .then(user => {
+      return dispatch(updateCurrentUser(user));
+    })
   );
 };

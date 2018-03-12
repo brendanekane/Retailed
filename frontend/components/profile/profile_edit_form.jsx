@@ -37,7 +37,13 @@ class ProfileEditForm extends React.Component {
 
   handleUpdate(e) {
     e.preventDefault();
-    this.props.updateUser(this.state);
+    const formData = new FormData();
+    formData.append("user[id]", this.state.id)
+    formData.append("user[email]", this.state.email)
+    formData.append("user[height]", this.state.height)
+    formData.append("user[weight]", this.state.weight)
+    formData.append("user[location]", this.state.location)
+    this.props.updateUser(formData);
   }
 
   handleClick(e) {

@@ -11,14 +11,13 @@ class Greeting extends React.Component {
     // this.props.updateUser(this.props.currentUser)
   }
 
-  componentWillReceiveProps(newProps) {
-    // debugger
-    // this.setState(this.props.updateUser(newProps.currentUser))
-    this.props.currentUser
-  }
+  // componentWillReceiveProps(newProps) {
+  //   // debugger
+  //   this.setState(this.props.updateUser(newProps.currentUser))
+  //   this.props.currentUser
+  // }
 
   render() {
-
     if (this.props.currentUser) {
       return (
         <div className='greeting-container'>
