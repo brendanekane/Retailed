@@ -42,7 +42,7 @@ const WithoutItems = () => {
 //       )}
 //     </ul>
 //   )
-// }
+
 
 const WithItems = (props) => {
   const productsArr = Object.values(props.products)
