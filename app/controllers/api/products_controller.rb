@@ -15,9 +15,17 @@ class Api::ProductsController < ApplicationController
 
   def index
     if params[:user_id]
-      @products = Product.where(user_id: params[:user_id])
+      @products = Product.where(user_id: params[:user_id]).includes(:product_photos)
+      @photos = []
+      @products.each do |product|
+        @photos.concat(product.product_photos)
+      end
     else
-      @products = Product.all
+      @products = Product.all.includes(:product_photos)
+      @photos = []
+      @products.each do |product|
+        @photos.concat(product.product_photos)
+      end
     end
   end
 
@@ -37,6 +45,6 @@ class Api::ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(:user_id, :price, :designer, :name, :clothing_type, :size, :clothing_category, :description, product_photo_attributes: [:product_id, :image])
+    params.require(:product).permit(:user_id, :price, :designer, :name, :clothing_type, :size, :clothing_category, :description, product_photos_attributes: [:image])
   end
 end

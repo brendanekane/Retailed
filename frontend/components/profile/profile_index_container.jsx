@@ -12,7 +12,7 @@ const mapStateToProps = ({session, entities}) => {
 
 const mapDispatchToProps = dispatch => {
   return({
-      getUserProducts: () => dispatch(getUserProducts()),
+      getUserProducts: (user_id) => dispatch(getUserProducts(user_id)),
   });
 };
 

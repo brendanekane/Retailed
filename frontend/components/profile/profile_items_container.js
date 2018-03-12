@@ -3,10 +3,11 @@ import { connect } from 'react-redux';
 import { getUserProducts } from 'actions/product_actions';
 import ProfileItems from 'components/profile/profile_items';
 
-const mapStateToProps = ({ session }) => {
+const mapStateToProps = ({ session, entities }) => {
   return({
     currentUser: session.currentUser,
-    products: session.currentUser.product_ids
+    products: entities.products,
+    photos: entities.photos
   });
 };
 

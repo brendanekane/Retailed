@@ -1,5 +1,5 @@
 class ProductPhoto < ApplicationRecord
-  validates :product_id, presence: true
+  validates :product, presence: true
 
   belongs_to :product
 

@@ -30,7 +30,10 @@ export const createProduct = product => {
     $.ajax({
       method: 'POST',
       url: 'api/products',
-      data: { product: product }
+      dataType: 'json',
+      contentType: false,
+      processData: false,
+      data: product
     })
   );
 };

@@ -1,9 +1,7 @@
 # json.id product.id
 # json.owner_id product.user_id
 json.extract! product, :id, :user_id, :created_at, :designer, :size, :name, :price, :description
-json.photo_ids do
-  json.array! product.product_photos
-end
+json.photo_ids product.product_photos.pluck(:id)
 # json.created_at product.created_at
 # json.designer product.designer
 # json.size product.size

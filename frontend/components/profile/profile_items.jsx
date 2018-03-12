@@ -17,25 +17,56 @@ const WithoutItems = () => {
 };
 
 
+// const WithItems = (props) => {
+//   // <img src={product.}></img>
+//   debugger
+//   return(
+//     <ul className='user-product-items'>
+//       {props.currentUser.products.map(product => {
+//         return (
+//           <li className={`user-product-item-${product.id}`}>
+//             <br/>
+//             <p className='user-product-created_at'>{product.created_at}</p>
+//             <br/>
+//             <p className='user-product-designer'>{product.designer}</p>
+//             <br/>
+//             <p className='user-product-size'>{product.size}</p>
+//             <br/>
+//             <p className='user-product-name'>{product.name}</p>
+//             <br/>
+//             <p className='user-product-price'>${product.price}</p>
+//             <br/>
+//             <br/>
+//           </li>
+//         )}
+//       )}
+//     </ul>
+//   )
+// }
+
 const WithItems = (props) => {
+  const productsArr = Object.values(props.products)
   return(
     <ul className='user-product-items'>
-      {props.currentUser.product_ids.map(product =>
-        <li className={`user-product-item-${product.id}`}>
-          <img src='https://http2.mlstatic.com/D_Q_NP_701774-MLM26033353605_092017-Q.jpg'></img>
-          <br/>
-          <p className='user-product-created_at'>{product.created_at}</p>
-          <br/>
-          <p className='user-product-designer'>{product.designer}</p>
-          <br/>
-          <p className='user-product-size'>{product.size}</p>
-          <br/>
-          <p className='user-product-name'>{product.name}</p>
-          <br/>
-          <p className='user-product-price'>${product.price}</p>
-          <br/>
-          <br/>
-        </li>
+      {productsArr.map(product => {
+        const photos = props.photos
+        return (
+          <li className={`user-product-item-${product.id}`}>
+            <img src={photos[product.photo_ids[0]].image_url}></img>
+            <br/>
+            <p className='user-product-created_at'>{product.created_at}</p>
+            <br/>
+            <p className='user-product-designer'>{product.designer}</p>
+            <br/>
+            <p className='user-product-size'>{product.size}</p>
+            <br/>
+            <p className='user-product-name'>{product.name}</p>
+            <br/>
+            <p className='user-product-price'>${product.price}</p>
+            <br/>
+            <br/>
+          </li>
+        )}
       )}
     </ul>
   )
@@ -52,7 +83,7 @@ class ProfileItems extends React.Component {
 
   render() {
     return(
-      this.props.products.length !== 0 ? <WithItems currentUser={this.props.currentUser} products={this.props.products}/> : <WithoutItems />
+      this.props.products.length !== 0 ? <WithItems currentUser={this.props.currentUser} products={this.props.products} photos={this.props.photos}/> : <WithoutItems />
     )
   }
 }

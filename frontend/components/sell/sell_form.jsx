@@ -4,7 +4,21 @@ import { withRouter } from 'react-router-dom';
 class SellForm extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      user_id: this.props.currentUser.id,
+      price: "",
+      designer: "",
+      name: "",
+      clothing_type: "",
+      size: "",
+      clothing_category: "",
+      description: "",
+      photos: [{imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null},
+        {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null},
+        {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null}]
+    };
     this.handleCreate = this.handleCreate.bind(this);
+    this.updateFile = this.updateFile.bind(this);
   }
 
   update(field) {
@@ -20,9 +34,38 @@ class SellForm extends React.Component {
     });
   }
 
+  updateFile(idx) {
+    return (e) => {
+      const fileReader = new FileReader();
+      const file = e.currentTarget.files[0];
+      fileReader.onloadend = () => {
+        const photosCopy = this.state.photos.slice(0);
+        photosCopy[idx] = {imageFile: file, imageUrl: fileReader.result};
+        this.setState({ photos: photosCopy });
+      };
+      if (file) {
+        fileReader.readAsDataURL(file);
+      }
+    };
+  }
+
   handleCreate(e) {
     e.preventDefault();
-    this.props.createProduct(this.state);
+    const formData = new FormData();
+    formData.append("product[user_id]", this.state.user_id);
+    formData.append("product[price]", this.state.price);
+    formData.append("product[designer]", this.state.designer);
+    formData.append("product[name]", this.state.name);
+    formData.append("product[clothing_type]", this.state.clothing_type);
+    formData.append("product[size]", this.state.size);
+    formData.append("product[clothing_category]", this.state.clothing_category);
+    formData.append("product[description]", this.state.description);
+    this.state.photos.forEach(photo => {
+      if (photo.imageFile) {
+        formData.append("product[product_photos_attributes][][image]", photo.imageFile)
+      }
+    });
+    this.props.createProduct(formData);
   }
   //
   renderProductErrors() {
@@ -98,6 +141,16 @@ class SellForm extends React.Component {
             <h2>PRICE</h2>
             <input className='clothing-price' type='number' step='.01' onChange={this.updatePrice()} onClick={e => e.stopPropagation()} placeholder='price'></input>
           </div>
+          <input type='file' onChange={this.updateFile(0)}></input>
+          <input type='file' onChange={this.updateFile(1)}></input>
+          <input type='file' onChange={this.updateFile(2)}></input>
+          <input type='file' onChange={this.updateFile(3)}></input>
+          <input type='file' onChange={this.updateFile(4)}></input>
+          <input type='file' onChange={this.updateFile(5)}></input>
+          <input type='file' onChange={this.updateFile(6)}></input>
+          <input type='file' onChange={this.updateFile(7)}></input>
+          <input type='file' onChange={this.updateFile(8)}></input>
+          <img src={this.state.photos[0]}></img>
           <button className='publish-clothing-button' onClick={this.handleCreate}>PUBLISH</button>
       </form>
     )
@@ -168,6 +221,16 @@ class SellForm extends React.Component {
               <h2>PRICE</h2>
               <input className='clothing-price' type='number' step='.01' onChange={this.updatePrice()} onClick={e => e.stopPropagation()} placeholder='price'></input>
             </div>
+            <img src={this.state.photos[0]}></img>
+            <input type='file' onChange={this.updateFile(0)}></input>
+            <input type='file' onChange={this.updateFile(1)}></input>
+            <input type='file' onChange={this.updateFile(2)}></input>
+            <input type='file' onChange={this.updateFile(3)}></input>
+            <input type='file' onChange={this.updateFile(4)}></input>
+            <input type='file' onChange={this.updateFile(5)}></input>
+            <input type='file' onChange={this.updateFile(6)}></input>
+            <input type='file' onChange={this.updateFile(7)}></input>
+            <input type='file' onChange={this.updateFile(8)}></input>
             <button className='publish-clothing-button' onClick={this.handleCreate}>PUBLISH</button>
         </form>
       )
