@@ -32,9 +32,11 @@ export const getOneUser = id => dispatch => {
 };
 
 export const updateUser = user => dispatch => {
+  debugger
   return(
     UserApiUtil.updateUser(user)
     .then(user => {
+      debugger
       return dispatch(updateCurrentUser(user));
     })
   );

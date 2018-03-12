@@ -25,12 +25,10 @@ class ProfileEditForm extends React.Component {
   }
 
   updateFile(e) {
-    const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
+    const file = e.currentTarget.files[0];
     fileReader.onloadend = () => {
-      return(
-        this.setState({ imageFile: file, imageUrl: fileReader.result })
-      )
+        this.setState({ imageFile: file, imageUrl: fileReader.result }, this.handleUpdate);
     };
     if (file) {
       fileReader.readAsDataURL(file);
@@ -38,7 +36,7 @@ class ProfileEditForm extends React.Component {
   }
 
   handleUpdate(e) {
-    e.preventDefault();
+    // e.preventDefault();
     const formData = new FormData();
     formData.append("user[id]", this.state.id);
     formData.append("user[email]", this.state.email);
@@ -74,7 +72,12 @@ class ProfileEditForm extends React.Component {
       <section className='profile-details'>
         <div className='profile-picture-container'>
           <p className= 'profile-picture-container-header'>EDIT YOUR INFO</p>
-          <img className='profile-edit-picture' src={this.props.currentUser.image_url} alt='profile picture'></img>
+          <div className='profile-avatar-container' onBlur={this.handleUpdate}>
+            <label htmlFor='profile-edit-photo-input'>
+              <img className='profile-edit-picture' src={this.props.currentUser.image_url} alt='profile picture'></img>
+            </label>
+            <input id='profile-edit-photo-input' type='file' onChange={this.updateFile}></input>
+          </div>
           <p className= 'profile-picture-container-footer'>AVATAR</p>
         </div>
         <form className='profile-edit-form' onBlur={this.handleUpdate}>
@@ -92,8 +95,6 @@ class ProfileEditForm extends React.Component {
           </select>
           <input className='profile-edit-weight' type='text' value={this.state.weight} placeholder='Weight(in pounds)' onChange={this.update('weight')}></input>
           <input className='profile-edit-height' type='text' value={this.state.height} placeholder='Height(in inches)' onChange={this.update('height')}></input>
-          <input type='file' onChange={this.updateFile}></input>
-          <img src={this.state.image}></img>
         </form>
         <button className='profile-settings-logout' onClick={this.handleClick}>SIGN OUT</button>
       </section>
