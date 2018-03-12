@@ -43,7 +43,9 @@ class ProfileEditForm extends React.Component {
     formData.append("user[height]", this.state.height);
     formData.append("user[weight]", this.state.weight);
     formData.append("user[location]", this.state.location);
-    formData.append("user[avatar]", this.state.imageFile);
+    if (this.state.imageFile){
+      formData.append("user[avatar]", this.state.imageFile);
+    }
     this.props.updateUser(formData);
   }
 
