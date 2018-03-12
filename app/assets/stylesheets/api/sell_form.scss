@@ -1,0 +1,222 @@
+.sell-clothing-form-container{
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.sell-form-header-img{
+  height: 350px;
+  width: 100%;
+}
+
+.sell-form-header{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sell-form-header-text{
+  position: absolute;
+  display: flex;
+  font-family: 'Abhaya Libre', serif;
+  color: white;
+  font-size: 70px;
+  text-shadow: 2px 2px black;
+}
+
+.sell-clothing-form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clothing-main-info{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 70%;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.clothing-main-info * {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.clothing-main-info > select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  border: 1px solid black;
+  background: white;
+  height: 42px;
+  width: 379px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  font-size: 15px;
+  flex-direction: row;
+}
+
+.clothing-main-info > input {
+  border: 1px solid black;
+  background: white;
+  height: 38px;
+  width: 375px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  font-size: 15px;
+  flex-direction: row;
+}
+
+.clothing-main-info > h2{
+  font-size: 20px;
+  margin-right: 703px;
+  margin-bottom: 30px;
+}
+
+.clothing-type{
+  margin: 0 10px 10px 5px;
+}
+
+.clothing-size{
+  margin: 0px 0 10px 10px;
+}
+
+.clothing-designer{
+  margin: 10px 10px 0 5px;
+}
+
+.clothing-name{
+  margin: 10px 0 5px 10px;
+}
+
+.clothing-category-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 70px;
+}
+
+.clothing-category{
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  border: 1px solid black;
+  background: white;
+  height: 42px;
+  width: 379px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  font-size: 15px;
+  flex-direction: row;
+}
+
+.category-descriptions{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 70%;
+}
+
+.category-descriptions div{
+  display: flex;
+  flex-wrap: wrap;
+  width: 39%;
+}
+
+.category-descriptions h2{
+  font-size: 20px;
+  margin-bottom: 20px
+}
+
+.category-descriptions p{
+  color: #565656;
+}
+
+.clothing-category-container h2{
+  font-size: 20px;
+  margin-right: 705px;
+}
+
+.category-label-retails{
+  margin: 0 28px 20px 0;
+}
+
+.category-label-hype{
+  margin: 0 0 20px 28px;
+}
+
+.category-label-sartorial{
+  margin: 20px 28px 0 0;
+}
+
+.category-label-core{
+  margin: 20px 0 0 28px;
+}
+
+.clothing-category{
+  margin: 40px 0 40px 0;
+}
+
+.clothing-description-container{
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: 65%;
+  justify-content: center;
+  padding-top: 70px;
+}
+
+.clothing-description-container h2{
+  font-size: 20px;
+  margin: 0 690px 40px 0;
+}
+
+.clothing-description{
+  width: 800px;
+  height: 140px;
+  font-size: 13px;
+}
+
+.clothing-price-container{
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: 38%;
+  justify-content: center;
+  padding-top: 70px;
+}
+
+.clothing-price-container h2{
+  font-size: 20px;
+  margin: 0 760px 40px 0;
+}
+
+.clothing-price{
+  border: 1px solid black;
+  background: white;
+  height: 38px;
+  width: 375px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  font-size: 15px;
+  flex-direction: row;
+  margin-right: 641px;
+}
+
+.publish-clothing-button{
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  width: 100%;
+  width: 60%;
+  margin-right: 7px;
+  height: 60px;
+  font-size: 20px;
+  margin-top: 100px;
+  cursor: pointer;
+}

@@ -26,7 +26,6 @@ export const getProduct = id => {
 };
 
 export const createProduct = product => {
-  debugger
   return (
     $.ajax({
       method: 'POST',
