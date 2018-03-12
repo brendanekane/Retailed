@@ -28,7 +28,9 @@ class ProfileEditForm extends React.Component {
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
     fileReader.onloadend = () => {
-      this.setState({ imageFile: file, imageUrl: fileReader.result });
+      return(
+        this.setState({ imageFile: file, imageUrl: fileReader.result })
+      )
     };
     if (file) {
       fileReader.readAsDataURL(file);
@@ -38,11 +40,12 @@ class ProfileEditForm extends React.Component {
   handleUpdate(e) {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("user[id]", this.state.id)
-    formData.append("user[email]", this.state.email)
-    formData.append("user[height]", this.state.height)
-    formData.append("user[weight]", this.state.weight)
-    formData.append("user[location]", this.state.location)
+    formData.append("user[id]", this.state.id);
+    formData.append("user[email]", this.state.email);
+    formData.append("user[height]", this.state.height);
+    formData.append("user[weight]", this.state.weight);
+    formData.append("user[location]", this.state.location);
+    formData.append("user[avatar]", this.state.imageFile);
     this.props.updateUser(formData);
   }
 
@@ -89,7 +92,7 @@ class ProfileEditForm extends React.Component {
           </select>
           <input className='profile-edit-weight' type='text' value={this.state.weight} placeholder='Weight(in pounds)' onChange={this.update('weight')}></input>
           <input className='profile-edit-height' type='text' value={this.state.height} placeholder='Height(in inches)' onChange={this.update('height')}></input>
-          <input type='file' ></input>
+          <input type='file' onChange={this.updateFile}></input>
           <img src={this.state.image}></img>
         </form>
         <button className='profile-settings-logout' onClick={this.handleClick}>SIGN OUT</button>

@@ -106,7 +106,7 @@ class SellForm extends React.Component {
   renderProductErrorsForm() {
     if (this.props.errors.length === 0) {
       {return this.sellProductForm()}
-    } else { debugger
+    } else {
       return (
         <form className='sell-clothing-form-container'>
           <div className='sell-clothing-errors'>{this.renderProductErrors()}</div>

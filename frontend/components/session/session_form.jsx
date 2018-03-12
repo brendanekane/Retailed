@@ -26,7 +26,6 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then((data) => {
-      // debugger
       this.props.closeModal();
       this.props.history.push(`/users/${data.currentUser.id}`);
     });
