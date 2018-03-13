@@ -52,27 +52,21 @@ div[class*='homepage-top-product-item-']{
   align-items: flex-end;
 }
 
+.homepage-top-product-item-1{
+  margin: 3px 3px 3px 3px;
+}
+
+.homepage-top-product-item-2{
+  margin: 3px 3px 3px 3px;
+}
+
 .homepage-top-products-details-container{
   position: absolute;
   font-family: 'Abhaya Libre', serif;
-  color: #c1c1c1;
+  color: black;
   text-shadow: 1px 1px black;
 }
 
-// .homepage-top-product-item-0{
-//   border: 2px solid #d8d8d8;
-// }
-//
-// .homepage-top-product-item-1{
-//   border-top: 2px solid #d8d8d8;
-//   border-right: 2px solid #d8d8d8;
-//   border-bottom: 2px solid #d8d8d8;
-// }
-//
-// .homepage-top-product-item-2{
-//   border-right: 2px solid #d8d8d8;
-//   border-bottom: 2px solid #d8d8d8;
-// }
 
 .homepage-top-product-img-0{
   width: 800px;
@@ -82,15 +76,15 @@ div[class*='homepage-top-product-item-']{
 }
 
 .homepage-top-product-img-1{
-  height: 270px;
-  width: 255px;
+  height: 263px;
+  width: 240px;
   opacity: .7;
   z-index: -1;
 }
 
 .homepage-top-product-img-2{
-  height: 270px;
-  width: 255px;
+  height: 263px;
+  width: 240px;
   opacity: .7;
   z-index: -1;
 }
@@ -153,5 +147,15 @@ div[class*='homepage-top-product-item-']{
   letter-spacing: 2px;
   font-size: 20px;
   font-weight: 900;
-  width: 38%;
+  margin-bottom: 20px;
+  width: 32%;
+}
+
+
+.top-product-container{
+  margin-top: 40px;
+}
+
+.top-product-main-container{
+  margin-bottom: 40px;
 }

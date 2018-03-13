@@ -54,7 +54,7 @@ class HomepageTopProducts extends React.Component {
     return(
       <div className='top-product-container'>
         <div className='top-products-header'>
-          <h2>TOP PRODUCTS</h2>
+          <h2>TOP RETAILS</h2>
         </div>
         <div className='top-product-main-container'>
           { topProductsList[0] }
