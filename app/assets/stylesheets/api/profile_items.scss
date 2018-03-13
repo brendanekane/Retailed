@@ -44,7 +44,7 @@ li[class*='user-product-item-'] > img{
 .user-product-created_at{
   font-size: 11px;
   border-bottom: 1px solid lightgrey;
-  padding-bottom: 10px;
+  padding: 5px 0 10px 0;
 }
 
 .user-product-designer{
@@ -53,4 +53,9 @@ li[class*='user-product-item-'] > img{
 }
 .user-product-name{
   font-size: 13px;
+}
+
+.user-product-designersize-container{
+  display: flex;
+  justify-content: space-between;
 }

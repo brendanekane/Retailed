@@ -28,9 +28,10 @@ const WithItems = (props) => {
             <br/>
             <p className='user-product-created_at'>{product.created_at}</p>
             <br/>
-            <p className='user-product-designer'>{product.designer}</p>
-            <br/>
-            <p className='user-product-size'>{product.size}</p>
+            <div className='user-product-designersize-container'>
+              <p className='user-product-designer'>{product.designer}</p>
+              <p className='user-product-size'>{product.size}</p>
+            </div>
             <br/>
             <p className='user-product-name'>{product.name}</p>
             <br/>

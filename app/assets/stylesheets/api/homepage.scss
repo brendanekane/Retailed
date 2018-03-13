@@ -19,7 +19,7 @@ li[class*='homepage-product-item-']{
 .homepage-product-created_at{
   font-size: 11px;
   border-bottom: 1px solid lightgrey;
-  padding-bottom: 10px;
+  padding: 5px 0 10px 0;
 }
 
 .homepage-product-designer{
@@ -33,4 +33,9 @@ li[class*='homepage-product-item-']{
 .homepage-product-price{
   font-size: 14px;
   font-weight: 700;
+}
+
+.homepage-product-designsize-container{
+  display: flex;
+  justify-content: space-between;
 }

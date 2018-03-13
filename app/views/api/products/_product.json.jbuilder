@@ -1,6 +1,7 @@
 # json.id product.id
 # json.owner_id product.user_id
-json.extract! product, :id, :user_id, :created_at, :designer, :size, :name, :price, :description
+json.extract! product, :id, :user_id, :designer, :size, :name, :price, :description
+json.created_at product.created_at.to_formatted_s(:long_ordinal)
 json.photo_ids product.product_photos.pluck(:id)
 # json.created_at product.created_at
 # json.designer product.designer

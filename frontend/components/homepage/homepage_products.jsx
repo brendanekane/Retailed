@@ -24,9 +24,10 @@ class HomepageProducts extends React.Component{
               <br/>
               <p className='homepage-product-created_at'>{product.created_at}</p>
               <br/>
-              <p className='homepage-product-designer'>{product.designer}</p>
-              <br/>
-              <p className='homepage-product-size'>{product.size}</p>
+              <div className= 'homepage-product-designsize-container'>
+                <p className='homepage-product-designer'>{product.designer}</p>
+                <p className='homepage-product-size'>{product.size}</p>
+              </div>
               <br/>
               <p className='homepage-product-name'>{product.name}</p>
               <br/>
