@@ -36,7 +36,7 @@ export const getUsers = () => dispatch => {
 
 export const getOneUser = id => dispatch => {
   return UserApiUtil.getOneUser(id)
-  .then(user => dispatch(receiveOneUser(users)));
+  .then(user => dispatch(receiveOneUser(user)));
 };
 
 export const updateUser = user => dispatch => {

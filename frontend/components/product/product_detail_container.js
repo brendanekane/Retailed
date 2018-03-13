@@ -1,24 +1,25 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import Product from 'components/product/product';
+import ProductDetail from 'components/product/product_detail';
 import { getProduct, getProducts } from 'actions/product_actions';
-import { getOneUser } from 'actions/user_actions';
 
 
 const mapStateToProps = ({session, entities}, ownProps) => {
+  const product = entities.products[ownProps.match.params.productId] || {};
   return ({
-    product: entities.products[ownProps.match.params.productId]
+    product,
+    user: entities.users[product.user_id],
+    photos: entities.photos
   });
 };
 
 const mapDispatchToProps = dispatch => {
   return ({
-    getProducts: () => dispatch(getProducts()),
-    getOneUser: id => dispatch(getOneUser(id))
+    getProducts: () => dispatch(getProducts())
   });
 };
 
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(Product));
+)(ProductDetail));

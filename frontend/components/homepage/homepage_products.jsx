@@ -6,9 +6,6 @@ class HomepageProducts extends React.Component{
     super(props);
   }
 
-  componentDidMount(){
-    this.props.getProducts();
-  }
 
 
 

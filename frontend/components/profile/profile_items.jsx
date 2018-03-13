@@ -18,12 +18,10 @@ const WithoutItems = () => {
 
 const WithItems = (props) => {
   const productsArr =  Object.values(props.products).filter(product =>{
-    debugger
     if (product['user_id'] === props.currentUser.id) {
       return product
     }
   });
-  debugger
   return(
     <ul className='user-product-items'>
       {productsArr.map(product => {
@@ -58,12 +56,11 @@ class ProfileItems extends React.Component {
 
   componentDidMount() {
     this.props.getUserProducts(this.props.currentUser.id)
-    debugger
   }
 
   render() {
     return(
-      this.props.currentUser.products.length !== 0 ? <WithItems currentUser={this.props.currentUser} products={this.props.products} photos={this.props.photos}/> : <WithoutItems />
+      this.props.currentUser.product_ids.length !== 0 ? <WithItems currentUser={this.props.currentUser} products={this.props.products} photos={this.props.photos}/> : <WithoutItems />
     )
   }
 }
