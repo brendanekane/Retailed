@@ -9,9 +9,9 @@ import Modal from 'components/modal';
 import ProfileContainer from 'components/profile/profile_container';
 import HomepageContainer from 'components/homepage/homepage_container';
 import SellFormContainer from 'components/sell/sell_form_container';
+import ProductContainer from 'components/product/product_container';
 
-// let email = store.getState().session.currentUser.email;
-// let user_name = email.substring(0, email.lastIndexOf("@"));
+
 
 const App = ({store}) => {
   let currentUser = (
@@ -21,6 +21,7 @@ const App = ({store}) => {
     <div className="app-hook">
       <Modal />
       <NavbarContainer />
+      <Route path='/products/:productId' component={ProductContainer} />
       <Route path='/users' component={GreetingContainer} />
       <Route exact path='/' component={HomepageContainer}/>
       <Route path='/users/:id' component={ProfileContainer} />

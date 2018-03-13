@@ -39,3 +39,119 @@ li[class*='homepage-product-item-']{
   display: flex;
   justify-content: space-between;
 }
+
+.top-product-main-container{
+  display: flex;
+  justify-content: center;
+}
+
+div[class*='homepage-top-product-item-']{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.homepage-top-products-details-container{
+  position: absolute;
+  font-family: 'Abhaya Libre', serif;
+  color: #c1c1c1;
+  text-shadow: 1px 1px black;
+}
+
+// .homepage-top-product-item-0{
+//   border: 2px solid #d8d8d8;
+// }
+//
+// .homepage-top-product-item-1{
+//   border-top: 2px solid #d8d8d8;
+//   border-right: 2px solid #d8d8d8;
+//   border-bottom: 2px solid #d8d8d8;
+// }
+//
+// .homepage-top-product-item-2{
+//   border-right: 2px solid #d8d8d8;
+//   border-bottom: 2px solid #d8d8d8;
+// }
+
+.homepage-top-product-img-0{
+  width: 800px;
+  height: 535px;
+  opacity: .7;
+  z-index: -1;
+}
+
+.homepage-top-product-img-1{
+  height: 270px;
+  width: 255px;
+  opacity: .7;
+  z-index: -1;
+}
+
+.homepage-top-product-img-2{
+  height: 270px;
+  width: 255px;
+  opacity: .7;
+  z-index: -1;
+}
+
+.homepage-designerprice-container-0{
+  justify-content: space-between;
+  display: flex;
+  align-items: self-end;
+  width: 750px;
+}
+
+.homepage-top-product-designer-0{
+  font-size: 50px;
+  text-shadow: 2px 2px #878787;
+}
+
+.homepage-top-product-price-0{
+  font-size: 50px;
+  text-shadow: 2px 2px #878787;
+}
+
+.homepage-top-product-size-0{
+  font-size: 20px;
+  text-shadow: 2px 2px #878787;
+}
+
+.homepage-top-product-name-0{
+  font-size: 35px;
+  text-shadow: 2px 2px #878787;
+}
+
+.homepage-designerprice-container-1{
+  justify-content: space-between;
+  display: flex;
+  width: 230px;
+}
+
+.homepage-top-product-size-1{
+  justify-content: flex-start;
+  display: flex;
+  width: 230px;
+}
+
+.homepage-designerprice-container-2{
+  justify-content: space-between;
+  display: flex;
+  width: 230px;
+}
+
+.homepage-top-product-size-2{
+  justify-content: flex-start;
+  display: flex;
+  width: 230px;
+}
+
+.top-products-header{
+  display: flex;
+  justify-content: center;
+  font-family: 'Fira Sans', sans-serif;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-weight: 900;
+  width: 38%;
+}

@@ -55,10 +55,13 @@ const receiveAllProducts = products => {
   });
 };
 
-const receiveProduct = product => ({
-  type: RECEIVE_PRODUCT,
-  product
-});
+const receiveProduct = product => {
+  // debugger
+  return ({
+    type: RECEIVE_PRODUCT,
+    product
+  });
+};
 
 const removeProduct = id => ({
   type: REMOVE_PRODUCT,
