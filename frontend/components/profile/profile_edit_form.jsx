@@ -83,7 +83,7 @@ class ProfileEditForm extends React.Component {
           <p className= 'profile-picture-container-footer'>AVATAR</p>
         </div>
         <form className='profile-edit-form' onBlur={this.handleUpdate}>
-          <input className= 'profile-edit-email' type='text' value={this.state.email} onChange={this.update('email')} onClick={e => e.stopPropagation()}></input>
+          <input className= 'profile-edit-email' type='email' value={this.state.email} onChange={this.update('email')} onClick={e => e.stopPropagation()}></input>
           <select className= 'profile-edit-location' value={this.state.location} onChange={this.update('location')}>
             return (
             <option value='United States' key='1'>United States</option>

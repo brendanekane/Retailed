@@ -81,6 +81,7 @@ class SellForm extends React.Component {
   }
 
   sellProductForm() {
+    debugger
     return (
       <form className='sell-clothing-form-container'>
         <div className='clothing-main-info'>
@@ -141,16 +142,20 @@ class SellForm extends React.Component {
             <h2>PRICE</h2>
             <input className='clothing-price' type='number' step='.01' onChange={this.updatePrice()} onClick={e => e.stopPropagation()} placeholder='price'></input>
           </div>
-          <input type='file' onChange={this.updateFile(0)}></input>
-          <input type='file' onChange={this.updateFile(1)}></input>
-          <input type='file' onChange={this.updateFile(2)}></input>
-          <input type='file' onChange={this.updateFile(3)}></input>
-          <input type='file' onChange={this.updateFile(4)}></input>
-          <input type='file' onChange={this.updateFile(5)}></input>
-          <input type='file' onChange={this.updateFile(6)}></input>
-          <input type='file' onChange={this.updateFile(7)}></input>
-          <input type='file' onChange={this.updateFile(8)}></input>
-          <img src={this.state.photos[0]}></img>
+          <div className= 'clothing-photos-container'>
+            <label htmlFor='clothing-main-photo-input'>
+              <img className='clothing-main-photo' src={this.state.photos[0].imageUrl}></img>
+            </label>
+            <input id='clothing-main-photo-input' type='file' onChange={this.updateFile(0)}></input>
+            <input type='file' onChange={this.updateFile(1)}></input>
+            <input type='file' onChange={this.updateFile(2)}></input>
+            <input type='file' onChange={this.updateFile(3)}></input>
+            <input type='file' onChange={this.updateFile(4)}></input>
+            <input type='file' onChange={this.updateFile(5)}></input>
+            <input type='file' onChange={this.updateFile(6)}></input>
+            <input type='file' onChange={this.updateFile(7)}></input>
+            <input type='file' onChange={this.updateFile(8)}></input>
+          </div>
           <button className='publish-clothing-button' onClick={this.handleCreate}>PUBLISH</button>
       </form>
     )
@@ -221,16 +226,20 @@ class SellForm extends React.Component {
               <h2>PRICE</h2>
               <input className='clothing-price' type='number' step='.01' onChange={this.updatePrice()} onClick={e => e.stopPropagation()} placeholder='price'></input>
             </div>
-            <img src={this.state.photos[0]}></img>
-            <input type='file' onChange={this.updateFile(0)}></input>
-            <input type='file' onChange={this.updateFile(1)}></input>
-            <input type='file' onChange={this.updateFile(2)}></input>
-            <input type='file' onChange={this.updateFile(3)}></input>
-            <input type='file' onChange={this.updateFile(4)}></input>
-            <input type='file' onChange={this.updateFile(5)}></input>
-            <input type='file' onChange={this.updateFile(6)}></input>
-            <input type='file' onChange={this.updateFile(7)}></input>
-            <input type='file' onChange={this.updateFile(8)}></input>
+            <div className= 'clothing-photos-container'>
+              <label htmlFor='clothing-main-photo-input'>
+                <img className='clothing-main-photo' src={this.props.photos[0].imageUrl}></img>
+              </label>
+              <input type='file' onChange={this.updateFile(0)}></input>
+              <input type='file' onChange={this.updateFile(1)}></input>
+              <input type='file' onChange={this.updateFile(2)}></input>
+              <input type='file' onChange={this.updateFile(3)}></input>
+              <input type='file' onChange={this.updateFile(4)}></input>
+              <input type='file' onChange={this.updateFile(5)}></input>
+              <input type='file' onChange={this.updateFile(6)}></input>
+              <input type='file' onChange={this.updateFile(7)}></input>
+              <input type='file' onChange={this.updateFile(8)}></input>
+            </div>
             <button className='publish-clothing-button' onClick={this.handleCreate}>PUBLISH</button>
         </form>
       )
