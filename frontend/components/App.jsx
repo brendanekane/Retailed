@@ -13,6 +13,7 @@ import ProductContainer from 'components/product/product_container';
 
 
 
+
 const App = ({store}) => {
   let currentUser = (
     store.getState().session.currentUser === null ? "" : store.getState().session.currentUser.email
