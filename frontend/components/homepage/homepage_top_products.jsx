@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 // this.props.photos[topProducts[0].id].image_url
 class HomepageTopProducts extends React.Component {
@@ -43,7 +44,9 @@ class HomepageTopProducts extends React.Component {
               <p className={`homepage-top-product-name-${idx}`}>{product.name}</p>
               <br/>
             </div>
-            <img className={`homepage-top-product-img-${idx}`} src={photos[product.id].image_url}></img>
+            <Link to={`/products/${product.id}`}>
+              <img className={`homepage-top-product-img-${idx}`} src={photos[product.id].image_url}></img>
+            </Link>
           </div>
         )
       })

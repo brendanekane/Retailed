@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class HomepageProducts extends React.Component{
   constructor(props) {
@@ -17,7 +17,9 @@ class HomepageProducts extends React.Component{
           const photos = this.props.photos;
           return (
             <li className={`homepage-product-item-${product.id}`}>
-              <img src={photos[product.photo_ids[0]].image_url}></img>
+              <Link to={`/products/${product.id}`} className={`homepage-link-item-${product.id}`}>
+                <img src={photos[product.photo_ids[0]].image_url}></img>
+              </Link>
               <br/>
               <p className='homepage-product-created_at'>{product.created_at}</p>
               <br/>
