@@ -81,7 +81,6 @@ class SellForm extends React.Component {
   }
 
   sellProductForm() {
-    debugger
     return (
       <form className='sell-clothing-form-container'>
         <div className='clothing-main-info'>
