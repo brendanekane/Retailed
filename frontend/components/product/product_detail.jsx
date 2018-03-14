@@ -5,7 +5,13 @@ import { withRouter } from 'react-router-dom';
 class ProductDetail extends React.Component {
   constructor(props) {
     super(props);
-    // debugger
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick(e) {
+    e.preventDefault();
+    debugger
+    this.props.history.push('/cart')
   }
 
 
@@ -33,6 +39,9 @@ class ProductDetail extends React.Component {
             <p>{this.props.user.weight}</p>
             <p>{this.props.user.height}</p>
           </div>
+          <form onSubmit={this.handleClick}>
+            <input type='submit' className='buy-product-button' value='PURCHASE'></input>
+          </form>
         </div>
       );
     } else {

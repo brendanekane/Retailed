@@ -3,14 +3,14 @@ import GreetingContainer from 'components/greeting/greeting_container';
 import { Route } from 'react-router-dom';
 import LoginFormContainer from 'components/session/login_form_container';
 import SignupFormContainer from 'components/session/signup_form_container';
-import { AuthRoute } from 'util/route_util';
+import { AuthRoute, ProtectedRoute } from 'util/route_util';
 import NavbarContainer from 'components/navbar/navbar_container';
 import Modal from 'components/modal';
 import ProfileContainer from 'components/profile/profile_container';
 import HomepageContainer from 'components/homepage/homepage_container';
 import SellFormContainer from 'components/sell/sell_form_container';
 import ProductContainer from 'components/product/product_container';
-
+import CartIndexContainer from 'components/cart/cart_index_container';
 
 
 
@@ -27,6 +27,7 @@ const App = ({store}) => {
       <Route exact path='/' component={HomepageContainer}/>
       <Route path='/users/:id' component={ProfileContainer} />
       <Route path='/sell' component={SellFormContainer} />
+      <ProtectedRoute exact path='/cart' component={CartIndexContainer}/>
     </div>
   );
 };
