@@ -1,7 +1,7 @@
 export const createItem = productId => (
   $.ajax({
     method: 'POST',
-    url: 'api/cart_items'
+    url: 'api/cart_items',
     data: {product_id: productId}
   })
 );

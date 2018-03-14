@@ -1,8 +1,8 @@
 import * as CartItemApiUtil from 'util/cart_item_api_util';
 
-export RECEIVE_ITEM  = 'RECEIVE_ITEM';
-export RECEIVE_ITEMS = 'RECEIVE_ITEMS';
-export DELETE_ITEM = 'DELETE_ITEM';
+export const RECEIVE_ITEM = 'RECEIVE_ITEM';
+export const RECEIVE_ITEMS = 'RECEIVE_ITEMS';
+export const DELETE_ITEM = 'DELETE_ITEM';
 
 const receiveItems = cartItems => ({
   type: RECEIVE_ITEMS,
