@@ -43,6 +43,7 @@ li[class*='homepage-product-item-']{
 .top-product-main-container{
   display: flex;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 div[class*='homepage-top-product-item-']{
@@ -154,8 +155,4 @@ div[class*='homepage-top-product-item-']{
 
 .top-product-container{
   margin-top: 40px;
-}
-
-.top-product-main-container{
-  margin-bottom: 40px;
 }

@@ -223,11 +223,52 @@
 
 .clothing-main-photo{
   cursor: pointer;
-  height: 40px;
-  width: 20px;
-  border: 1px solid black;
+  height: 340px;
+  width: 255px;
+  background: #bababa;
+  margin-right: 2px;
 }
 
 #clothing-main-photo-input{
   display: none;
+}
+
+input[id*='clothing-photo-input-']{
+  display: none;
+}
+
+img[class*='clothing-photo-']{
+  height: 165px;
+  width: 123px;
+  background: #bababa;
+  cursor: pointer;
+  margin: 1px 2px 1px 2px;
+}
+
+.clothing-photos-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.clothing-main-photo-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clothing-secondary-photos-container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+}
+
+.clothing-photos-header{
+  // margin-right: 990px;
+  margin: 100px 990px 30px 247px;
+  // margin-bottom: 30px;
+  // margin-left: 247px;
+  font-size: 20px;
 }
