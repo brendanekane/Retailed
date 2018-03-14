@@ -9,6 +9,7 @@
 User.destroy_all
 Product.destroy_all
 ProductPhoto.destroy_all
+Cart.destroy_all
 
 brendan = User.create!(
   email: 'brendanekane@gmail.com',
