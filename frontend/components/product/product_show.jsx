@@ -7,13 +7,6 @@ class ProductShow extends React.Component {
     super(props);
     // debugger
   }
-  //
-  // componentDidMount() {
-  //   this.props.getProducts().then( () => {
-  //     this.props.getOneUser(this.props.product['user_id']);
-  //   });
-  // }
-
 
 
   render() {

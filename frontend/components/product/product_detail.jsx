@@ -7,12 +7,7 @@ class ProductDetail extends React.Component {
     super(props);
     // debugger
   }
-  //
-  // componentDidMount() {
-  //   this.props.getProducts().then( () => {
-  //     this.props.getOneUser(this.props.product['user_id']);
-  //   });
-  // }
+
 
   render() {
     if (this.props.product !== undefined && this.props.user) {
@@ -25,6 +20,8 @@ class ProductDetail extends React.Component {
           <p>{this.props.product.size}</p>
           <br />
           <p>{this.props.product.price}</p>
+          <br />
+          <p>{this.props.product.description}</p>
           <br />
           <br />
           <div>
