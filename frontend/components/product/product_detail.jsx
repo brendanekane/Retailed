@@ -5,13 +5,23 @@ import { withRouter } from 'react-router-dom';
 class ProductDetail extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this)
+    this.state = {
+      alert: ""
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentDidMount() {
+
+    this.props.getProduct(this.props.match.params.productId);
   }
 
   handleClick(e) {
     e.preventDefault();
-    debugger
-    this.props.history.push('/cart')
+    if (this.props.currentUser) {
+      this.props.createItem(this.props.product.id);
+      this.props.history.push('/cart');
+    }
   }
 
 

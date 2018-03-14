@@ -37,3 +37,17 @@ export const deleteItem = id => dispatch => {
     })
   );
 };
+
+export const getItems = () => dispatch => {
+  return (
+    CartItemApiUtil.getItems()
+    .then(cartItems => dispatch(receiveItems(cartItems)))
+  );
+};
+
+export const getItem = id => dispatch => {
+  return (
+    CartItemApiUtil.getItem(id)
+    .then(cartItem => dispatch(receiveItem(cartItem)))
+  );
+};

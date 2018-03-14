@@ -5,3 +5,7 @@ json.size cart_item.product.size
 json.name cart_item.product.name
 json.price cart_item.product.price
 json.description cart_item.product.description
+json.photo_ids cart_item.product.product_photos.pluck(:id)
+json.user_id cart_item.product.user_id
+json.clothing_type cart_item.product.clothing_type
+json.clothing_category cart_item.product.clothing_category

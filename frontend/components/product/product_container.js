@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import Product from 'components/product/product';
 import { getProduct, getProducts } from 'actions/product_actions';
 import { getOneUser } from 'actions/user_actions';
+import { getItems } from 'actions/cart_item_actions';
 
 
 const mapStateToProps = ({session, entities}, ownProps) => {
@@ -14,7 +15,8 @@ const mapStateToProps = ({session, entities}, ownProps) => {
 const mapDispatchToProps = dispatch => {
   return ({
     getProducts: () => dispatch(getProducts()),
-    getOneUser: id => dispatch(getOneUser(id))
+    getOneUser: id => dispatch(getOneUser(id)),
+    getItems: () => dispatch(getItems())
   });
 };
 

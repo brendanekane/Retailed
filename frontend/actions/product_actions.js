@@ -42,10 +42,13 @@ export const updateProduct = product => dispatch => (
   .then(product => dispatch(receiveProduct(product)))
 );
 
-export const deleteProduct = id => dispatch => (
-  ProductApiUtil.deleteProduct(id)
-  .then(product => dispatch(removeProduct(id)))
-);
+export const deleteProduct = id => dispatch => {
+  debugger
+  return (
+    ProductApiUtil.deleteProduct(id)
+    .then(product => dispatch(removeProduct(id)))
+  );
+};
 
 
 const receiveAllProducts = products => {

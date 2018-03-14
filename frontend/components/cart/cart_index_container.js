@@ -1,20 +1,26 @@
 import { connect } from 'react-redux';
-import { deleteItem } from 'actions/cart_item_actions';
+import { deleteItem, getItems } from 'actions/cart_item_actions';
 import CartIndex from 'components/cart/cart_index';
+import { getProducts, updateProduct } from 'actions/product_actions';
 
-// totalPrice = Object.values(cart).map(product => product.price).reduce((x,y) => x + y, 0);
-// totalPrice,
-// cartProducts: Object.values(cart),
-const mapStateToProps = ({ cart, session }) => {
-  debugger
+const mapStateToProps = (state) => {
+  const cart = state.entities.cart
+  let totalPrice = Object.values(cart).map(product => product.price).reduce((x,y) => x + y, 0);
   return ({
-    loggedIn: Boolean(session.currentUser)
+    totalPrice,
+    cartProducts: Object.values(cart),
+    loggedIn: Boolean(state.session.currentUser),
+    photos: state.entities.photos,
+    currentUser: state.session.currentUser
   });
 };
 
 const mapDispatchToProps = dispatch => {
   return ({
-    deleteItem: id => dispatch(deleteItem(id))
+    deleteItem: id => dispatch(deleteItem(id)),
+    getItems: () => dispatch(getItems()),
+    getProducts: () => dispatch(getProducts()),
+    updateProduct: product => dispatch(updateProduct(product))
   });
 };
 
