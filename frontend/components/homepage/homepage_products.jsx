@@ -13,6 +13,9 @@ class HomepageProducts extends React.Component{
   render() {
     return(
       <ul className='homepage-product-items'>
+        <div className='homepage-products-header'>
+          <h2>BROWSE THE FEED</h2>
+        </div>
         {this.props.products.map(product => {
           const photos = this.props.photos;
           return (

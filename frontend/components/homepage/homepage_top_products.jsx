@@ -34,7 +34,7 @@ class HomepageTopProducts extends React.Component {
       topProductsList = topProducts.map((product, idx) => {
         return (
           <div className={`homepage-top-product-item-${idx}`}>
-            <div className='homepage-top-products-details-container'>
+            <div className={`homepage-top-products-details-container-${idx}`}>
               <div className={`homepage-designerprice-container-${idx}`}>
                 <p className={`homepage-top-product-designer-${idx}`}>{product.designer}</p>
                 <p className={`homepage-top-product-price-${idx}`}>${product.price}</p>

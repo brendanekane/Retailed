@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 
 const WithoutItems = () => {
@@ -28,7 +28,9 @@ const WithItems = (props) => {
         const photos = props.photos
         return (
           <li className={`user-product-item-${product.id}`}>
-            <img src={photos[product.photo_ids[0]].image_url}></img>
+            <Link to={`/products/${product.id}`} className={`user-product-link-item-${product.id}`}>
+              <img src={photos[product.photo_ids[0]].image_url} className={`user-product-link-img-${product.id}`}></img>
+            </Link>
             <br/>
             <p className='user-product-created_at'>{product.created_at}</p>
             <br/>
