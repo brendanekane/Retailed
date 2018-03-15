@@ -32,6 +32,11 @@ class HomepageTopProducts extends React.Component {
     let topProductsList = [];
     if (topProducts.length !== 0) {
       topProductsList = topProducts.map((product, idx) => {
+        const productPhotos = [];
+        Object.values(photos).filter(photo => {if (photo.product_id === product.id) {
+            productPhotos.push(photo)
+          }
+        });
         return (
           <div className={`homepage-top-product-item-${idx}`}>
             <div className={`homepage-top-products-details-container-${idx}`}>
@@ -45,7 +50,7 @@ class HomepageTopProducts extends React.Component {
               <br/>
             </div>
             <Link to={`/products/${product.id}`}>
-              <img className={`homepage-top-product-img-${idx}`} src={photos[product.id].image_url}></img>
+              <img className={`homepage-top-product-img-${idx}`} src={productPhotos[0].image_url}></img>
             </Link>
           </div>
         )

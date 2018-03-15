@@ -9,7 +9,7 @@
 User.destroy_all
 Product.destroy_all
 ProductPhoto.destroy_all
-Cart.destroy_all
+
 
 brendan = User.create!(
   email: 'brendanekane@gmail.com',
@@ -260,4 +260,240 @@ uniqlo_shirt = Product.create!(
 uniqlo_shirt_pic_1 = ProductPhoto.create!(
   product_id: uniqlo_shirt.id,
   image: 'https://s3.amazonaws.com/retailed-seed/uniqlo_shirt.jpeg'
+)
+
+acne_white = Product.create!(
+  user_id: michael_scott.id,
+  price: 82.05,
+  designer: 'Acne Studios',
+  name: 'Acne White',
+  clothing_type: 'Bottoms',
+  size: 'S',
+  clothing_category: 'Retailed',
+  description: 'Acne studious. Ace white jeans. Size 32/32. Worn 1 time only. Like new'
+)
+
+acne_white_pic_1 = ProductPhoto.create!(
+  product_id: acne_white.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/acne_white_1.jpg'
+)
+
+acne_white_pic_2 = ProductPhoto.create!(
+  product_id: acne_white.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/acne_white_2.jpg'
+)
+
+acne_white_pic_3 = ProductPhoto.create!(
+  product_id: acne_white.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/acne_white_3.jpg'
+)
+
+acne_white_pic_4 = ProductPhoto.create!(
+  product_id: acne_white.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/acne_white_4.jpg'
+)
+
+acne_white_pic_5 = ProductPhoto.create!(
+  product_id: acne_white.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/acne_white_5.jpg'
+)
+
+slp_shark = Product.create!(
+  user_id: michael_scott.id,
+  price: 190.99,
+  designer: 'Saint Laurent Paris',
+  name: 'Shark Tee',
+  clothing_type: 'Tops',
+  size: 'XL',
+  clothing_category: 'Retailed',
+  description: 'Saint Laurent Paris. Ss16 shark t shirt. Very iconic t. Size XL. Great condition'
+)
+
+slp_shark_pic_1 = ProductPhoto.create!(
+  product_id: slp_shark.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/shark_1.jpg'
+)
+
+slp_shark_pic_2 = ProductPhoto.create!(
+  product_id: slp_shark.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/shark_2.jpg'
+)
+
+slp_shark_pic_3 = ProductPhoto.create!(
+  product_id: slp_shark.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/shark_3.jpg'
+)
+
+slp_shark_pic_4 = ProductPhoto.create!(
+  product_id: slp_shark.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/shark_4.jpg'
+)
+
+slp_shark_pic_5 = ProductPhoto.create!(
+  product_id: slp_shark.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/shark_5.jpg'
+)
+
+gosha_sweats = Product.create!(
+  user_id: luke.id,
+  price: 90.50,
+  designer: 'Gosha Rubchinskiy',
+  name: 'Sweats',
+  clothing_type: 'Bottoms',
+  size: 'M',
+  clothing_category: 'Hype',
+  description: 'Gosha sweats. Size large. Worn but good condition'
+)
+
+
+gosha_sweats_pic_1 = ProductPhoto.create!(
+  product_id: gosha_sweats.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/gosha_sweats_1.jpg'
+)
+
+gosha_sweats_pic_2 = ProductPhoto.create!(
+  product_id: gosha_sweats.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/gosha_sweats_2.jpg'
+)
+
+gosha_sweats_pic_3 = ProductPhoto.create!(
+  product_id: gosha_sweats.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/gosha_sweats_3.jpg'
+)
+
+gosha_sweats_pic_4 = ProductPhoto.create!(
+  product_id: gosha_sweats.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/gosha_sweats_4.jpg'
+)
+
+jil_sander = Product.create!(
+  user_id: luke.id,
+  price: 190,
+  designer: 'Jil Sander',
+  name: 'RAF Era Blazer',
+  clothing_type: 'Outerwear',
+  size: 'M',
+  clothing_category: 'Retailed',
+  description: 'Jil sander blazer from raf Simons era. Size 50 fits medium / slim large. Used but great condition. Very nice piece'
+)
+
+jill_sander_pic_1 = ProductPhoto.create!(
+  product_id: jil_sander.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/jil_sander_1.jpg'
+)
+
+jill_sander_pic_2 = ProductPhoto.create!(
+  product_id: jil_sander.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/jil_sander_2.jpg'
+)
+
+jill_sander_pic_3 = ProductPhoto.create!(
+  product_id: jil_sander.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/jil_sander_3.jpg'
+)
+
+jill_sander_pic_4 = ProductPhoto.create!(
+  product_id: jil_sander.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/jil_sander_4.jpg'
+)
+
+jill_sander_pic_5 = ProductPhoto.create!(
+  product_id: jil_sander.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/jil_sander_5.jpg'
+)
+
+jill_sander_pic_6 = ProductPhoto.create!(
+  product_id: jil_sander.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/jil_sander_6.jpg'
+)
+
+jill_sander_pic_7 = ProductPhoto.create!(
+  product_id: jil_sander.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/jil_sander_7.jpg'
+)
+
+jill_sander_pic_8 = ProductPhoto.create!(
+  product_id: jil_sander.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/jil_sander_8.jpg'
+)
+
+off_white_tee = Product.create!(
+  user_id: luke.id,
+  price: 325,
+  designer: 'Off-White',
+  name: 'Guns and Roses Collab Tee',
+  clothing_type: 'Tops',
+  size: 'XXL',
+  clothing_category: 'Retailed',
+  description: 'Off white x guns and roses. Maxfield LA exclusive. Size XXL brand new with tags. Retail $310. RARE!'
+)
+
+off_white_tee_pic_1 = ProductPhoto.create!(
+  product_id: off_white_tee.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/off_white_t_1.jpg'
+)
+off_white_tee_pic_1 = ProductPhoto.create!(
+  product_id: off_white_tee.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/off_white_t_1.jpg'
+)
+
+off_white_tee_pic_2 = ProductPhoto.create!(
+  product_id: off_white_tee.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/off_white_t_2.jpg'
+)
+
+off_white_tee_pic_3 = ProductPhoto.create!(
+  product_id: off_white_tee.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/off_white_t_3.jpg'
+)
+
+off_white_tee_pic_4 = ProductPhoto.create!(
+  product_id: off_white_tee.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/off_white_t_4.jpg'
+)
+
+off_white_tee_pic_5 = ProductPhoto.create!(
+  product_id: off_white_tee.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/off_white_t_5.jpg'
+)
+
+kermit_toy = Product.create!(
+  user_id: chewie.id,
+  price: 175.50,
+  designer: 'Supreme X Medicom',
+  name: 'Kermit Toy',
+  clothing_type: 'Accessories',
+  size: 'OS',
+  clothing_category: 'Hype',
+  description: 'Supreme x medicom toy. Very rare. 100% authentic. Brand new / some damage to packaging'
+)
+
+kermit_toy_pic_1 = ProductPhoto.create!(
+  product_id: kermit_toy.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/kermit_1.jpg'
+)
+
+kermit_toy_pic_2 = ProductPhoto.create!(
+  product_id: kermit_toy.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/kermit_2.jpg'
+)
+
+kermit_toy_pic_3 = ProductPhoto.create!(
+  product_id: kermit_toy.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/kermit_3.jpg'
+)
+
+kermit_toy_pic_4 = ProductPhoto.create!(
+  product_id: kermit_toy.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/kermit_4.jpg'
+)
+
+kermit_toy_pic_5 = ProductPhoto.create!(
+  product_id: kermit_toy.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/kermit_5.jpg'
+)
+
+kermit_toy_pic_6 = ProductPhoto.create!(
+  product_id: kermit_toy.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/kermit_6.jpg'
 )
