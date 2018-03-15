@@ -37,15 +37,19 @@ class CartIndex extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>{this.props.cartProducts.map(product => (
-            <ul className='cart-product-items'>
+      <div className='cart-wrapper'>
+        <div className='cart-products-container'>
+          <div className='cart-product-items-container'>
+            <h2 className='cart-header'>YOUR CART</h2>
+            <ul className='cart-product-items'> {this.props.cartProducts.map(product => (
               <CartItems deleteItem={this.props.deleteItem} product={product} photos={this.props.photos}/>
-            </ul>
-          ))}</div>
-        <form onClick={this.handleSubmit}>
-          <input type='submit' value='BUY ITEMS'></input>
-        </form>
+          ))}
+        </ul>
+          </div>
+          <form className='checkout-button-container' onClick={this.handleSubmit}>
+            <input className='checkout-button' type='submit' value='CHECKOUT'></input>
+          </form>
+        </div>
     </div>
     )
   }

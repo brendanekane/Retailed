@@ -21,18 +21,22 @@ class CartItems extends React.Component {
           <img src={this.props.photos[product.photo_ids[0]].image_url} className={`cart-link-img-${product.product_id}`}></img>
         </Link>
         <br/>
-        <p className='cart-product-designer'>{product.designer}</p>
-        <br/>
-        <p className='cart-product-size'>{product.size}</p>
-        <br/>
-        <p className='cart-product-name'>{product.name}</p>
-        <br/>
-        <p className='cart-product-price'>${product.price}</p>
-        <br/>
-        <br/>
-        <form onClick={this.handleDelete}>
-          <input type='submit' className={`cart-delete-product-${product.product_id}`} value="REMOVE FROM CART"></input>
-        </form>
+        <div className='cart-product-description-container'>
+          <div className='cart-product-designersize-container'>
+            <p className='cart-product-designer'>{product.designer}</p>
+            <br/>
+            <p className='cart-product-size'>{product.size}</p>
+          </div>
+          <br/>
+          <p className='cart-product-name'>{product.name}</p>
+          <br/>
+          <p className='cart-product-price'>${product.price}</p>
+          <br/>
+          <br/>
+          <form onClick={this.handleDelete}>
+            <input type='submit' className={`cart-delete-product-${product.product_id}`} value="REMOVE FROM CART"></input>
+          </form>
+        </div>
       </li>
     )
   }
