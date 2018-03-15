@@ -8,7 +8,9 @@ import { getItems } from 'actions/cart_item_actions';
 
 const mapStateToProps = ({session, entities}, ownProps) => {
   return ({
-    product: entities.products[ownProps.match.params.productId]
+    product: entities.products[ownProps.match.params.productId],
+    products: entities.products,
+    photos: entities.photos
   });
 };
 

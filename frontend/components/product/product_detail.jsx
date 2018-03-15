@@ -41,7 +41,7 @@ class ProductDetail extends React.Component {
           </form>
           <br />
           <p className='product-show-description-header'>DESCRIPTION</p>
-          <p classname='product-show-description'>{this.props.product.description}</p>
+          <p className='product-show-description'>{this.props.product.description}</p>
           <br />
           <br />
           <div className='product-show-seller-container'>

@@ -13,16 +13,17 @@ class Product extends React.Component {
   componentDidMount() {
     this.props.getProducts().then( () => {
       this.props.getOneUser(this.props.product['user_id']);
+      this.props.getItems();
     });
-    this.props.getItems();
   }
 
 
   render() {
+    debugger
     return (
       <div className='product-show-page-wrapper'>
         <div className='product-show-container'>
-          <ProductShowContainer />
+          <ProductShowContainer photos={this.props.photos}/>
           <ProductDetailContainer />
         </div>
       </div>
