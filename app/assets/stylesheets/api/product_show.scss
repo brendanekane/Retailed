@@ -74,3 +74,14 @@ div[class*='show-product-page-']{
 .product-show-seller-location{
   margin-bottom: 4px;
 }
+
+.product-show-user-avatar{
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.product-show-seller-container{
+  display: flex;
+}

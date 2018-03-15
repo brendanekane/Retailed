@@ -44,15 +44,18 @@ class ProductDetail extends React.Component {
           <p classname='product-show-description'>{this.props.product.description}</p>
           <br />
           <br />
-          <div>
-            <div className='product-show-seller-name-container'>
-              <p className='product-show-seller-name'>{this.props.user.email.substring(0, this.props.user.email.lastIndexOf("@"))}</p>
-              <p>({this.props.user.transactions})</p>
-            </div>
-            <p className='product-show-seller-location'>{this.props.user.location}</p>
-            <div className='product-show-seller-weightheight'>
-              <p className='product-show-seller-height'>{this.props.user.height} in,</p>
-              <p>{this.props.user.weight} lbs.</p>
+          <div className='product-show-seller-container'>
+            <img className='product-show-user-avatar'src={this.props.user.image_url}></img>
+            <div className='product-show-seller-description-container'>
+              <div className='product-show-seller-name-container'>
+                <p className='product-show-seller-name'>{this.props.user.email.substring(0, this.props.user.email.lastIndexOf("@"))}</p>
+                <p>({this.props.user.transactions})</p>
+              </div>
+              <p className='product-show-seller-location'>{this.props.user.location}</p>
+              <div className='product-show-seller-weightheight'>
+                <p className='product-show-seller-height'>{this.props.user.height} in,</p>
+                <p>{this.props.user.weight} lbs.</p>
+              </div>
             </div>
           </div>
         </div>
