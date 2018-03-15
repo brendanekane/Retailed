@@ -19,7 +19,6 @@ class Product extends React.Component {
 
 
   render() {
-    debugger
     return (
       <div className='product-show-page-wrapper'>
         <div className='product-show-container'>

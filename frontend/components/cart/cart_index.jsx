@@ -30,7 +30,12 @@ class CartIndex extends React.Component {
         this.props.updateProduct(product).then(this.props.deleteItem(oldCartProductId))
       );
     });
-    // dispatch action to remove products from cart
+    const currentUser = this.props.currentUser
+    currentUser.transactions += this.props.totalItems
+    const formData = new FormData();
+    formData.append("user[id]", currentUser.id);
+    formData.append("user[transactions]", currentUser.transactions);
+    this.props.updateUser(formData)
     this.props.history.push('/users/myitems');
   }
 
