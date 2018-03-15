@@ -21,8 +21,10 @@ class Product extends React.Component {
   render() {
     return (
       <div className='product-show-page-wrapper'>
-        <ProductShowContainer />
-        <ProductDetailContainer />
+        <div className='product-show-container'>
+          <ProductShowContainer />
+          <ProductDetailContainer />
+        </div>
       </div>
     )
   }

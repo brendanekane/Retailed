@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 const NavLoginLinks = (props) => {
   return (
     <div className='nav-bar'>
-      <div className='nav-search-bar'>search bar</div>
+      <div className='nav-search-bar'>search bar placeholder, hidden</div>
       <Link to='/' className='navbar-logo'>RETAILED</Link>
       <nav className='login-signup'>
         <p className="loginLink" onClick={() => props.openModal('login')}>LOGIN</p>
@@ -20,7 +20,9 @@ const NavProfileLink = ({currentUser}) => {
   // let user_name = email ? email.substring(0, email.lastIndexOf("@")) : ""
   return(
     <div className='nav-bar'>
-      <div className='nav-search-bar'>search bar</div>
+      <div className='nav-cart-div'>
+        <Link to='/cart' className='nav-cart-link'>CART</Link>
+      </div>
       <Link to='/' className='navbar-logo'>RETAILED</Link>
       <div className='nav-right'>
         <Link to='/sell' className='nav-sell-link'>SELL</Link>

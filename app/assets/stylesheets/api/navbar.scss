@@ -73,7 +73,7 @@
 
 .nav-search-bar{
   visibility: hidden;
-  width: 145px;
+  width: 100px;
 }
 
 .profile-dropdown-content{
@@ -113,4 +113,33 @@
 .nav-sell-link:hover{
   color: #cfcfd1;
   border: 1px solid grey;
+}
+
+.nav-cart-link{
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  border: 1px solid lightgrey;
+  padding: 7px;
+  display: flex;
+  -webkit-transition: color 1s;
+  -moz-transition:    color 1s;
+  -ms-transition:     color 1s;
+  -o-transition:      color 1s;
+  transition:         color 1s;
+  -webkit-transition: border 1s;
+  -moz-transition:    border 1s;
+  -ms-transition:     border 1s;
+  -o-transition:      border 1s;
+  transition:         border 1s;
+}
+
+.nav-cart-link:hover{
+  color: #cfcfd1;
+  border: 1px solid grey;
+}
+
+.nav-cart-link{
+  margin: 20px 0 0 70px;
+
 }
