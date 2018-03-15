@@ -13,9 +13,9 @@
 .profile-index-items{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  margin: 10px 147px 0 32px;
+  margin: 10px 138px 0 32px;
 
 }
 
@@ -60,7 +60,7 @@
   text-decoration: none;
   color: #c5c5c5;
   font-weight: 700;
-  margin-right: 6px;
+  margin: 0 6px 12px 65px;
   position: relative;
 }
 
@@ -76,6 +76,6 @@
   text-decoration: none;
   color: #c5c5c5;
   font-weight: 700;
-  margin-right: 5px;
+  margin: 0 6px 12px 65px;
   position: relative;
 }

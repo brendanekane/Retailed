@@ -72,7 +72,7 @@ pam = User.create!(
   height: '63',
   weight: '120',
   location: 'Asia',
-  avatar: 'https://s3.amazonaws.com/retailed-seed/michael_scott.jpeg'
+  avatar: 'https://s3.amazonaws.com/retailed-seed/pam_beesly.jpg'
 )
 
 jim = User.create!(

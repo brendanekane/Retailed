@@ -35,7 +35,6 @@ const NavProfileLink = ({currentUser}) => {
               <Link to='/users/messages' className='profile-dropdwon-messages'>MESSAGES</Link>
               <Link to='users/retails'>MY RETAILS</Link>
               <Link to='/users/myitems'>MY ITEMS</Link>
-              <Link to='/users/transactions'>TRANSACTIONS</Link>
               <Link to='/users/settings'>SETTINGS</Link>
             </ul>
           </div>
@@ -44,17 +43,22 @@ const NavProfileLink = ({currentUser}) => {
     </div>
   )
 };
+
+// removed from profile-dropdown until transactions table implemented
+// and buy/sell feature refactored
+// NOTE profile-dropdown will shift when you readd this, make sure to
+// fix margin in stylesheet to -44 when you reimplement
+// <Link to='/users/transactions'>TRANSACTIONS</Link>
+
 // make a classical component componentdidmount currentUser and componentwillreceiveprops pokedex(this.props.history.push(email substring))
-// export withRouter...maybeee wait til later (not important enough of a feature)
+// export withRouter...maybeee wait til later when refactoring
 class NavSessionLinks extends React.Component {
   constructor(props){
     super(props)
 
   }
 
-  // componentWillReceiveProps(newProps) {
-  //   if this.props.currentUser.id !== newProps.currentUser.id
-  // }
+
   render(){
     return(
     this.props.currentUser ? <NavProfileLink currentUser={this.props.currentUser} /> : <NavLoginLinks openModal={this.props.openModal} closeModal={this.props.closeModal}/>
