@@ -9,6 +9,7 @@
 User.destroy_all
 Product.destroy_all
 ProductPhoto.destroy_all
+CartItem.destroy_all
 
 
 brendan = User.create!(
@@ -299,7 +300,7 @@ acne_white_pic_5 = ProductPhoto.create!(
 )
 
 slp_shark = Product.create!(
-  user_id: michael_scott.id,
+  user_id: leia.id,
   price: 190.99,
   designer: 'Saint Laurent Paris',
   name: 'Shark Tee',
@@ -496,4 +497,292 @@ kermit_toy_pic_5 = ProductPhoto.create!(
 kermit_toy_pic_6 = ProductPhoto.create!(
   product_id: kermit_toy.id,
   image: 'https://s3.amazonaws.com/retailed-seed/kermit_6.jpg'
+)
+
+slp_shoes = Product.create!(
+  user_id: chewie.id,
+  price: 383,
+  designer: 'Saint Laurent Paris',
+  name: 'SL01 Low',
+  clothing_type: 'Footwear',
+  size: 'M',
+  clothing_category: 'Retailed',
+  description: 'Saint Laurent Paris. SL01 low tops. Used but in good condition. No heal drag. Some small scratches on toe box. Size 42 but fits more like a 43/US10. No box'
+)
+
+slp_shoes_pic_1 = ProductPhoto.create!(
+  product_id: slp_shoes.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slp_shoes_1.jpg'
+)
+slp_shoes_pic_2 = ProductPhoto.create!(
+  product_id: slp_shoes.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slp_shoes_2.jpg'
+)
+slp_shoes_pic_3 = ProductPhoto.create!(
+  product_id: slp_shoes.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slp_shoes_3.jpg'
+)
+slp_shoes_pic_4 = ProductPhoto.create!(
+  product_id: slp_shoes.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slp_shoes_4.jpg'
+)
+slp_shoes_pic_5 = ProductPhoto.create!(
+  product_id: slp_shoes.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slp_shoes_5.jpg'
+)
+slp_shoes_pic_6 = ProductPhoto.create!(
+  product_id: slp_shoes.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slp_shoes_6.jpg'
+)
+slp_shoes_pic_7 = ProductPhoto.create!(
+  product_id: slp_shoes.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slp_shoes_7.jpg'
+)
+slp_shoes_pic_8 = ProductPhoto.create!(
+  product_id: slp_shoes.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slp_shoes_8.jpg'
+)
+slp_shoes_pic_9 = ProductPhoto.create!(
+  product_id: slp_shoes.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slp_shoes_9.jpg'
+)
+
+cnn_deck = Product.create!(
+  user_id: pam.id,
+  price: 80,
+  designer: 'Supreme',
+  name: 'CNN Skateboard Deck',
+  clothing_type: 'Accessories',
+  size: 'OS',
+  clothing_category: 'Hype',
+  description: 'Supreme. CNN skateboard. New in plastic'
+)
+
+cnn_deck_pic_1 = ProductPhoto.create!(
+  product_id: cnn_deck.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/cnn_deck_1.jpg'
+)
+
+cnn_deck_pic_2 = ProductPhoto.create!(
+  product_id: cnn_deck.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/cnn_deck_2.jpg'
+)
+
+snoop_tee = Product.create!(
+  user_id: jim.id,
+  price: 1200,
+  designer: 'Vetements',
+  name: 'Front Snoop Tee',
+  clothing_type: 'Tops',
+  size: 'M',
+  clothing_category: 'Retailed',
+  description: 'Vetements. Og snoop dogg t. Size medium (extremely oversized). Worn a few times, never washed. No flaws'
+)
+
+snoop_tee_pic_1 = ProductPhoto.create!(
+  product_id: snoop_tee.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/snoop_tee_1.jpg'
+)
+
+snoop_tee_pic_2 = ProductPhoto.create!(
+  product_id: snoop_tee.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/snoop_tee_2.jpg'
+)
+
+snoop_tee_pic_3 = ProductPhoto.create!(
+  product_id: snoop_tee.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/snoop_tee_3.jpg'
+)
+
+snoop_tee_pic_4 = ProductPhoto.create!(
+  product_id: snoop_tee.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/snoop_tee_4.jpg'
+)
+
+snoop_tee_pic_5 = ProductPhoto.create!(
+  product_id: snoop_tee.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/snoop_tee_5.jpg'
+)
+
+snoop_tee_pic_6 = ProductPhoto.create!(
+  product_id: snoop_tee.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/snoop_tee_6.jpg'
+)
+
+snoop_tee_pic_7 = ProductPhoto.create!(
+  product_id: snoop_tee.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/snoop_tee_7.jpg'
+)
+
+snoop_tee_pic_8 = ProductPhoto.create!(
+  product_id: snoop_tee.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/snoop_tee_8.jpg'
+)
+
+perfecto = Product.create!(
+  user_id: han_solo.id,
+  price: 495.99,
+  designer: 'Schott',
+  name: 'Perfecto',
+  clothing_type: 'Outerwear',
+  size: 'L',
+  clothing_category: 'Retailed',
+  description: 'Classic motorcycle jacket. Retail $750. Size large. Fits true to size. Worn 2 times, no flaws'
+)
+
+perfecto_pic_1 = ProductPhoto.create!(
+  product_id: perfecto.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/perfecto_1.jpg'
+)
+
+perfecto_pic_2 = ProductPhoto.create!(
+  product_id: perfecto.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/perfecto_2.jpg'
+)
+
+perfecto_pic_3 = ProductPhoto.create!(
+  product_id: perfecto.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/perfecto_3.jpg'
+)
+
+perfecto_pic_4 = ProductPhoto.create!(
+  product_id: perfecto.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/perfecto_4.jpg'
+)
+
+perfecto_pic_5 = ProductPhoto.create!(
+  product_id: perfecto.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/perfecto_5.jpg'
+)
+
+perfecto_pic_6 = ProductPhoto.create!(
+  product_id: perfecto.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/perfecto_6.jpg'
+)
+
+perfecto_pic_7 = ProductPhoto.create!(
+  product_id: perfecto.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/perfecto_7.jpg'
+)
+
+perfecto_pic_8 = ProductPhoto.create!(
+  product_id: perfecto.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/perfecto_8.jpg'
+)
+
+perfecto_pic_9 = ProductPhoto.create!(
+  product_id: perfecto.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/perfecto_9.jpg'
+)
+
+slp_biker = Product.create!(
+  user_id: leslie.id,
+  price: 790,
+  designer: 'Saint Laurent Paris',
+  name: 'Biker Jeans',
+  clothing_type: 'Bottoms',
+  size: 'M',
+  clothing_category: 'Retailed',
+  description: 'up for sale I have the saint laurent biker jeans. Size 34 used a hand full of times but still in great condition. Only flaw is that the little chain above the inside tag fell off and I lost it. Jeans were tailored to 6.5 inch opening and 32 inch inseam. Retail price $1590, asking $790 shipped within the united states or best offer.'
+)
+
+slp_biker_pic_1 = ProductPhoto.create!(
+  product_id: slp_biker.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slp_biker_1.jpg'
+)
+
+slp_biker_pic_2 = ProductPhoto.create!(
+  product_id: slp_biker.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slp_biker_2.jpg'
+)
+
+slp_biker_pic_3 = ProductPhoto.create!(
+  product_id: slp_biker.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slp_biker_3.jpg'
+)
+
+slp_biker_pic_4 = ProductPhoto.create!(
+  product_id: slp_biker.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slp_biker_4.jpg'
+)
+
+slp_biker_pic_5 = ProductPhoto.create!(
+  product_id: slp_biker.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slp_biker_5.jpg'
+)
+
+slp_biker_pic_6 = ProductPhoto.create!(
+  product_id: slp_biker.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slp_biker_6.jpg'
+)
+
+slp_biker_pic_7 = ProductPhoto.create!(
+  product_id: slp_biker.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slp_biker_7.jpg'
+)
+
+slp_biker_pic_8 = ProductPhoto.create!(
+  product_id: slp_biker.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slp_biker_8.jpg'
+)
+
+slp_biker_pic_9 = ProductPhoto.create!(
+  product_id: slp_biker.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slp_biker_9.jpg'
+)
+
+rick_shoes = Product.create!(
+  user_id: ben.id,
+  price: 650,
+  designer: 'Rick Owens',
+  name: 'Geobasket',
+  clothing_type: 'Footwear',
+  size: 'M',
+  clothing_category: 'Retailed',
+  description: 'Rick Owens Geobasket. size 43. 9/10 condition with OG all. looking for $750 obo shipped within the united states'
+)
+
+rick_shoes_pic_1 = ProductPhoto.create!(
+  product_id: rick_shoes.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/rick_1.jpg'
+)
+
+rick_shoes_pic_2 = ProductPhoto.create!(
+  product_id: rick_shoes.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/rick_2.jpg'
+)
+
+rick_shoes_pic_3 = ProductPhoto.create!(
+  product_id: rick_shoes.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/rick_3.jpg'
+)
+
+rick_shoes_pic_4 = ProductPhoto.create!(
+  product_id: rick_shoes.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/rick_4.jpg'
+)
+
+rick_shoes_pic_5 = ProductPhoto.create!(
+  product_id: rick_shoes.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/rick_5.jpg'
+)
+
+rick_shoes_pic_6 = ProductPhoto.create!(
+  product_id: rick_shoes.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/rick_6.jpg'
+)
+
+rick_shoes_pic_7 = ProductPhoto.create!(
+  product_id: rick_shoes.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/rick_7.jpg'
+)
+
+rick_shoes_pic_8 = ProductPhoto.create!(
+  product_id: rick_shoes.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/rick_8.jpg'
+)
+
+rick_shoes_pic_9 = ProductPhoto.create!(
+  product_id: rick_shoes.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/rick_9.jpg'
 )
