@@ -277,6 +277,19 @@ gucci_monaco_pic_1 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/gucci_suit.jpg'
 )
 
+gucci_monaco_pic_2 = ProductPhoto.create!(
+  product_id: gucci_monaco.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/gucci_suit_2.jpg'
+)
+gucci_monaco_pic_3 = ProductPhoto.create!(
+  product_id: gucci_monaco.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/gucci_suit_3.jpg'
+)
+gucci_monaco_pic_4 = ProductPhoto.create!(
+  product_id: gucci_monaco.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/gucci_suit_4.jpg'
+)
+
 uniqlo_shirt = Product.create!(
   user_id: pam.id,
   price: 19.99,
