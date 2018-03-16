@@ -132,7 +132,37 @@ saint_laurent_l01 = Product.create!(
 
 saint_laurent_l01_pic_1 = ProductPhoto.create!(
   product_id: saint_laurent_l01.id,
-  image: 'https://s3.amazonaws.com/retailed-seed/L01.jpg'
+  image: 'https://s3.amazonaws.com/retailed-seed/slo_l01_1.jpg'
+)
+
+saint_laurent_l01_pic_2 = ProductPhoto.create!(
+  product_id: saint_laurent_l01.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slo_l01_2.jpg'
+)
+
+saint_laurent_l01_pic_3 = ProductPhoto.create!(
+  product_id: saint_laurent_l01.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slo_l01_3.jpg'
+)
+
+saint_laurent_l01_pic_4 = ProductPhoto.create!(
+  product_id: saint_laurent_l01.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slo_l01_4.jpg'
+)
+
+saint_laurent_l01_pic_5 = ProductPhoto.create!(
+  product_id: saint_laurent_l01.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slo_l01_5.jpg'
+)
+
+saint_laurent_l01_pic_6 = ProductPhoto.create!(
+  product_id: saint_laurent_l01.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slo_l01_6.jpg'
+)
+
+saint_laurent_l01_pic_7 = ProductPhoto.create!(
+  product_id: saint_laurent_l01.id,
+  image: 'https://s3.amazonaws.com/retailed-seed/slo_l01_7.jpg'
 )
 
 seven_samurai = Product.create!(

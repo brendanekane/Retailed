@@ -210,6 +210,8 @@ class SellForm extends React.Component {
     )
   }
 
+  //className="fas fa-camera" on clothing-main-photo-input <label>
+
   renderProductErrorsForm() {
     if (this.props.errors.length === 0) {
       {return this.sellProductForm()}

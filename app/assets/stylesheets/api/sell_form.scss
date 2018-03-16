@@ -265,9 +265,14 @@ img[class*='clothing-photo-']{
 }
 
 .clothing-photos-header{
-  // margin-right: 990px;
   margin: 100px 990px 30px 247px;
-  // margin-bottom: 30px;
-  // margin-left: 247px;
   font-size: 20px;
 }
+
+
+// not yet implemented
+// .fa-camera::before{
+//   content: "\f030";
+//   position: absolute;
+//   margin-left: 50px;
+// }
