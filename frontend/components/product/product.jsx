@@ -7,7 +7,6 @@ import ProductDetailContainer from 'components/product/product_detail_container'
 class Product extends React.Component {
   constructor(props) {
     super(props);
-    // debugger
   }
 
   componentDidMount() {

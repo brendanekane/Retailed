@@ -66,9 +66,6 @@ class SellForm extends React.Component {
       }
     });
     this.props.createProduct(formData).then((data)=> {
-      // debugger
-      // const last = data.currentUser.products.length - 1;
-      // const products = data.currentUser.products;
       this.props.history.push(`/users/${this.state.user_id}`);
     });
   }

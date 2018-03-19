@@ -43,7 +43,6 @@ export const updateProduct = product => dispatch => (
 );
 
 export const deleteProduct = id => dispatch => {
-  debugger
   return (
     ProductApiUtil.deleteProduct(id)
     .then(product => dispatch(removeProduct(id)))
@@ -59,7 +58,6 @@ const receiveAllProducts = products => {
 };
 
 const receiveProduct = product => {
-  // debugger
   return ({
     type: RECEIVE_PRODUCT,
     product

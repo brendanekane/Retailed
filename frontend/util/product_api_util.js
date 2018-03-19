@@ -49,7 +49,6 @@ export const updateProduct = product => {
 };
 
 export const deleteProduct = id => {
-  debugger
   return(
     $.ajax({
       method: 'DELETE',

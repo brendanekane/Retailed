@@ -5,7 +5,6 @@ import { withRouter } from 'react-router-dom';
 class ProductShow extends React.Component {
   constructor(props) {
     super(props);
-    // debugger
   }
 
 
