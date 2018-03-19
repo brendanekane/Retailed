@@ -32,8 +32,6 @@ const NavProfileLink = ({currentUser}) => {
           </Link>
           <div className='profile-dropdown'>
             <ul className='profile-dropdown-content'>
-              <Link to='/users/messages' className='profile-dropdwon-messages'>MESSAGES</Link>
-              <Link to='users/retails'>MY RETAILS</Link>
               <Link to='/users/myitems'>MY ITEMS</Link>
               <Link to='/users/settings'>SETTINGS</Link>
             </ul>
@@ -44,6 +42,8 @@ const NavProfileLink = ({currentUser}) => {
   )
 };
 
+// <Link to='users/retails'>MY RETAILS</Link>
+// <Link to='/users/messages' className='profile-dropdwon-messages'>MESSAGES</Link>
 // removed from profile-dropdown until transactions table implemented
 // and buy/sell feature refactored
 // NOTE profile-dropdown will shift when you readd this, make sure to
