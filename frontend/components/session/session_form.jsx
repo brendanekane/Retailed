@@ -25,10 +25,16 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then((data) => {
-      this.props.closeModal();
-      this.props.history.push(`/users/${data.currentUser.id}`);
-    });
+    if (this.props.history.location.pathname.includes('/products/')) {
+      this.props.processForm(user).then((data) => {
+        this.props.closeModal();
+      });
+    } else {
+      this.props.processForm(user).then((data) => {
+        this.props.closeModal();
+        this.props.history.push(`/users/${data.currentUser.id}`);
+      });
+    }
 
   }
 

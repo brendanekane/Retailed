@@ -20,7 +20,7 @@ class HomepageProducts extends React.Component{
           {this.props.products.map(product => {
             const photos = this.props.photos;
             return (
-              <li className={`homepage-product-item-${product.id}`}>
+              <li key={`homepage-product-item-${product.id}`} className={`homepage-product-item-${product.id}`}>
                 <Link to={`/products/${product.id}`} className={`homepage-link-item-${product.id}`}>
                   <img src={photos[product.photo_ids[0]].image_url}></img>
                 </Link>

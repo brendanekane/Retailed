@@ -16,7 +16,7 @@ class CartItems extends React.Component {
   render() {
     const product = this.props.product;
     return(
-      <li className={`cart-product-item-${product.product_id}`}>
+      <li key={`cart-product-item-${product.product_id}`} className={`cart-product-item-${product.product_id}`}>
         <Link to={`/products/${product.product_id}`} className={`cart-link-item-${product.product_id}`}>
           <img src={this.props.photos[product.photo_ids[0]].image_url} className={`cart-link-img-${product.product_id}`}></img>
         </Link>

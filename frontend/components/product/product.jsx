@@ -12,7 +12,7 @@ class Product extends React.Component {
   componentDidMount() {
     this.props.getProducts().then( () => {
       this.props.getOneUser(this.props.product['user_id']);
-      this.props.getItems();
+      // this.props.getItems();
     });
   }
 
