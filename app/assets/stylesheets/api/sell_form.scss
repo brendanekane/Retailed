@@ -276,3 +276,13 @@ img[class*='clothing-photo-']{
 //   position: absolute;
 //   margin-left: 50px;
 // }
+
+.sell-form-errors-list{
+  color: red;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+[class*='error-']{
+  margin-bottom: 10px;
+}

@@ -74,7 +74,7 @@ class SellForm extends React.Component {
     return(
       <ul className="sell-form-errors-list">
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li className={`error-${i}`}>
             {error}
           </li>
         ))}
@@ -88,7 +88,7 @@ class SellForm extends React.Component {
         <div className='clothing-main-info'>
           <h2>DETAILS</h2>
           <select className='clothing-type' onBlur={this.update('clothing_type')}>
-            <option value='Tops' key='1'>Tops</option>
+            <option value='Tops' key='1' selected='selected'>Tops</option>
             <option value='Bottoms' key='2'>Bottoms</option>
             <option value='Outerwear' key='3'>Outerwear</option>
             <option value='Footwear' key='4'>Footwear</option>
@@ -96,7 +96,7 @@ class SellForm extends React.Component {
             <option value='Accessories' key='6'>Accessories</option>
           </select>
           <select className='clothing-size' onBlur={this.update('size')}>
-            <option value='XXS' key='1'>XXS</option>
+            <option value='XXS' key='1' selected='selected'>XXS</option>
             <option value='XS' key='2'>XS</option>
             <option value='S' key='3'>S</option>
             <option value='M' key='4'>M</option>
@@ -111,7 +111,7 @@ class SellForm extends React.Component {
           <div className='clothing-category-container'>
             <h2>MARKET</h2>
             <select className='clothing-category' onBlur={this.update('clothing_category')}>
-              <option value='Retails' key='1'>RETAILS</option>
+              <option value='Retails' key='1' selected='selected'>RETAILS</option>
               <option value='Hype' key='2'>HYPE</option>
               <option value='Sartorial' key='3'>SARTORIAL</option>
               <option value='Core' key='4'>CORE</option>
@@ -215,11 +215,10 @@ class SellForm extends React.Component {
     } else {
       return (
         <form className='sell-clothing-form-container'>
-          <div className='sell-clothing-errors'>{this.renderProductErrors()}</div>
           <div className='clothing-main-info'>
             <h2>DETAILS</h2>
             <select className='clothing-type' onBlur={this.update('clothing_type')}>
-              <option value='Tops' key='1'>Tops</option>
+              <option value='Tops' key='1' selected='selected'>Tops</option>
               <option value='Bottoms' key='2'>Bottoms</option>
               <option value='Outerwear' key='3'>Outerwear</option>
               <option value='Footwear' key='4'>Footwear</option>
@@ -227,7 +226,7 @@ class SellForm extends React.Component {
               <option value='Accessories' key='6'>Accessories</option>
             </select>
             <select className='clothing-size' onBlur={this.update('size')}>
-              <option value='XXS' key='1'>XXS</option>
+              <option value='XXS' key='1' selected='selected'>XXS</option>
               <option value='XS' key='2'>XS</option>
               <option value='S' key='3'>S</option>
               <option value='M' key='4'>M</option>
@@ -242,7 +241,7 @@ class SellForm extends React.Component {
             <div className='clothing-category-container'>
               <h2>MARKET</h2>
               <select className='clothing-category' onBlur={this.update('clothing_category')}>
-                <option value='Retails' key='1'>RETAILS</option>
+                <option value='Retails' key='1' selected='selected'>RETAILS</option>
                 <option value='Hype' key='2'>HYPE</option>
                 <option value='Sartorial' key='3'>SARTORIAL</option>
                 <option value='Core' key='4'>CORE</option>
@@ -332,6 +331,7 @@ class SellForm extends React.Component {
                 </div>
               </div>
             </div>
+            <div className='sell-clothing-errors'>{this.renderProductErrors()}</div>
             <button className='publish-clothing-button' onClick={this.handleCreate}>PUBLISH</button>
         </form>
       )
