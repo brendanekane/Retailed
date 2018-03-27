@@ -18,10 +18,16 @@ class ProductDetail extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    if (this.props.currentUser) {
+    if (this.props.currentUser !== null) {
       this.props.createItem(this.props.product.id);
       this.props.history.push('/cart');
+    } else if (this.props.currentUser === null) {
+      this.props.openModal('login')
     }
+  }
+
+  detailsWithCurrentUser() {
+    return
   }
 
 

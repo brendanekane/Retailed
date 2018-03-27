@@ -88,7 +88,7 @@ class SellForm extends React.Component {
         <div className='clothing-main-info'>
           <h2>DETAILS</h2>
           <select className='clothing-type' onBlur={this.update('clothing_type')}>
-            <option value='Tops' key='1' selected='selected'>Tops</option>
+            <option value='Tops' key='1' defaultValue>Tops</option>
             <option value='Bottoms' key='2'>Bottoms</option>
             <option value='Outerwear' key='3'>Outerwear</option>
             <option value='Footwear' key='4'>Footwear</option>
@@ -96,7 +96,7 @@ class SellForm extends React.Component {
             <option value='Accessories' key='6'>Accessories</option>
           </select>
           <select className='clothing-size' onBlur={this.update('size')}>
-            <option value='XXS' key='1' selected='selected'>XXS</option>
+            <option value='XXS' key='1' defaultValue>XXS</option>
             <option value='XS' key='2'>XS</option>
             <option value='S' key='3'>S</option>
             <option value='M' key='4'>M</option>
@@ -111,7 +111,7 @@ class SellForm extends React.Component {
           <div className='clothing-category-container'>
             <h2>MARKET</h2>
             <select className='clothing-category' onBlur={this.update('clothing_category')}>
-              <option value='Retails' key='1' selected='selected'>RETAILS</option>
+              <option value='Retails' key='1' defaultValue>RETAILS</option>
               <option value='Hype' key='2'>HYPE</option>
               <option value='Sartorial' key='3'>SARTORIAL</option>
               <option value='Core' key='4'>CORE</option>
@@ -218,7 +218,7 @@ class SellForm extends React.Component {
           <div className='clothing-main-info'>
             <h2>DETAILS</h2>
             <select className='clothing-type' onBlur={this.update('clothing_type')}>
-              <option value='Tops' key='1' selected='selected'>Tops</option>
+              <option value='Tops' key='1' defaultValue>Tops</option>
               <option value='Bottoms' key='2'>Bottoms</option>
               <option value='Outerwear' key='3'>Outerwear</option>
               <option value='Footwear' key='4'>Footwear</option>
@@ -226,7 +226,7 @@ class SellForm extends React.Component {
               <option value='Accessories' key='6'>Accessories</option>
             </select>
             <select className='clothing-size' onBlur={this.update('size')}>
-              <option value='XXS' key='1' selected='selected'>XXS</option>
+              <option value='XXS' key='1' defaultValue>XXS</option>
               <option value='XS' key='2'>XS</option>
               <option value='S' key='3'>S</option>
               <option value='M' key='4'>M</option>
@@ -241,7 +241,7 @@ class SellForm extends React.Component {
             <div className='clothing-category-container'>
               <h2>MARKET</h2>
               <select className='clothing-category' onBlur={this.update('clothing_category')}>
-                <option value='Retails' key='1' selected='selected'>RETAILS</option>
+                <option value='Retails' key='1' defaultValue>RETAILS</option>
                 <option value='Hype' key='2'>HYPE</option>
                 <option value='Sartorial' key='3'>SARTORIAL</option>
                 <option value='Core' key='4'>CORE</option>
@@ -278,7 +278,7 @@ class SellForm extends React.Component {
                 <label htmlFor='clothing-main-photo-input'>
                   <img className='clothing-main-photo' src={this.state.photos[0].imageUrl}></img>
                 </label>
-                <input id='clothing-main-photo-input' type='file' onChange={this.updateFile(0)}></input>
+                <input id='clothing-main-photo-input' className='fas fa-camera'type='file' onChange={this.updateFile(0)}></input>
               </div>
               <div className='clothing-secondary-photos-container'>
                 <div className='clothing-photo-input-container-2'>

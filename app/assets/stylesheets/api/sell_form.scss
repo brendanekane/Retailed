@@ -271,11 +271,11 @@ img[class*='clothing-photo-']{
 
 
 // not yet implemented
-// .fa-camera::before{
-//   content: "\f030";
-//   position: absolute;
-//   margin-left: 50px;
-// }
+.fa-camera{
+  content: "\f030";
+  position: absolute;
+  margin-left: 50px;
+}
 
 .sell-form-errors-list{
   color: red;
