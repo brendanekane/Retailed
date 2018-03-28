@@ -248,13 +248,13 @@ input[id*='clothing-photo-input-']{
   width: 129px;
 }
 
-.clothing-photo-input-container-0{
-  margin-left: -29px;
-}
-
-.clothing-photo-input-container-4{
-  margin-left: -29px;
-}
+// .clothing-photo-input-container-0{
+//   margin-left: -29px;
+// }
+//
+// .clothing-photo-input-container-4{
+//   margin-left: -29px;
+// }
 
 img[class*='clothing-photo-']{
   height: 165px;
@@ -294,7 +294,6 @@ img[class*='clothing-photo-']{
 .fa-camera{
   content: "\f030";
   position: absolute;
-  margin-left: 50px;
 }
 
 .sell-form-errors-list{
@@ -327,8 +326,4 @@ img[class*='clothing-photo-']{
   font-size: 30px;
   margin: 71px 0 0 46px;
 
-}
-
-[id*='with-photo-input-container-']{
-  margin-left: 21px;
 }
