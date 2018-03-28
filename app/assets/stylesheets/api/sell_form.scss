@@ -33,7 +33,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 58%;
+  width: 63%;
   justify-content: center;
   margin-top: 70px;
 }
@@ -270,6 +270,7 @@ img[class*='clothing-photo-']{
   flex-direction: row;
   justify-content: center;
   width: 95%;
+  margin-left: 50px;
 }
 
 .clothing-main-photo-container{
@@ -285,12 +286,10 @@ img[class*='clothing-photo-']{
 }
 
 .clothing-photos-header{
-  margin: 100px 990px 30px 290px;
+  margin: 100px 990px 30px 234px;
   font-size: 20px;
 }
 
-
-// not yet implemented
 .fa-camera{
   content: "\f030";
   position: absolute;
@@ -325,5 +324,11 @@ img[class*='clothing-photo-']{
 #secondary-photos-fa-icon::before{
   font-size: 30px;
   margin: 71px 0 0 46px;
+}
 
+.sell-clothing-errors{
+  display: flex;
+  justify-content: center;
+  font-family: 'Fira Sans', sans-serif;
+  margin-top: -60px;
 }
