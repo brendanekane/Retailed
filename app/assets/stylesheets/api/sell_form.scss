@@ -33,7 +33,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 70%;
+  width: 58%;
   justify-content: center;
   margin-top: 70px;
 }
@@ -62,7 +62,7 @@
   border: 1px solid black;
   background: white;
   height: 38px;
-  width: 375px;
+  width: 365px;
   font-size: 14px;
   cursor: pointer;
   display: flex;
@@ -78,18 +78,22 @@
 
 .clothing-type{
   margin: 0 10px 10px 5px;
+  padding-left: 10px;
 }
 
 .clothing-size{
   margin: 0px 0 10px 10px;
+  padding-left: 10px;
 }
 
 .clothing-designer{
   margin: 10px 10px 0 5px;
+  padding-left: 10px;
 }
 
 .clothing-name{
   margin: 10px 0 5px 10px;
+  padding-left: 10px;
 }
 
 .clothing-category-container{
@@ -111,6 +115,7 @@
   display: flex;
   font-size: 15px;
   flex-direction: row;
+  padding-left: 10px;
 }
 
 .category-descriptions{
@@ -118,7 +123,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  width: 70%;
+  width: 65%;
 }
 
 .category-descriptions div{
@@ -167,7 +172,7 @@
   flex-wrap: wrap;
   width: 65%;
   justify-content: center;
-  padding-top: 70px;
+  padding: 70px 0 0 30px;
 }
 
 .clothing-description-container h2{
@@ -179,6 +184,7 @@
   width: 800px;
   height: 140px;
   font-size: 13px;
+  padding-left: 10px;
 }
 
 .clothing-price-container{
@@ -193,6 +199,7 @@
 .clothing-price-container h2{
   font-size: 20px;
   margin: 0 760px 40px 0;
+  margin-left: 32px;
 }
 
 .clothing-price{
@@ -205,7 +212,8 @@
   display: flex;
   font-size: 15px;
   flex-direction: row;
-  margin-right: 641px;
+  padding-left: 10px;
+  margin: 0 641px 0 40px
 }
 
 .publish-clothing-button{
@@ -236,6 +244,18 @@ input[id*='clothing-photo-input-']{
   display: none;
 }
 
+[class*='clothing-photo-input-container'] {
+  width: 129px;
+}
+
+.clothing-photo-input-container-0{
+  margin-left: -29px;
+}
+
+.clothing-photo-input-container-4{
+  margin-left: -29px;
+}
+
 img[class*='clothing-photo-']{
   height: 165px;
   width: 123px;
@@ -249,7 +269,7 @@ img[class*='clothing-photo-']{
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
+  width: 95%;
 }
 
 .clothing-main-photo-container{
@@ -261,11 +281,11 @@ img[class*='clothing-photo-']{
 .clothing-secondary-photos-container{
   display: flex;
   flex-wrap: wrap;
-  width: 40%;
+  width: 44%;
 }
 
 .clothing-photos-header{
-  margin: 100px 990px 30px 247px;
+  margin: 100px 990px 30px 290px;
   font-size: 20px;
 }
 
@@ -285,4 +305,30 @@ img[class*='clothing-photo-']{
 
 [class*='error-']{
   margin-bottom: 10px;
+}
+
+.clothing-sell-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fa-camera{
+  position: relative;
+}
+
+.fa-camera::before{
+  position: absolute;
+  font-size: 70px;
+  margin: 130px 0 0 90px;
+}
+
+#secondary-photos-fa-icon::before{
+  font-size: 30px;
+  margin: 71px 0 0 46px;
+
+}
+
+[id*='with-photo-input-container-']{
+  margin-left: 21px;
 }

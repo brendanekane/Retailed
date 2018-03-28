@@ -82,9 +82,62 @@ class SellForm extends React.Component {
     );
   }
 
+  renderFirstPicture() {
+    if (this.state.photos[0].imageUrl === null) {
+      return (
+        <div className='clothing-main-photo-container'>
+          <label htmlFor='clothing-main-photo-input' className="fa fa-camera">
+            <img className='clothing-main-photo' src={this.state.photos[0].imageUrl}></img>
+          </label>
+          <input id='clothing-main-photo-input' type='file' onChange={this.updateFile(0)}></input>
+        </div>
+      )
+    } else if (this.state.photos[0].imageUrl !== null) {
+      return (
+        <div className='clothing-main-photo-container'>
+          <label htmlFor='clothing-main-photo-input'>
+            <img className='clothing-main-photo' src={this.state.photos[0].imageUrl}></img>
+          </label>
+          <input id='clothing-main-photo-input' type='file' onChange={this.updateFile(0)}></input>
+        </div>
+      )
+    }
+  }
+  renderSecondaryPictures() {
+    const photoArr = this.state.photos.slice(1);
+    debugger
+    return (
+      <div className='clothing-secondary-photos-container'>
+        {photoArr.map((photo,idx) =>
+          {if (photo.imageUrl === null) {
+            return (
+              <div key={`${idx}`} className={`clothing-photo-input-container-${idx}`}>
+                <label htmlFor={`clothing-photo-input-${idx}`} className="fa fa-camera" id='secondary-photos-fa-icon'>
+                  <img className={`clothing-photo-${idx}`} src={photoArr[idx].imageUrl}></img>
+                </label>
+                <input id= {`clothing-photo-input-${idx}`} type='file' onChange={this.updateFile(idx+1)}></input>
+              </div>
+            )
+          } else if (photo.imageUrl !== null) {
+            return (
+              <div key={`${idx}`} className={`clothing-photo-input-container-${idx}`} id={`with-photo-input-container-${idx}`}>
+                <label htmlFor={`clothing-photo-input-${idx}`}>
+                  <img className={`clothing-photo-${idx}`} src={photoArr[idx].imageUrl}></img>
+                </label>
+                <input id= {`clothing-photo-input-${idx}`} type='file' onChange={this.updateFile(idx+1)}></input>
+              </div>
+            )
+          }}
+        )}
+      </div>
+    )
+  }
+
   sellProductForm() {
+    debugger
     return (
       <form className='sell-clothing-form-container'>
+        <div className='clothing-sell-container'>
         <div className='clothing-main-info'>
           <h2>DETAILS</h2>
           <select className='clothing-type' onBlur={this.update('clothing_type')}>
@@ -145,64 +198,11 @@ class SellForm extends React.Component {
           </div>
           <div className='clothing-photos-container'>
               <h2 className='clothing-photos-header'>PHOTOS</h2>
-            <div className='clothing-main-photo-container'>
-              <label htmlFor='clothing-main-photo-input'>
-                <img className='clothing-main-photo' src={this.state.photos[0].imageUrl}></img>
-              </label>
-              <input id='clothing-main-photo-input' type='file' onChange={this.updateFile(0)}></input>
-            </div>
-            <div className='clothing-secondary-photos-container'>
-              <div className='clothing-photo-input-container-2'>
-                <label htmlFor='clothing-photo-input-2'>
-                  <img className='clothing-photo-2' src={this.state.photos[1].imageUrl}></img>
-                </label>
-                <input id='clothing-photo-input-2' type='file' onChange={this.updateFile(1)}></input>
-              </div>
-              <div className='clothing-photo-input-container-3'>
-                <label htmlFor='clothing-photo-input-3'>
-                  <img className='clothing-photo-3' src={this.state.photos[2].imageUrl}></img>
-                </label>
-                <input id='clothing-photo-input-3' type='file' onChange={this.updateFile(2)}></input>
-              </div>
-              <div className='clothing-photo-input-container-4'>
-                <label htmlFor='clothing-photo-input-4'>
-                  <img className='clothing-photo-4' src={this.state.photos[3].imageUrl}></img>
-                </label>
-                <input id='clothing-photo-input-4' type='file' onChange={this.updateFile(3)}></input>
-              </div>
-              <div className='clothing-photo-input-container-5'>
-                <label htmlFor='clothing-photo-input-5'>
-                  <img className='clothing-photo-5' src={this.state.photos[4].imageUrl}></img>
-                </label>
-                <input id='clothing-photo-input-5' type='file' onChange={this.updateFile(4)}></input>
-              </div>
-              <div className='clothing-photo-input-container-6'>
-                <label htmlFor='clothing-photo-input-6'>
-                  <img className='clothing-photo-6' src={this.state.photos[5].imageUrl}></img>
-                </label>
-                <input id='clothing-photo-input-6' type='file' onChange={this.updateFile(5)}></input>
-              </div>
-              <div className='clothing-photo-input-container-7'>
-                <label htmlFor='clothing-photo-input-7'>
-                  <img className='clothing-photo-7' src={this.state.photos[6].imageUrl}></img>
-                </label>
-                <input id='clothing-photo-input-7' type='file' onChange={this.updateFile(6)}></input>
-              </div>
-              <div className='clothing-photo-input-container-8'>
-                <label htmlFor='clothing-photo-input-8'>
-                  <img className='clothing-photo-8' src={this.state.photos[7].imageUrl}></img>
-                </label>
-                <input id='clothing-photo-input-8' type='file' onChange={this.updateFile(7)}></input>
-              </div>
-              <div className='clothing-photo-input-container-9'>
-                <label htmlFor='clothing-photo-input-9'>
-                  <img className='clothing-photo-9' src={this.state.photos[8].imageUrl}></img>
-                </label>
-                <input id='clothing-photo-input-9' type='file' onChange={this.updateFile(8)}></input>
-              </div>
-            </div>
+            {this.renderFirstPicture()}
+            {this.renderSecondaryPictures()}
           </div>
           <button className='publish-clothing-button' onClick={this.handleCreate}>PUBLISH</button>
+        </div>
       </form>
     )
   }
@@ -215,29 +215,30 @@ class SellForm extends React.Component {
     } else {
       return (
         <form className='sell-clothing-form-container'>
-          <div className='clothing-main-info'>
-            <h2>DETAILS</h2>
-            <select className='clothing-type' onBlur={this.update('clothing_type')}>
-              <option value='Tops' key='1' defaultValue>Tops</option>
-              <option value='Bottoms' key='2'>Bottoms</option>
-              <option value='Outerwear' key='3'>Outerwear</option>
-              <option value='Footwear' key='4'>Footwear</option>
-              <option value='Tailoring' key='5'>Tailoring</option>
-              <option value='Accessories' key='6'>Accessories</option>
-            </select>
-            <select className='clothing-size' onBlur={this.update('size')}>
-              <option value='XXS' key='1' defaultValue>XXS</option>
-              <option value='XS' key='2'>XS</option>
-              <option value='S' key='3'>S</option>
-              <option value='M' key='4'>M</option>
-              <option value='L' key='5'>L</option>
-              <option value='XL' key='6'>XL</option>
-              <option value='XXL' key='7'>XXL</option>
-              <option value='OS' key='8'>OS</option>
-            </select>
-            <input className='clothing-designer' type='text' onChange={this.update('designer')} onClick={e => e.stopPropagation()} placeholder='Designer'></input>
-            <input className='clothing-name' type='text' onChange={this.update('name')} onClick={e => e.stopPropagation()} placeholder='Name'></input>
-          </div>
+          <div className='clothing-sell-container'>
+            <div className='clothing-main-info'>
+              <h2>DETAILS</h2>
+              <select className='clothing-type' onBlur={this.update('clothing_type')}>
+                <option value='Tops' key='1' defaultValue>Tops</option>
+                <option value='Bottoms' key='2'>Bottoms</option>
+                <option value='Outerwear' key='3'>Outerwear</option>
+                <option value='Footwear' key='4'>Footwear</option>
+                <option value='Tailoring' key='5'>Tailoring</option>
+                <option value='Accessories' key='6'>Accessories</option>
+              </select>
+              <select className='clothing-size' onBlur={this.update('size')}>
+                <option value='XXS' key='1' defaultValue>XXS</option>
+                <option value='XS' key='2'>XS</option>
+                <option value='S' key='3'>S</option>
+                <option value='M' key='4'>M</option>
+                <option value='L' key='5'>L</option>
+                <option value='XL' key='6'>XL</option>
+                <option value='XXL' key='7'>XXL</option>
+                <option value='OS' key='8'>OS</option>
+              </select>
+              <input className='clothing-designer' type='text' onChange={this.update('designer')} onClick={e => e.stopPropagation()} placeholder='Designer'></input>
+              <input className='clothing-name' type='text' onChange={this.update('name')} onClick={e => e.stopPropagation()} placeholder='Name'></input>
+            </div>
             <div className='clothing-category-container'>
               <h2>MARKET</h2>
               <select className='clothing-category' onBlur={this.update('clothing_category')}>
@@ -333,6 +334,7 @@ class SellForm extends React.Component {
             </div>
             <div className='sell-clothing-errors'>{this.renderProductErrors()}</div>
             <button className='publish-clothing-button' onClick={this.handleCreate}>PUBLISH</button>
+          </div>
         </form>
       )
     }
