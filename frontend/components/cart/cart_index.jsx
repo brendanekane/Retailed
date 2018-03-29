@@ -5,7 +5,7 @@ import CartItems from 'components/cart/cart_items';
 class CartIndex extends React.Component {
   constructor(props) {
     super(props);
-  this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   componentDidMount(){
@@ -39,6 +39,8 @@ class CartIndex extends React.Component {
     this.props.history.push('/users/myitems');
   }
 
+  // else {
+  // }
 
   render() {
     return (
@@ -46,10 +48,18 @@ class CartIndex extends React.Component {
         <div className='cart-products-container'>
           <div className='cart-product-items-container'>
             <h2 className='cart-header'>YOUR CART</h2>
-            <ul className='cart-product-items'> {this.props.cartProducts.map(product => (
-              <CartItems deleteItem={this.props.deleteItem} product={product} photos={this.props.photos}/>
-          ))}
-        </ul>
+            <div>
+            </div>
+            {(this.props.cartProducts.length === 0) ?
+              <div className='no-cart-items'>No Products In Your Cart</div> :
+              <ul className='cart-product-items'> {this.props.cartProducts.map(product => {
+                    return (
+                      <CartItems deleteItem={this.props.deleteItem} product={product} photos={this.props.photos}/>
+                    )
+                  }
+                )}
+              </ul>
+            }
           </div>
           <form className='checkout-button-container' onClick={this.handleSubmit}>
             <input className='checkout-button' type='submit' value='CHECKOUT'></input>

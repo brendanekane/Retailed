@@ -77,3 +77,11 @@ a[class*='cart-link-item-'] > img{
   font-family: 'Fira Sans', sans-serif;
   letter-spacing: 2px;
 }
+
+.no-cart-items{
+  display: flex;
+  justify-content: center;
+  font-family: 'Fira Sans', sans-serif;
+  margin: 50px 40px 50px 0;
+  font-size: 30px;
+}
