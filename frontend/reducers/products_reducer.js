@@ -6,7 +6,11 @@ const productsReducer = (state = {}, action) => {
   Object.freeze(state);
     switch (action.type) {
       case RECEIVE_ALL_PRODUCTS:
-        return action.products.products;
+        if (action.products.products !== undefined) {
+          return action.products.products;
+        } else {
+          return null;
+        }
       case RECEIVE_PRODUCT:
         return merge({}, state, {[action.product.product.id]: action.product.product});
       case REMOVE_PRODUCT:

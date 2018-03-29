@@ -4,9 +4,6 @@ import { Link, Route } from 'react-router-dom';
 
 class ProfileIndex extends React.Component {
 
-  componentDidMount() {
-    this.props.getUserProducts(this.props.currentUser.id);
-  }
 
   render() {
     return (
