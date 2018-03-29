@@ -4,10 +4,4 @@ json.extract! user, :id, :email, :transactions, :height, :weight, :location
 # end
 json.product_ids user.products.pluck(:id)
 
-url = asset_path(user.avatar.url)
-if url.include? "assets"
-  url
-else
-  url[3] = url[3] + 's'
-end
-json.image_url asset_path(url)
+json.image_url asset_path(user.avatar.url)
