@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+const guestUser = {email: "michael_scott@gmail.com", password: "office"}
 
 const NavLoginLinks = (props) => {
   return (
@@ -7,6 +8,7 @@ const NavLoginLinks = (props) => {
       <div className='nav-search-bar'>search bar placeholder, hidden</div>
       <Link to='/' className='navbar-logo'>RETAILED</Link>
       <nav className='login-signup'>
+        <p className="loginLink" onClick={() => props.login(guestUser)}>GUEST</p>
         <p className="loginLink" onClick={() => props.openModal('login')}>LOGIN</p>
         <p className="signupLink" onClick={() => props.openModal('signup')}>SIGNUP</p>
       </nav>
@@ -27,7 +29,7 @@ const NavProfileLink = ({currentUser}) => {
       <div className='nav-right'>
         <Link to='/sell' className='nav-sell-link'>SELL</Link>
         <nav className='nav-profile-link'>
-          <Link to={`/users/${currentUser.id}`}>
+          <Link to={`/users/myitems`}>
             <img className='nav-profile-img' src={currentUser.image_url}></img>
           </Link>
           <div className='profile-dropdown'>
@@ -61,7 +63,7 @@ class NavSessionLinks extends React.Component {
 
   render(){
     return(
-    this.props.currentUser ? <NavProfileLink currentUser={this.props.currentUser} /> : <NavLoginLinks openModal={this.props.openModal} closeModal={this.props.closeModal}/>
+    this.props.currentUser ? <NavProfileLink currentUser={this.props.currentUser} /> : <NavLoginLinks openModal={this.props.openModal} closeModal={this.props.closeModal} login={this.props.login}/>
 
   )
   }
