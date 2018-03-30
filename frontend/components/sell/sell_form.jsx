@@ -74,7 +74,7 @@ class SellForm extends React.Component {
     return(
       <ul className="sell-form-errors-list">
         {this.props.errors.map((error, i) => (
-          <li className={`error-${i}`}>
+          <li key={`error-${i}`} className={`error-${i}`}>
             {error}
           </li>
         ))}
@@ -105,7 +105,6 @@ class SellForm extends React.Component {
   }
   renderSecondaryPictures() {
     const photoArr = this.state.photos.slice(1);
-    debugger
     return (
       <div className='clothing-secondary-photos-container'>
         {photoArr.map((photo,idx) =>
@@ -134,7 +133,6 @@ class SellForm extends React.Component {
   }
 
   sellProductForm() {
-    debugger
     return (
       <form className='sell-clothing-form-container'>
         <div className='clothing-sell-container'>

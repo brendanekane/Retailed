@@ -17,17 +17,13 @@ const WithoutItems = () => {
 };
 
 const WithItems = (props) => {
-  const productsArr =  Object.values(props.products).filter(product =>{
-    if (product['user_id'] === props.currentUser.id) {
-      return product
-    }
-  });
+  const productsArr =  Object.values(props.products)
   return(
     <ul className='user-product-items'>
       {productsArr.map(product => {
         const photos = props.photos
         return (
-          <li className={`user-product-item-${product.id}`}>
+          <li key={`${product.id}`} className={`user-product-item-${product.id}`}>
             <Link to={`/products/${product.id}`} className={`user-product-link-item-${product.id}`}>
               <img src={photos[product.photo_ids[0]].image_url} className={`user-product-link-img-${product.id}`}></img>
             </Link>

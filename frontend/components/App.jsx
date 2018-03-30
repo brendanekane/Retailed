@@ -21,7 +21,7 @@ const App = ({store}) => {
   return (
     <div className="app-hook">
       <Modal />
-      <NavbarContainer />
+      <NavbarContainer path='/'/>
       <Route path='/products/:productId' component={ProductContainer} />
       <Route path='/users' component={GreetingContainer} />
       <Route exact path='/' component={HomepageContainer}/>

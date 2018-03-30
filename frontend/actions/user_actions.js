@@ -10,10 +10,12 @@ const receiveUsers = users => ({
   users
 });
 
-const receiveOneUser = user => ({
-  type: RECEIVE_ONE_USER,
-  user
-});
+const receiveOneUser = user => {
+  return ({
+    type: RECEIVE_ONE_USER,
+    user
+  });
+};
 
 const updateCurrentUser = currentUser => {
   return ({

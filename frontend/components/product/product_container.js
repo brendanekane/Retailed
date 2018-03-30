@@ -17,6 +17,7 @@ const mapStateToProps = ({session, entities}, ownProps) => {
 const mapDispatchToProps = dispatch => {
   return ({
     getProducts: () => dispatch(getProducts()),
+    getProduct: (user_id) => dispatch(getProduct(user_id)),
     getOneUser: id => dispatch(getOneUser(id)),
     getItems: () => dispatch(getItems())
   });

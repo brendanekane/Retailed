@@ -11,10 +11,6 @@ class ProductDetail extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  componentDidMount() {
-
-    this.props.getProduct(this.props.match.params.productId);
-  }
 
   handleClick(e) {
     e.preventDefault();
