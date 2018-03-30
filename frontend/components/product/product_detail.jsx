@@ -34,7 +34,7 @@ class ProductDetail extends React.Component {
   render() {
     if (this.props.product !== undefined && this.props.user) {
       return (
-        <div>
+        <div className='product-show-wrapper'>
           <div className= {`show-product-page-${this.props.product.id}`}>
             <p className='product-show-designer'>{this.props.product.designer}</p>
             <br />

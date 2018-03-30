@@ -52,9 +52,9 @@ class CartIndex extends React.Component {
             </div>
             {(this.props.cartProducts.length === 0) ?
               <div className='no-cart-items'>No Products In Your Cart</div> :
-              <ul className='cart-product-items'> {this.props.cartProducts.map(product => {
+              <ul className='cart-product-items'> {this.props.cartProducts.map((product, idx) => {
                     return (
-                      <CartItems deleteItem={this.props.deleteItem} product={product} photos={this.props.photos}/>
+                      <CartItems key={`${idx}`} deleteItem={this.props.deleteItem} product={product} photos={this.props.photos}/>
                     )
                   }
                 )}

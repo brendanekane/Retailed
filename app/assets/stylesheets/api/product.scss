@@ -1,7 +1,7 @@
 .product-photo-main{
   width: 700px;
   height: 700px;
-  margin-left: 200px;
+  margin-left: 188px;
 }
 
 .product-show-container{
@@ -102,4 +102,13 @@ img{
 
 [class*='product-sub-photo-container-']{
   margin-bottom: 10px;
+}
+
+.product-photos-wrapper{
+  display: flex;
+  width: 71%;
+}
+
+.product-show-wrapper{
+  width: 25%;
 }
