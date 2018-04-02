@@ -103,7 +103,7 @@ ben = User.create!(
   avatar: 'https://s3.amazonaws.com/retailed-seed/ben_wyatt.png'
 )
 
-illegal_business_hat = Product.new(
+illegal_business_hat = Product.create!(
   user_id: brendan.id,
   price: 149.99,
   designer: 'Supreme',
@@ -119,9 +119,7 @@ illegal_business_pic_1 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/illegal_business.jpg'
 )
 
-illegal_business_hat.save
-
-saint_laurent_l01 = Product.new(
+saint_laurent_l01 = Product.create!(
   user_id: han_solo.id,
   price: 2499.99,
   designer: 'Saint Laurent',
@@ -136,8 +134,6 @@ saint_laurent_l01_pic_1 = ProductPhoto.create!(
   product_id: saint_laurent_l01.id,
   image: 'https://s3.amazonaws.com/retailed-seed/slo_l01_1.jpg'
 )
-
-saint_laurent_l01.save
 
 saint_laurent_l01_pic_2 = ProductPhoto.create!(
   product_id: saint_laurent_l01.id,
@@ -169,7 +165,7 @@ saint_laurent_l01_pic_7 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/slo_l01_7.jpg'
 )
 
-seven_samurai = Product.new(
+seven_samurai = Product.create!(
   user_id: brendan.id,
   price: 199.99,
   designer: 'Supreme',
@@ -185,9 +181,7 @@ seven_samurai_pic_1 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/IMG_1570.jpg'
 )
 
-seven_samurai.save
-
-taxi_driver = Product.new(
+taxi_driver = Product.create!(
   user_id: leia.id,
   price: 799.99,
   designer: 'Supreme',
@@ -203,7 +197,7 @@ taxi_driver_pic_1 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/sup_taxi.jpg'
 )
 
-tie_dye_tri_ferg = Product.new(
+tie_dye_tri_ferg = Product.create!(
   user_id: michael_scott.id,
   price: 79.99,
   designer: 'Palace',
@@ -219,7 +213,7 @@ tie_dye_tri_ferg_pic_1 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/palace_triferg.jpeg'
 )
 
-blue_tint_v2 = Product.new(
+blue_tint_v2 = Product.create!(
   user_id: jim.id,
   price: 499.99,
   designer: 'Adidas',
@@ -235,9 +229,7 @@ blue_tint_v2_pic_1 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/v2_zebra.jpeg'
 )
 
-blue_tint_v2.save
-
-supreme_brick = Product.new(
+supreme_brick = Product.create!(
   user_id: brendan.id,
   price: 350.99,
   designer: 'Supreme',
@@ -253,9 +245,7 @@ supreme_brick_pic_1 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/Supreme-Brick-Brick.jpg'
 )
 
-supreme_brick.save
-
-ilu_zespy = Product.new(
+ilu_zespy = Product.create!(
   user_id: ben.id,
   price: 79.99,
   designer: 'I Love Ugly',
@@ -271,9 +261,7 @@ ilu_zespy_pic_1 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/zespy_green.jpg'
 )
 
-ilu_zespy.save
-
-gucci_monaco = Product.new(
+gucci_monaco = Product.create!(
   user_id: leslie.id,
   price: 2999.99,
   designer: 'Gucci',
@@ -289,8 +277,6 @@ gucci_monaco_pic_1 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/gucci_suit.jpg'
 )
 
-gucci_monaco.save
-
 gucci_monaco_pic_2 = ProductPhoto.create!(
   product_id: gucci_monaco.id,
   image: 'https://s3.amazonaws.com/retailed-seed/gucci_suit_2.jpg'
@@ -304,7 +290,7 @@ gucci_monaco_pic_4 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/gucci_suit_4.jpg'
 )
 
-uniqlo_shirt = Product.new(
+uniqlo_shirt = Product.create!(
   user_id: pam.id,
   price: 19.99,
   designer: 'Uniqlo',
@@ -320,9 +306,7 @@ uniqlo_shirt_pic_1 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/uniqlo_shirt.jpeg'
 )
 
-uniqlo_shirt.save
-
-acne_white = Product.new(
+acne_white = Product.create!(
   user_id: michael_scott.id,
   price: 82.05,
   designer: 'Acne Studios',
@@ -337,8 +321,6 @@ acne_white_pic_1 = ProductPhoto.create!(
   product_id: acne_white.id,
   image: 'https://s3.amazonaws.com/retailed-seed/acne_white_1.jpg'
 )
-
-acne_white.save
 
 acne_white_pic_2 = ProductPhoto.create!(
   product_id: acne_white.id,
@@ -360,7 +342,7 @@ acne_white_pic_5 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/acne_white_5.jpg'
 )
 
-slp_shark = Product.new(
+slp_shark = Product.create!(
   user_id: leia.id,
   price: 190.99,
   designer: 'Saint Laurent Paris',
@@ -375,8 +357,6 @@ slp_shark_pic_1 = ProductPhoto.create!(
   product_id: slp_shark.id,
   image: 'https://s3.amazonaws.com/retailed-seed/shark_1.jpg'
 )
-
-slp_shark.save
 
 slp_shark_pic_2 = ProductPhoto.create!(
   product_id: slp_shark.id,
@@ -398,7 +378,7 @@ slp_shark_pic_5 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/shark_5.jpg'
 )
 
-gosha_sweats = Product.new(
+gosha_sweats = Product.create!(
   user_id: luke.id,
   price: 90.50,
   designer: 'Gosha Rubchinskiy',
@@ -415,8 +395,6 @@ gosha_sweats_pic_1 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/gosha_sweats_1.jpg'
 )
 
-gosha_sweats.save
-
 gosha_sweats_pic_2 = ProductPhoto.create!(
   product_id: gosha_sweats.id,
   image: 'https://s3.amazonaws.com/retailed-seed/gosha_sweats_2.jpg'
@@ -432,7 +410,7 @@ gosha_sweats_pic_4 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/gosha_sweats_4.jpg'
 )
 
-jil_sander = Product.new(
+jil_sander = Product.create!(
   user_id: luke.id,
   price: 190,
   designer: 'Jil Sander',
@@ -447,8 +425,6 @@ jill_sander_pic_1 = ProductPhoto.create!(
   product_id: jil_sander.id,
   image: 'https://s3.amazonaws.com/retailed-seed/jil_sander_1.jpg'
 )
-
-jil_sander.save
 
 jill_sander_pic_2 = ProductPhoto.create!(
   product_id: jil_sander.id,
@@ -485,7 +461,7 @@ jill_sander_pic_8 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/jil_sander_8.jpg'
 )
 
-off_white_tee = Product.new(
+off_white_tee = Product.create!(
   user_id: luke.id,
   price: 325,
   designer: 'Off-White',
@@ -495,8 +471,6 @@ off_white_tee = Product.new(
   clothing_category: 'Retailed',
   description: 'Off white x guns and roses. Maxfield LA exclusive. Size XXL brand new with tags. Retail $310. RARE!'
 )
-
-off_white_tee.save
 
 off_white_tee_pic_1 = ProductPhoto.create!(
   product_id: off_white_tee.id,
@@ -527,7 +501,7 @@ off_white_tee_pic_5 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/off_white_t_5.jpg'
 )
 
-kermit_toy = Product.new(
+kermit_toy = Product.create!(
   user_id: chewie.id,
   price: 175.50,
   designer: 'Supreme X Medicom',
@@ -542,8 +516,6 @@ kermit_toy_pic_1 = ProductPhoto.create!(
   product_id: kermit_toy.id,
   image: 'https://s3.amazonaws.com/retailed-seed/kermit_1.jpg'
 )
-
-kermit_toy.save
 
 kermit_toy_pic_2 = ProductPhoto.create!(
   product_id: kermit_toy.id,
@@ -570,7 +542,7 @@ kermit_toy_pic_6 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/kermit_6.jpg'
 )
 
-slp_shoes = Product.new(
+slp_shoes = Product.create!(
   user_id: chewie.id,
   price: 383,
   designer: 'Saint Laurent Paris',
@@ -585,9 +557,6 @@ slp_shoes_pic_1 = ProductPhoto.create!(
   product_id: slp_shoes.id,
   image: 'https://s3.amazonaws.com/retailed-seed/slp_shoes_1.jpg'
 )
-
-slp_shoes.save
-
 slp_shoes_pic_2 = ProductPhoto.create!(
   product_id: slp_shoes.id,
   image: 'https://s3.amazonaws.com/retailed-seed/slp_shoes_2.jpg'
@@ -621,7 +590,7 @@ slp_shoes_pic_9 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/slp_shoes_9.jpg'
 )
 
-cnn_deck = Product.new(
+cnn_deck = Product.create!(
   user_id: pam.id,
   price: 80,
   designer: 'Supreme',
@@ -637,14 +606,12 @@ cnn_deck_pic_1 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/cnn_deck_1.jpg'
 )
 
-cnn_deck.save
-
 cnn_deck_pic_2 = ProductPhoto.create!(
   product_id: cnn_deck.id,
   image: 'https://s3.amazonaws.com/retailed-seed/cnn_deck_2.jpg'
 )
 
-snoop_tee = Product.new(
+snoop_tee = Product.create!(
   user_id: jim.id,
   price: 1200,
   designer: 'Vetements',
@@ -659,8 +626,6 @@ snoop_tee_pic_1 = ProductPhoto.create!(
   product_id: snoop_tee.id,
   image: 'https://s3.amazonaws.com/retailed-seed/snoop_tee_1.jpg'
 )
-
-snoop_tee.save
 
 snoop_tee_pic_2 = ProductPhoto.create!(
   product_id: snoop_tee.id,
@@ -697,7 +662,7 @@ snoop_tee_pic_8 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/snoop_tee_8.jpg'
 )
 
-perfecto = Product.new(
+perfecto = Product.create!(
   user_id: han_solo.id,
   price: 495.99,
   designer: 'Schott',
@@ -712,8 +677,6 @@ perfecto_pic_1 = ProductPhoto.create!(
   product_id: perfecto.id,
   image: 'https://s3.amazonaws.com/retailed-seed/perfecto_1.jpg'
 )
-
-perfecto.save
 
 perfecto_pic_2 = ProductPhoto.create!(
   product_id: perfecto.id,
@@ -755,7 +718,7 @@ perfecto_pic_9 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/perfecto_9.jpg'
 )
 
-slp_biker = Product.new(
+slp_biker = Product.create!(
   user_id: leslie.id,
   price: 790,
   designer: 'Saint Laurent Paris',
@@ -770,8 +733,6 @@ slp_biker_pic_1 = ProductPhoto.create!(
   product_id: slp_biker.id,
   image: 'https://s3.amazonaws.com/retailed-seed/slp_biker_1.jpg'
 )
-
-slp_biker.save
 
 slp_biker_pic_2 = ProductPhoto.create!(
   product_id: slp_biker.id,
@@ -813,7 +774,7 @@ slp_biker_pic_9 = ProductPhoto.create!(
   image: 'https://s3.amazonaws.com/retailed-seed/slp_biker_9.jpg'
 )
 
-rick_shoes = Product.new(
+rick_shoes = Product.create!(
   user_id: ben.id,
   price: 650,
   designer: 'Rick Owens',
@@ -828,8 +789,6 @@ rick_shoes_pic_1 = ProductPhoto.create!(
   product_id: rick_shoes.id,
   image: 'https://s3.amazonaws.com/retailed-seed/rick_1.jpg'
 )
-
-rick_shoes.save
 
 rick_shoes_pic_2 = ProductPhoto.create!(
   product_id: rick_shoes.id,
