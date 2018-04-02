@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   validates :user_id, :price, :designer, :name, :clothing_type, :size,
-  :clothing_category, presence: true
+  :clothing_category, :product_photos, presence: true
 
   belongs_to :user
 
