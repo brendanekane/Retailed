@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
-  validates :user_id, :price, :designer, :name, :clothing_type, :size, :clothing_category, presence: true
+  validates :user_id, :price, :designer, :name, :clothing_type, :size,
+  :clothing_category, :product_photos, presence: true
 
   belongs_to :user
 
@@ -7,6 +8,5 @@ class Product < ApplicationRecord
   accepts_nested_attributes_for :product_photos
 
   has_many :cart_items, dependent: :destroy
-  
 
 end
