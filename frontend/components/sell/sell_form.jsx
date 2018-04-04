@@ -15,8 +15,7 @@ class SellForm extends React.Component {
       description: "",
       photos: [{imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null},
         {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null},
-        {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null}],
-      errors: this.props.errors
+        {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null}]
     };
     this.handleCreate = this.handleCreate.bind(this);
     this.updateFile = this.updateFile.bind(this);
@@ -81,10 +80,11 @@ class SellForm extends React.Component {
         this.props.history.push(`/users/myitems`);
       });
     } else if (validatePhoto === false && !this.props.errors.includes('You must upload at least one photo')) {
-        this.setState((prevState, props) => {
-          return {errors: prevState.errors.push('You must upload at least one photo')};
-        });
-
+        // this.setState((prevState, props) => {
+        //   return {errors: prevState.errors.push('You must upload at least one photo')};
+        // });
+        this.props.errors.push('You must upload at least one photo')
+        this.forceUpdate()
     }
   }
   renderProductErrors() {
