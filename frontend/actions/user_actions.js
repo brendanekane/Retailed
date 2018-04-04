@@ -4,6 +4,7 @@ import { RECEIVE_CURRENT_USER } from 'actions/session_actions';
 export const RECEIVE_USERS = 'RECEIVE_USERS';
 export const RECEIVE_ONE_USER = "RECEIVE_ONE_USER";
 export const RECEIVE_USERS_ERRORS = 'RECEIVE_USERS_ERRORS';
+export const CLEAR_USER_ERRORS = 'CLEAR_USER_ERRORS';
 
 const receiveUsers = users => ({
   type: RECEIVE_USERS,
@@ -28,8 +29,12 @@ const receiveUserErrors = error => {
   return ({
     type: RECEIVE_USERS_ERRORS,
     error
-  })
-}
+  });
+};
+
+export const clearUserErrors = () => ({
+  type: CLEAR_USER_ERRORS
+});
 
 export const getUsers = () => dispatch => {
   return UserApiUtil.getUsers()
