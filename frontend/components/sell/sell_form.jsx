@@ -65,9 +65,22 @@ class SellForm extends React.Component {
         formData.append("product[product_photos_attributes][][image]", photo.imageFile)
       }
     });
-    this.props.createProduct(formData).then((data)=> {
-      this.props.history.push(`/users/myitems`);
+    let validatePhoto = false;
+    this.state.photos.forEach(photo => {
+      if (photo.imageFile !== null) {
+        debugger
+        validatePhoto = true;
+      }
     });
+    if (validatePhoto) {
+      debugger
+      this.props.createProduct(formData).then((data)=> {
+        this.props.history.push(`/users/myitems`);
+      });
+    } else {
+      alert('You must upload at least one photo');
+      // this.renderPhotoErrors();
+    }
   }
   //
   renderProductErrors() {
