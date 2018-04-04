@@ -31,7 +31,7 @@ class SessionForm extends React.Component {
     } else {
       this.props.processForm(user).then((data) => {
         this.props.closeModal();
-        this.props.history.push(`/users/myitem`);
+        this.props.history.push(`/users/myitems`);
       });
     }
 
