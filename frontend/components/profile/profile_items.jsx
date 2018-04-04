@@ -19,7 +19,6 @@ const WithoutItems = () => {
 const WithItems = (props) => {
   const productsArr =  Object.values(props.products)
 
-  debugger
   return(
     <ul className='user-product-items'>
       {productsArr.map(product => {

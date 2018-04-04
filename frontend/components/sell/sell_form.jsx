@@ -15,10 +15,15 @@ class SellForm extends React.Component {
       description: "",
       photos: [{imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null},
         {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null},
-        {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null}]
+        {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null}, {imageFile: null, imageUrl: null}],
+      errors: this.props.errors
     };
     this.handleCreate = this.handleCreate.bind(this);
     this.updateFile = this.updateFile.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.clearProductErrors();
   }
 
   update(field) {
@@ -62,27 +67,26 @@ class SellForm extends React.Component {
     formData.append("product[description]", this.state.description);
     this.state.photos.forEach(photo => {
       if (photo.imageFile) {
-        formData.append("product[product_photos_attributes][][image]", photo.imageFile)
+        formData.append("product[product_photos_attributes][][image]", photo.imageFile);
       }
     });
     let validatePhoto = false;
     this.state.photos.forEach(photo => {
       if (photo.imageFile !== null) {
-        debugger
         validatePhoto = true;
       }
     });
     if (validatePhoto) {
-      debugger
       this.props.createProduct(formData).then((data)=> {
         this.props.history.push(`/users/myitems`);
       });
-    } else {
-      alert('You must upload at least one photo');
-      // this.renderPhotoErrors();
+    } else if (validatePhoto === false && !this.props.errors.includes('You must upload at least one photo')) {
+        this.setState((prevState, props) => {
+          return {errors: prevState.errors.push('You must upload at least one photo')};
+        });
+
     }
   }
-  //
   renderProductErrors() {
     return(
       <ul className="sell-form-errors-list">
@@ -93,6 +97,10 @@ class SellForm extends React.Component {
         ))}
       </ul>
     );
+  }
+
+  clearErrors() {
+
   }
 
   renderFirstPicture() {
@@ -299,6 +307,7 @@ class SellForm extends React.Component {
   }
 
   render() {
+
     return (
       <div className='sell-form-wrapper'>
         <div className='sell-form-header'>

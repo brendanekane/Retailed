@@ -4,6 +4,7 @@ export const RECEIVE_ALL_PRODUCTS = 'RECEIVE_ALL_PRODUCTS';
 export const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
 export const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
 export const RECEIVE_PRODUCT_ERRORS = 'RECEIVE_PRODUCT_ERRORS';
+export const CLEAR_PRODUCT_ERRORS = 'CLEAR_PRODUCT_ERRORS';
 
 export const getProducts = () => dispatch => {
   return (
@@ -70,4 +71,8 @@ const removeProduct = id => ({
 const receiveProductErrors = errors => ({
   type: RECEIVE_PRODUCT_ERRORS,
   errors
+});
+
+export const clearProductErrors = () => ({
+  type: CLEAR_PRODUCT_ERRORS
 });

@@ -1,18 +1,19 @@
 import { connect } from 'react-redux';
 import SellForm from 'components/sell/sell_form';
-import { createProduct } from 'actions/product_actions';
+import { createProduct, clearProductErrors } from 'actions/product_actions';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = ({ session, errors}) => {
   return ({
     currentUser: session.currentUser,
-    errors: errors.products
+    errors: errors.products.slice(0)
   });
 };
 
 const mapDispatchToProps = dispatch => {
   return({
-    createProduct: product => dispatch(createProduct(product))
+    createProduct: product => dispatch(createProduct(product)),
+    clearProductErrors: () => dispatch(clearProductErrors())
   });
 };
 
