@@ -7,9 +7,6 @@ class HomepageProducts extends React.Component{
   }
 
 
-
-
-
   render() {
     return(
       <div>
@@ -22,7 +19,7 @@ class HomepageProducts extends React.Component{
             return (
               <li key={`homepage-product-item-${product.id}`} className={`homepage-product-item-${product.id}`}>
                 <Link to={`/products/${product.id}`} className={`homepage-link-item-${product.id}`}>
-                  <img src={photos[product.photo_ids[0]].image_url}></img>
+                  <div className='homepage-link-item-div' style={{background: `url(${photos[product.photo_ids[0]].image_url})`, backgroundSize: 'cover', backgroundPosition: 'center'}}></div>
                 </Link>
                 <br/>
                 <p className='homepage-product-created_at'>{product.created_at}</p>

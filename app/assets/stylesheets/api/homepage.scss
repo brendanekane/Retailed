@@ -1,8 +1,3 @@
-a[class*='homepage-link-item-'] > img{
-  height: 280px;
-  width: 210px;
-}
-
 .homepage-product-items{
   display: flex;
   flex-wrap: wrap;
@@ -169,4 +164,9 @@ div[class*='homepage-top-products-details-container']{
   font-weight: 900;
   width: 32%;
   margin: 30px 480px 30px 20px;
+}
+
+.homepage-link-item-div{
+  height: 280px;
+  width: 210px;
 }

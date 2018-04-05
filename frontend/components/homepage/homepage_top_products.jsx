@@ -50,7 +50,7 @@ class HomepageTopProducts extends React.Component {
               <br/>
             </div>
             <Link to={`/products/${product.id}`}>
-              <img className={`homepage-top-product-img-${idx}`} src={productPhotos[0].image_url}></img>
+                  <div className={`homepage-top-product-img-${idx}`} style={{background: `url(${photos[product.photo_ids[0]].image_url})`, backgroundSize: 'cover', backgroundPosition: 'center'}}></div>
             </Link>
           </div>
         )

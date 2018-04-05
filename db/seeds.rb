@@ -226,7 +226,7 @@ blue_tint_v2 = Product.create!(
 
 blue_tint_v2_pic_1 = ProductPhoto.create!(
   product_id: blue_tint_v2.id,
-  image: 'https://s3.amazonaws.com/retailed-seed/v2_zebra.jpeg'
+  image: 'https://s3.amazonaws.com/retailed-seed/v2_blue_tint.jpg'
 )
 
 supreme_brick = Product.create!(
@@ -242,7 +242,7 @@ supreme_brick = Product.create!(
 
 supreme_brick_pic_1 = ProductPhoto.create!(
   product_id: supreme_brick.id,
-  image: 'https://s3.amazonaws.com/retailed-seed/Supreme-Brick-Brick.jpg'
+  image: 'https://s3.amazonaws.com/retailed-seed/sup_brick.jpeg'
 )
 
 ilu_zespy = Product.create!(
