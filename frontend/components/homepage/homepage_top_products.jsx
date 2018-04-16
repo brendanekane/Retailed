@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 // this.props.photos[topProducts[0].id].image_url
 class HomepageTopProducts extends React.Component {
@@ -7,20 +7,23 @@ class HomepageTopProducts extends React.Component {
     super(props);
     this.state = {
       products: this.props.products
-    }
+    };
   }
+
   render() {
-    function productSort(key) {
-    var order = 1;
-    if(key[0] === "-") {
+    const productSort = (key) => {
+      let order = 1;
+      if(key[0] === "-") {
         order = -1;
         key = key.substr(1);
-    }
-    return function (a,b) {
-        var result = (a[key] < b[key]) ? 1 : (a[key] > b[key]) ? -1 : 0;
+      }
+      return (a,b) => {
+        let result = (a[key] < b[key]) ? 1 : (a[key] > b[key]) ? -1 : 0;
         return result * order;
-    }
-}
+      };
+    };
+
+
     const sortedProducts = Object.values(this.props.products).sort(productSort('price'));
     const photos = this.props.photos;
     const topProducts = [];
@@ -34,7 +37,7 @@ class HomepageTopProducts extends React.Component {
       topProductsList = topProducts.map((product, idx) => {
         const productPhotos = [];
         Object.values(photos).filter(photo => {if (photo.product_id === product.id) {
-            productPhotos.push(photo)
+            productPhotos.push(photo);
           }
         });
         return (

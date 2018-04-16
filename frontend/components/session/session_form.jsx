@@ -45,6 +45,7 @@ class SessionForm extends React.Component {
             {error}
           </li>
         ))}
+        <br></br>
       </ul>
     );
   }
@@ -68,7 +69,7 @@ class SessionForm extends React.Component {
           placeholder="Email"
           value={this.state.email}
           onChange={this.update('email')}
-          className="login-input-email"
+          className={this.props.errors.length === 0 ? "login-input-email" : "login-input-email-errors"}
           />
         <br/>
         <br/>
@@ -76,10 +77,11 @@ class SessionForm extends React.Component {
           value={this.state.password}
           placeholder="Password"
           onChange={this.update('password')}
-          className="login-input-pw"
+          className={this.props.errors.length === 0 ? "login-input-pw" : "login-input-pw-errors"}
           />
         <br/>
         <br/>
+        {this.props.errors.length !== 0 ? <div>{this.renderErrors()}</div> : <div></div> }
         <input className="session-submit" type="submit" value= {thisForm} />
         <br/>
         <br/>
@@ -87,60 +89,15 @@ class SessionForm extends React.Component {
     );
   }
 
-
-  renderInputErrors() {
-    let thisForm;
-    if (this.props.formType === 'Log In') {
-     thisForm = 'Log In'
-   } else if (this.props.formType === 'Sign Up') {
-     thisForm = 'Sign Up'
-   }
-    if (this.props.errors.length === 0) {
-      {return this.loginForm()}
-    } else {
-      return (
-        <div className="login-form">
-          <br/>
-          <input type="email"
-            placeholder="Email"
-            value={this.state.email}
-            onChange={this.update('email')}
-            className="login-input-email-errors"
-            />
-          <br/>
-          <br/>
-          <input type="password"
-            value={this.state.password}
-            placeholder="Password"
-            onChange={this.update('password')}
-            className="login-input-pw-errors"
-            />
-          <br/>
-          <div className='login-form-errors'>{this.renderErrors()}</div>
-          <input className="session-submit" type="submit" value= {thisForm} />
-          <br/>
-          <br/>
-        </div>
-      )
-    }
-  }
-
-
   render() {
     let otherForm;
-    let thisForm;
     let modalLink;
-    let otherFormLink;
     if (this.props.formType === 'Log In') {
-     thisForm = 'Log In'
      modalLink = 'signup'
      otherForm = 'Sign Up';
-     otherFormLink = '/signup';
    } else if (this.props.formType === 'Sign Up') {
-     thisForm = 'Sign Up'
      modalLink = 'login'
      otherForm = 'Log In';
-     otherFormLink = '/login';
    }
     return (
         <div className="login-form-wrapper">
@@ -151,12 +108,14 @@ class SessionForm extends React.Component {
                 <br/>
                 <br/>
                 <div>
-                  <p className='login-header-link' onClick={  () => this.props.openModal(modalLink)}>{otherForm}</p> or {this.props.formType} below.
+                  <p className='login-header-link' onClick={  () =>
+                    this.props.openModal(modalLink)}>{otherForm}</p>
+                    or {this.props.formType} below.
                 </div>
                 <br/>
                 <br/>
               </div>
-              {this.renderInputErrors()}
+              {this.loginForm()}
               <div className="login-form-footer">
               </div>
             </form>
