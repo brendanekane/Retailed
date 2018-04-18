@@ -2,17 +2,13 @@ import React  from 'react';
 import { Link, Route } from 'react-router-dom';
 
 
-class ProfileIndex extends React.Component {
-
-
-  render() {
-    return (
-      <div className='profile-index-items'>
-        <Link to='/users/myitems' className='profile-index-item'>MY ITEMS</Link>
-        <Link to='/users/settings' className='profile-index-settings'>SETTINGS</Link>
-      </div>
-    )
-  }
+const ProfileIndex = () => {
+  return (
+    <div className='profile-index-items'>
+      <Link to='/users/myitems' className='profile-index-item'>MY ITEMS</Link>
+      <Link to='/users/settings' className='profile-index-settings'>SETTINGS</Link>
+    </div>
+  )
 }
 
 // Removed from above settings until feature is implemented
