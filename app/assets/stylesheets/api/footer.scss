@@ -1,0 +1,29 @@
+.footer-container{
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.footer{
+  display: flex;
+  width: 50vw;
+  justify-content: space-evenly;
+}
+
+[class*='footer-link-']{
+  text-decoration: none;
+  color: black;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 20px;
+}
+
+#footer-fonta-github{
+  font-size: 30px;
+}
+
+#footer-fonta-portfolio{
+  font-size: 30px;
+}
+#footer-fonta-linkedin{
+  font-size: 30px;
+}

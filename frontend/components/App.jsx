@@ -11,6 +11,7 @@ import HomepageContainer from 'components/homepage/homepage_container';
 import SellFormContainer from 'components/sell/sell_form_container';
 import ProductContainer from 'components/product/product_container';
 import CartIndexContainer from 'components/cart/cart_index_container';
+import Footer from 'components/footer/footer';
 
 
 
@@ -28,6 +29,7 @@ const App = ({store}) => {
       <Route path='/users/:id' component={ProfileContainer} />
       <Route path='/sell' component={SellFormContainer} />
       <ProtectedRoute exact path='/cart' component={CartIndexContainer}/>
+      <Footer path='/'/>
     </div>
   );
 };
