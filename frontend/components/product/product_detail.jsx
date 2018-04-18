@@ -22,10 +22,6 @@ class ProductDetail extends React.Component {
     }
   }
 
-  detailsWithCurrentUser() {
-    return
-  }
-
 
   render() {
     if (this.props.product !== undefined && this.props.user) {
