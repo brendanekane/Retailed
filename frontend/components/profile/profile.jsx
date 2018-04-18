@@ -5,25 +5,19 @@ import ProfileEditFormContainer from 'components/profile/profile_edit_form_conta
 import ProfileItemsContainer from 'components/profile/profile_items_container';
 import ProfileMessagesContainer from 'components/profile/profile_messages_container';
 
-class Profile extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <div className="profile-container">
-        <div className="profile-index-container">
-          <ProfileIndexContainer />
-          <div>
-            <Route path='/users/settings' component={ ProfileEditFormContainer } />
-            <Route path='/users/myitems' component={ ProfileItemsContainer } />
-            <Route path='/users/messages' component={ ProfileMessagesContainer } />
-          </div>
+const Profile = () => {
+  return (
+    <div className="profile-container">
+      <div className="profile-index-container">
+        <ProfileIndexContainer />
+        <div>
+          <Route path='/users/settings' component={ ProfileEditFormContainer } />
+          <Route path='/users/myitems' component={ ProfileItemsContainer } />
+          <Route path='/users/messages' component={ ProfileMessagesContainer } />
         </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default withRouter(Profile);

@@ -6,7 +6,7 @@ import SignupFormContainer from 'components/session/signup_form_container';
 import { AuthRoute, ProtectedRoute } from 'util/route_util';
 import NavbarContainer from 'components/navbar/navbar_container';
 import Modal from 'components/modal';
-import ProfileContainer from 'components/profile/profile_container';
+import Profile from 'components/profile/profile';
 import HomepageContainer from 'components/homepage/homepage_container';
 import SellFormContainer from 'components/sell/sell_form_container';
 import ProductContainer from 'components/product/product_container';
@@ -26,7 +26,7 @@ const App = ({store}) => {
       <Route path='/products/:productId' component={ProductContainer} />
       <Route path='/users' component={GreetingContainer} />
       <Route exact path='/' component={HomepageContainer}/>
-      <Route path='/users/:id' component={ProfileContainer} />
+      <Route path='/users/:id' component={Profile} />
       <Route path='/sell' component={SellFormContainer} />
       <ProtectedRoute exact path='/cart' component={CartIndexContainer}/>
       <Footer path='/'/>
