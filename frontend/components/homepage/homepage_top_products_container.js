@@ -1,4 +1,3 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import HomepageTopProducts from 'components/homepage/homepage_top_products';
 
