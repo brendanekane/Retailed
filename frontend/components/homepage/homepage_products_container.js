@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import HomepageProducts from 'components/homepage/homepage_products';
-import { getProducts } from 'actions/product_actions';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = ({ session, entities }) => {
@@ -12,13 +11,7 @@ const mapStateToProps = ({ session, entities }) => {
   });
 };
 
-const mapDispatchToProps = dispatch => {
-  return({
-    getProducts: () => dispatch(getProducts())
-  });
-};
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(HomepageProducts);
