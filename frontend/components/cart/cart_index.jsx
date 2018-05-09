@@ -39,9 +39,6 @@ class CartIndex extends React.Component {
     this.props.history.push('/users/myitems');
   }
 
-  // else {
-  // }
-
   render() {
     return (
       <div className='cart-wrapper'>

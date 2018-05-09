@@ -36,7 +36,6 @@ class ProfileEditForm extends React.Component {
   }
 
   handleUpdate(e) {
-    // e.preventDefault();
     const formData = new FormData();
     formData.append("user[id]", this.state.id);
     formData.append("user[email]", this.state.email);
@@ -54,20 +53,6 @@ class ProfileEditForm extends React.Component {
     this.props.logout();
     this.props.history.push('/');
   }
-
-  // errors() {
-  //   if (this.props.errors) {
-  //     return (
-  //       this.props.errors.map(error => {
-  //         return (<li className="error" key={error}>{error}</li>);
-  //       })
-  //     );
-  //   }
-  // }
-  //
-  // <ul className= 'profile-edit-errors'>
-  //   {this.errors()}
-  // </ul>
 
   render() {
     return (
