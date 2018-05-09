@@ -16,10 +16,8 @@ const NavLoginLinks = (props) => {
   )
 };
 
-//refactor later to have url address be username instead of id
 const NavProfileLink = ({currentUser}) => {
-  // let email = currentUser.email
-  // let user_name = email ? email.substring(0, email.lastIndexOf("@")) : ""
+
   return(
     <div className='nav-bar'>
       <div className='nav-cart-div'>
@@ -44,29 +42,12 @@ const NavProfileLink = ({currentUser}) => {
   )
 };
 
-// <Link to='users/retails'>MY RETAILS</Link>
-// <Link to='/users/messages' className='profile-dropdwon-messages'>MESSAGES</Link>
-// removed from profile-dropdown until transactions table implemented
-// and buy/sell feature refactored
-// NOTE profile-dropdown will shift when you readd this, make sure to
-// fix margin in stylesheet to -44 when you reimplement
-// <Link to='/users/transactions'>TRANSACTIONS</Link>
 
-// make a classical component componentdidmount currentUser and componentwillreceiveprops pokedex(this.props.history.push(email substring))
-// export withRouter...maybeee wait til later when refactoring
-class NavSessionLinks extends React.Component {
-  constructor(props){
-    super(props)
-
-  }
-
-
-  render(){
-    return(
-    this.props.currentUser ? <NavProfileLink currentUser={this.props.currentUser} /> : <NavLoginLinks openModal={this.props.openModal} closeModal={this.props.closeModal} login={this.props.login}/>
+const NavSessionLinks = (props) => {
+  return (
+    props.currentUser ? <NavProfileLink currentUser={props.currentUser} /> : <NavLoginLinks openModal={props.openModal} closeModal={props.closeModal} login={props.login}/>
 
   )
-  }
 }
 
 export default NavSessionLinks;
