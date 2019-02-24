@@ -107,11 +107,11 @@ class SessionForm extends React.Component {
                 <h3>JOIN THE COMMUNITY</h3>
                 <br/>
                 <br/>
-                <div>
-                  <p className='login-header-link' onClick={  () =>
-                    this.props.openModal(modalLink)}>{otherForm}</p>
-                    or {this.props.formType} below.
-                </div>
+                  <div>
+                   <p className='login-header-link' onClick={  () =>
+                     this.props.openModal(modalLink)}>{otherForm}</p>
+                     or {this.props.formType} below.
+                 </div>
                 <br/>
                 <br/>
               </div>
