@@ -43,7 +43,7 @@
   background-color: black;
   color: #fff;
   border: 1px solid black;
-  width: 100%;
+  width: 60%;
   margin: 50px 0 50px 0;
   height: 46px;
   font-size: 14px;
@@ -102,12 +102,14 @@ img{
 .product-sub-photos-wrapper{
   display: grid;
   grid-template-columns: 30% 30% 30%;
+  grid-row-gap: 5%;
   justify-content: space-evenly;
 }
 
 [class*='product-sub-photo-container-']{
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 // .product-photos-wrapper{
@@ -115,7 +117,3 @@ img{
 //   width: 71%;
 // }
 // DELETE WHOLE THING DIV DOESN"T EXIST
-
-.product-show-wrapper{
-  width: 25%;
-}
