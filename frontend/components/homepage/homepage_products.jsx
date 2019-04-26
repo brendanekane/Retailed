@@ -4,10 +4,10 @@ import { Link, withRouter } from 'react-router-dom';
 const HomepageProducts = (props) => {
   return(
     <div>
+      <div className='homepage-products-header'>
+        <h2>BROWSE THE FEED</h2>
+      </div>
       <ul className='homepage-product-items'>
-        <div className='homepage-products-header'>
-          <h2>BROWSE THE FEED</h2>
-        </div>
         {props.products.map(product => {
           const photos = props.photos;
           return (

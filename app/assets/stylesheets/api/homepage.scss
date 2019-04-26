@@ -1,10 +1,10 @@
 .homepage-product-items{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   justify-content: space-between;
-  margin-left: 150px;
-  width: 76%;
+  margin: 0vw 12vw 0vw 12vw;
 }
+
 
 li[class*='homepage-product-item-']{
   font-size: 20px;
