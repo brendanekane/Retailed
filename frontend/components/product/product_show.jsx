@@ -32,14 +32,12 @@ class ProductShow extends React.Component {
     })
 
     return (
-    <div className='product-photos-wrapper'>
       <div className= 'product-photos-container'>
         <div className='product-photo-main-container'>
           <img className='product-photo-main' src={mainPhoto[0].image_url}></img>
         </div>
         <div className='product-sub-photos-wrapper' >{subPhotos}</div>
       </div>
-    </div>
     );} else {
       return(
         <div></div>

@@ -19,10 +19,8 @@ class Product extends React.Component {
   render() {
     return (
       <div className='product-show-page-wrapper'>
-        <div className='product-show-container'>
-          <ProductShowContainer photos={this.props.photos}/>
-          <ProductDetailContainer />
-        </div>
+        <ProductShowContainer photos={this.props.photos}/>
+        <ProductDetailContainer />
       </div>
     )
   }
