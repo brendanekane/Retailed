@@ -12,9 +12,7 @@ class ProductShow extends React.Component {
     e.preventDefault();
     const newMainPhoto = e.target;
     const oldMainPhoto = document.querySelector('.product-photo-main');
-    debugger
     [newMainPhoto.src, oldMainPhoto.src] = [oldMainPhoto.src, newMainPhoto.src];
-    debugger
   }
 
 
