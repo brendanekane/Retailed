@@ -5,6 +5,16 @@ import { withRouter } from 'react-router-dom';
 class ProductShow extends React.Component {
   constructor(props) {
     super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+    e.preventDefault();
+    const newMainPhoto = e.target;
+    const oldMainPhoto = document.querySelector('.product-photo-main');
+    debugger
+    [newMainPhoto.src, oldMainPhoto.src] = [oldMainPhoto.src, newMainPhoto.src];
+    debugger
   }
 
 
@@ -24,7 +34,7 @@ class ProductShow extends React.Component {
       if (photo.product_id === this.props.product.id) {
         const image = photo.image_url;
         subPhotos.push(
-          <div key={idx} className={`product-sub-photo-container-${idx}`}>
+          <div key={idx} onClick={this.handleClick} className={`product-sub-photo-container-${idx}`}>
             <img src={image}></img>
           </div>
         )
